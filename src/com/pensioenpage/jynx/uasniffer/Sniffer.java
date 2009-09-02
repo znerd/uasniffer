@@ -19,7 +19,7 @@ import org.xins.common.xml.Element;
  * @author <a href="mailto:mees@wittemansoftware.nl">Mees Witteman</a>
  * @author <a href="mailto:ernst@pensioenpage.com">Ernst de Haan</a>
  */
-public final class UserAgentSniffer extends Object {
+public final class Sniffer extends Object {
 
    //-------------------------------------------------------------------------
    // Class fields
@@ -29,7 +29,7 @@ public final class UserAgentSniffer extends Object {
     * An instance of this class, to avoid that the unit test coverage
     * complains about the constructor not being called.
     */
-   private static final Object FOOL_COVERAGE = new UserAgentSniffer();
+   private static final Object FOOL_COVERAGE = new Sniffer();
 
 
    //-------------------------------------------------------------------------
@@ -37,302 +37,262 @@ public final class UserAgentSniffer extends Object {
    //-------------------------------------------------------------------------
 
    /**
-    * Builds an XML element that describes the user agent.
+    * Analyzes the specified user agent string. The string is typically the
+    * value of a <em>User-Agent</em> HTTP request header.
     *
     * @param agentString
     *    the user agent string, or <code>null</code>.
     *
     * @return
-    *    an XML {@link Element} that describes the user agent,
+    *    an {@link UserAgent} that describes the user agent,
     *    never <code>null</code>.
     *
     * @throws IllegalArgumentException
     *    if <code>agentString == null</code>.
     */
-   public static final Element buildElement(String agentString)
+   public static final UserAgent analyze(String agentString)
    throws IllegalArgumentException {
 
       // Check preconditions
-      MandatoryArgumentChecker.check("agentString", agentString);
-
-      Set<String> names = new HashSet<String>();
-
-      // Convert the User-Agent request header to lower case
-      String ua = agentString.toLowerCase();
-
-      // Detect specific devices
-      boolean    android = ua.contains("android");
-      boolean appleTouch = ua.contains("ipod") || ua.contains("iphone");
-
-      // Mobile devices
-      boolean          matchFound = false;
-      String               uaType = "desktop";
-      boolean supportsTelProtocol = false;
-      boolean     supportsScripts = true;
-      boolean       supportsFlash = true;
-      boolean           isBrowser = true;
-      for (int i=0; i < UA_MOBILE_DEVICE_SNIPPETS.length; i++) {
-         if (ua.contains(UA_MOBILE_DEVICE_SNIPPETS[i])) {
-            matchFound          = true;
-            uaType              = "mobile";
-            supportsTelProtocol = true;
-            supportsScripts     = false;
-            supportsFlash       = false;
-
-            for (int j=0; j < UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT.length; j++) {
-               if (ua.contains(UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT[j])) {
-                  supportsTelProtocol = false;
-               }
-            }
-         }
+      if (agentString == null) {
+         throw new IllegalArgumentException("agentString == null");
       }
 
-      // iPod
-      if (!matchFound && ua.contains("ipod")) {
-         matchFound          = true;
-         uaType              = "desktop";
-         supportsTelProtocol = false;
-         supportsScripts     = true;
-         supportsFlash       = false;
+      UserAgent                 ua = new UserAgent(agentString);
+      String normalizedAgentString = agentString.toLowerCase().replace('_', '.');
 
-      // iPhone
-      } else if (!matchFound && ua.contains("iphone")) {
-         matchFound          = true;
-         uaType              = "desktop";
-         supportsTelProtocol = true;
-         supportsScripts     = true;
-         supportsFlash       = false;
+      return analyzeImpl(ua, normalizedAgentString);
+   }
+
+   private static final UserAgent analyzeImpl(UserAgent ua, String agentString) {
 
       // Android
-      } else if (!matchFound && ua.contains("android")) {
-         matchFound          = true;
-         uaType              = "desktop";
-         supportsTelProtocol = true;
-         supportsScripts     = true;
-         supportsFlash       = false;
+      if (agentStringLC.contains("android")) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDevice     (UserAgent.Type.ANDROID);
+         ua.setTelProtocol(true);
+         ua.setScripting  (true);
+         ua.setFlash      (true);
 
       // Palm Pre
-      } else if (!matchFound && ua.contains("pre/")) {
-         matchFound          = true;
-         uaType              = "desktop";
-         supportsTelProtocol = true;
-         supportsScripts     = true;
-         supportsFlash       = false;
+      } else if (agentStringLC.contains("webos/")) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDevice     (UserAgent.Type.PALM_PRE);
+         ua.setTelProtocol(true);
+         ua.setScripting  (true);
+
+      // iPod
+      } else if (agentStringLC.contains("ipod")) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDevice     (UserAgent.Type.APPLE_TOUCH);
+         ua.setScripting  (true);
+
+      // iPhone
+      } else if (agentStringLC.contains("iphone")) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDevice     (UserAgent.Type.APPLE_TOUCH);
+         ua.setTelProtocol(true);
+         ua.setScripting  (true);
+
+      } else if (agentStringLC.contains("blackberry")) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDevice     (UserAgent.Type.BLACKBERRY);
+         ua.setTelProtocol(true);
+         ua.setScripting  (true);
+
+      // Less advanced mobile devices
+      } else if (isMobileDevice(agentStringLC)) {
+         ua.setHuman      (true);
+         ua.setMobile     (true);
+         ua.setDisplayArea(UserAgent.DisplayArea.SMALL);
+         ua.setTelProtocol(isMobileWithTelSupport(agentStringLC));
 
       // Bots
-      } else if (!matchFound) {
-         for (int i=0; i < UA_BOT_SNIPPETS.length; i++) {
-            if (ua.contains(UA_BOT_SNIPPETS[i])) {
-               matchFound          = true;
-               uaType              = "bot";
-               supportsTelProtocol = false;
-               supportsScripts     = false;
-               supportsFlash       = false;
-               isBrowser           = false;
-            }
-         }
-      }
+      } else if (isBot(agentStringLC)) {
+         // default values apply: no optional features supported
 
-      Element element = new Element("UserAgent");
-      element.setAttribute("string",  agentString);
-      element.setAttribute("browser", String.valueOf(isBrowser));
-      element.setAttribute("type",    uaType);
-
-      // Support for the "tel:" protocol
-      Element suppElement = new Element("Support");
-      suppElement.setAttribute("technology", "TelProtocol");
-      suppElement.setAttribute("supported",  Boolean.toString(supportsTelProtocol));
-      element.addChild(suppElement);
-
-      // Support for JavaScript
-      suppElement = new Element("Support");
-      suppElement.setAttribute("technology", "ECMAScript");
-      suppElement.setAttribute("supported",  Boolean.toString(supportsScripts));
-      element.addChild(suppElement);
-
-      // Support for Adobe Flash
-      suppElement = new Element("Support");
-      suppElement.setAttribute("technology", "Flash");
-      suppElement.setAttribute("supported",  Boolean.toString(supportsFlash));
-      element.addChild(suppElement);
-
-      // Categorize Device
-      if (supportsTelProtocol) {
-         names.add("Device-Phone");
+      // Default is a desktop browser
       } else {
-         names.add("Device-NoPhone");
-      }
-      if ("mobile".equals(uaType) || appleTouch || android || ua.contains("webos/")) {
-         names.add("Device-Mobile");
-      } else if ("bot".equals(uaType)) {
-         names.add("Device-Bot");
-      } else {
-         names.add("Device-Desktop");
-      }
-      if (appleTouch) {
-         names.add("Device-AppleTouch");
-         if (ua.contains("ipod")) {
-            names.add("Device-AppleTouch-iPod");
-         } else { // iPhone
-            names.add("Device-AppleTouch-iPhone");
-         }
-      } else if (ua.contains("blackberry")) {
-         analyze(ua, names, "Device-Blackberry", "blackberry", 1, false);
+         ua.setHuman    (true);
+         ua.setDevice   (UserAgent.Type.DESKTOP);
+         ua.setScripting(true);
+         ua.setFlash    (true);
       }
 
       // Detect OS, browser engine and browser
-      if (! "bot".equals(uaType)) {
-         detectOS           (ua, names);
-         detectBrowserEngine(ua, names);
-         detectBrowser      (ua, names);
+      if (! ua.isBot()) {
+         detectOS           (agentStringLC, ua);
+         detectBrowserEngine(agentStringLC, ua);
+         detectBrowser      (agentStringLC, ua);
       }
-
-      for (String name : names) {
-         Element nameElement = new Element("Recognized");
-         nameElement.setAttribute("name", name);
-         element.addChild(nameElement);
-      }
-
-      return element;
    }
 
-   private static final void detectOS(String ua, Set<String> names) {
-
-      // Linux
-      if (ua.contains("linux")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-Linux");
-         if (ua.contains("linux 2.")) {
-            analyze(ua, names, "BrowserOS-Linux", "linux ");
+   private static boolean matchesSnippet(String agentString, String[] snippets) {
+      for (int i = 0; i < snippets.length; i++) {
+         if (agentString.contains(snippets[i])) {
+            return true;
          }
+      }
+      return false;
+   }
 
-         // Android
-         if (ua.contains("android")) {
-            analyze(ua, names, "BrowserOS-Linux-Android", "android ");
-         }
+   private static boolean isMobileDevice(String agentString) {
+      return matchesSnippet(agentString, UA_MOBILE_DEVICE_SNIPPETS);
+   }
+
+   private static boolean isMobileWithTelSupport(String agentString) {
+      return matchesSnippet(agentString, UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT);
+   }
+
+   private static boolean isBot(String agentString) {
+      return matchesSnippet(agentString, UA_BOT_SNIPPETS);
+   }
+
+   private static final void detectOS(String agentString, Set<String> names) {
+
+      // Android
+      if (ua.isAndroid()) {
+         applyOS(ua, UserAgent.OS.ANDROID, agentString, "android ");
 
       // webOS, by Palm
-      } else if (ua.contains("webos/")) {
-         analyze(ua, names, "BrowserOS-WebOS", "webos/");
+      } else if (ua.isPalmPre()) {
+         applyOS(ua, UserAgent.OS.WEB_OS, agentString, "webos/");
 
-      // iPhone OS (detect before Mac OS)
-      } else if (ua.contains("iphone") || ua.contains("ipod")) {
-         analyze(ua.replace('_', '.'), names, "BrowserOS-iPhoneOS", "iPhone OS ");
+      // iPhone OS
+      } else if (ua.isAppleTouch()) {
+         applyOS(ua, UserAgent.OS.IPHONE_OS, agentString, "iPhone OS ");
 
-      // Mac OS
-      } else if (ua.contains("mac os") || ua.contains("mac_") || ua.contains("macintosh")) {
+      // Mac OS X
+      } else if (agentString.contains("mac os x")) {
+         ua.addOS(UserAgent.OS.UNIX_OR_LINUX);
+         ua.addOS(UserAgent.OS.MAC_OS, new int[] { 10 });
 
-         addName(names, "BrowserOS-MacOS");
+         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x ",              0, false);
+         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x tiger ",        0, false);
+         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x leopard ",      0, false);
+         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x snow leopard ", 0, false);
 
-         // Mac OS X
-         if (ua.contains("mac os x")) {
-            addName(names, "BrowserOS-NIX");
-            addName(names, "BrowserOS-MacOS-10");
-            analyze(ua.replace('_', '.'), names, "BrowserOS-MacOS", "mac os x ",              0, false);
-            analyze(ua.replace('_', '.'), names, "BrowserOS-MacOS", "mac os x tiger ",        0, false);
-            analyze(ua.replace('_', '.'), names, "BrowserOS-MacOS", "mac os x leopard ",      0, false);
-            analyze(ua.replace('_', '.'), names, "BrowserOS-MacOS", "mac os x snow leopard ", 0, false);
-         }
+      // Older Mac OS (not Mac OS X)
+      } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
+         ua.addOS(UserAgent.OS.MAC_OS);
 
       // Windows
-      } else if (ua.contains("windows") || ua.contains("win3.") || ua.contains("win9") || ua.contains("winnt") || ua.contains("wince")) {
-         addName(names, "BrowserOS-Windows");
-         if (ua.contains("windows nt")) {
-            analyze(ua, names, "BrowserOS-Windows-NT", "windows nt ", 2, true);
-         } else if (ua.contains("windows 5.") || ua.contains("windows 6.")) {
-            analyze(ua, names, "BrowserOS-Windows-NT", "windows ", 2, false);
-         } else if (ua.contains("windows vista")) {
-            analyze("nt/6.0", names, "BrowserOS-Windows-NT", "nt/", 2, false);
-         } else if (ua.contains("windows xp")) {
-            analyze("nt/5.1", names, "BrowserOS-Windows-NT", "nt/", 2, false);
-         } else if (ua.contains("windows 2000")) {
-            analyze("nt/5.0", names, "BrowserOS-Windows-NT", "nt/", 2, false);
-         } else if (ua.contains("winnt")) {
-            analyze(ua, names, "BrowserOS-Windows-NT", "winnt", 2, true);
+      } else if (agentString.contains("windows") || agentString.contains("win3.") || agentString.contains("win9") || agentString.contains("winnt") || agentString.contains("wince")) {
+         ua.addOS(UserAgent.OS.WINDOWS);
+
+         if (agentString.contains("windows nt")) {
+            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "windows nt ", 2, true);
+         } else if (agentString.contains("windows 5.") || agentString.contains("windows 6.")) {
+            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "windows ", 2, true);
+         } else if (agentString.contains("windows vista")) {
+            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 6, 0 });
+         } else if (agentString.contains("windows xp")) {
+            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 1 });
+         } else if (agentString.contains("windows 2000")) {
+            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 0 });
+         } else if (agentString.contains("winnt")) {
+            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "winnt", 2, true);
 
          // Windows ME (needs to be checked before Windows 98)
-         } else if (ua.contains("win 9x 4.90") || ua.contains("windows me")) {
-            addName(names, "BrowserOS-Windows-ME");
+         } else if (agentString.contains("win 9x 4.90") || agentString.contains("windows me")) {
+            ua.addOS(UserAgent.OS.WINDOWS_ME);
 
          // Windows 98
-         } else if (ua.contains("windows 98") || ua.contains("win98")) {
-            addName(names, "BrowserOS-Windows-98");
+         } else if (agentString.contains("windows 98") || agentString.contains("win98")) {
+            ua.addOS(UserAgent.OS.WINDOWS_98);
 
          // Windows 95
-         } else if (ua.contains("windows 95") || ua.contains("win95")) {
-            addName(names, "BrowserOS-Windows-95");
+         } else if (agentString.contains("windows 95") || agentString.contains("win95")) {
+            ua.addOS(UserAgent.OS.WINDOWS_95);
 
          // Windows Mobile
-         } else if (ua.contains("windows mobile") || ua.contains("windows; ppc") || ua.contains("windows ce") || ua.contains("wince")) {
-            analyze(ua, names, "BrowserOS-Windows-Mobile", "windows mobile ", 3, true);
+         } else if (agentString.contains("windows mobile") || agentString.contains("windows; ppc") || agentString.contains("windows ce") || agentString.contains("wince")) {
+            applyOS(ua, UserAgent.OS.WINDOWS_MOBILE, agentString, "windows mobile ", 3, true);
 
          // Windows 3.x
-         } else if (ua.contains("windows 3.")) {
-            analyze(ua, names, "BrowserOS-Windows", "windows ", 3, true);
-         } else if (ua.contains("win3.")) {
-            int    indexWin3 = ua.indexOf("win3.");
-            int indexWindows = ua.indexOf("windows");
-            String         s = (indexWindows >= 0 && indexWindows < indexWin3) ? ua.substring(indexWindows + 1) : ua;
+         } else if (agentString.contains("windows 3.")) {
+            applyOS(ua, UserAgent.OS.WINDOWS, agentString, "windows ", 3, true);
+            analyze(agentString, names, "BrowserOS-Windows", "windows ", 3, true);
+         } else if (agentString.contains("win3.")) {
+            int    indexWin3 = agentString.indexOf("win3.");
+            int indexWindows = agentString.indexOf("windows");
+            String         s = (indexWindows >= 0 && indexWindows < indexWin3)
+                             ? agentString.substring(indexWindows + 1)
+                             : agentString;
 
-            analyze(s, names, "BrowserOS-Windows", "win", 3, true);
+            applyOS(ua, UserAgent.OS.WINDOWS, s, "win", 3, true);
          }
 
          // Add some marketing names for various Windows versions
-         if (names.contains("BrowserOS-Windows-NT-5-0")) {
-            addName(names, "BrowserOS-Windows-2000");
+         if (ua.isOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 0 })) {
+            ua.addOS(UserAgent.OS.WINDOWS_2000);
          } else if (names.contains("BrowserOS-Windows-NT-5")) {
-            addName(names, "BrowserOS-Windows-XP");
+            ua.addOS(UserAgent.OS.WINDOWS_XP);
          } else if (names.contains("BrowserOS-Windows-NT-6-0")) {
+            ua.addOS(UserAgent.OS.WINDOWS_VISTA);
             addName(names, "BrowserOS-Windows-Vista");
          } else if (names.contains("BrowserOS-Windows-NT-6-1")) {
-            addName(names, "BrowserOS-Windows-7");
+            ua.addOS(UserAgent.OS.WINDOWS_SEVEN);
+         }
+
+      // Linux
+      } else if (agentString.contains("linux")) {
+         addName(names, "BrowserOS-NIX");
+         addName(names, "BrowserOS-Linux");
+         if (agentString.contains("linux 2.")) {
+            analyze(agentString, names, "BrowserOS-Linux", "linux ");
          }
 
       // DragonFlyBSD, extra check
-      } else if (ua.contains("dragonfly")) {
+      } else if (agentString.contains("dragonfly")) {
          addName(names, "BrowserOS-NIX");
          addName(names, "BrowserOS-BSD");
          addName(names, "BrowserOS-BSD-DragonFlyBSD");
 
       // Other BSD variants
-      } else if (ua.contains("bsd")) {
+      } else if (agentString.contains("bsd")) {
          addName(names, "BrowserOS-NIX");
          addName(names, "BrowserOS-BSD");
-         if (ua.contains("netbsd")) {
+         if (agentString.contains("netbsd")) {
             addName(names, "BrowserOS-BSD-NetBSD");
-         } else if (ua.contains("openbsd")) {
+         } else if (agentString.contains("openbsd")) {
             addName(names, "BrowserOS-BSD-OpenBSD");
-         } else if (ua.contains("freebsd")) {
+         } else if (agentString.contains("freebsd")) {
             addName(names, "BrowserOS-BSD-FreeBSD");
          }
 
       // AIX
-      } else if (ua.contains("aix")) {
+      } else if (agentString.contains("aix")) {
          addName(names, "BrowserOS-NIX");
          addName(names, "BrowserOS-AIX");
 
       // IRIX
-      } else if (ua.contains("irix")) {
+      } else if (agentString.contains("irix")) {
          addName(names, "BrowserOS-NIX");
          addName(names, "BrowserOS-IRIX");
 
       // HP-UX
-      } else if (ua.contains("hp-ux")) {
+      } else if (agentString.contains("hp-ux")) {
          addName(names, "BrowserOS-NIX");
          addName(names, "BrowserOS-HPUX");
 
       // Sun Solaris
-      } else if (ua.contains("sunos")) {
+      } else if (agentString.contains("sunos")) {
          addName(names, "BrowserOS-NIX");
-         analyze(ua, names, "BrowserOS-Solaris", "sunos ", 1, false);
+         analyze(agentString, names, "BrowserOS-Solaris", "sunos ", 1, false);
 
-      // Sun Solaris
-      } else if (ua.contains("beos")) {
+      // BeOS
+      } else if (agentString.contains("beos")) {
          addName(names, "BrowserOS-BeOS");
 
       // OS/2 (a.k.a. Ecomstation)
-      } else if (ua.contains("(os/2")) {
-         analyze(ua, names, "BrowserOS-OS2", "warp ", 1, false);
+      } else if (agentString.contains("(os/2")) {
+         analyze(agentString, names, "BrowserOS-OS2", "warp ", 1, false);
       }
    }
 
@@ -625,9 +585,9 @@ public final class UserAgentSniffer extends Object {
    //-------------------------------------------------------------------------
 
    /**
-    * Constructs a new <code>UserAgentSniffer</code> instance.
+    * Constructs a new <code>Sniffer</code> instance.
     */
-   private UserAgentSniffer() {
+   private Sniffer() {
       // empty
    }
 }
