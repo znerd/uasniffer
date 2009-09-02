@@ -1,0 +1,42 @@
+This is uasniffer, a Java library for user agent sniffing. It analyzes a
+User-Agent header sent in an HTTP request and describes what kind of user
+agent this header indicates.
+
+The main class is the Sniffer class in the com.pensioenpage.jynx.uasniffer
+package.
+
+This utility program has no external dependencies other than the Java
+runtime environment, version 1.5 or higher.
+
+This software requires the following to build (with 'ant jar'):
+
+   - J2SE 1.5 or Java SE 6
+   - Ant 1.7.1
+
+To run the unit tests (using 'ant unittests'), the following libraries need to
+be in the classpath (or passed with 'ant -lib CLASSPATH'):
+
+   - ant-junit.jar    (tested with Ant 1.7.1)
+   - junit.jar        (tested with JUnit 4.0)
+   - commons-io.jar   (tested with Commons IO 1.4)
+
+This software is available under the terms of a BSD-style license, see
+the accompanied LICENSE file.
+
+This task comes as a collection of Java source files that can be built with Ant.
+Just run:
+
+   ant
+
+The result will be a JAR file:
+
+   build/uasniffer.jar
+
+If you want to file a bug report or a feature request, please do so here:
+
+   http://github.com/znerd/uasniffer/issues
+
+This software has been developed by:
+
+   Ernst de Haan      -  ernst@pensioenpage.com
+   PensioenPage B.V.  -  https://www.pensioenpage.com/
