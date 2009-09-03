@@ -1,3 +1,6 @@
+NOTE: This library is not usable at the moment, it does not compile.
+------------------------------------------------------------------------------
+
 This is uasniffer, a Java library for user agent sniffing. It analyzes a
 User-Agent header sent in an HTTP request and describes what kind of user
 agent this header indicates.
