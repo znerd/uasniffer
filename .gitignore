@@ -1,0 +1,7 @@
+target
+META-INF
+*.swp
+.classpath
+.externalToolBuilders
+.project
+.settings
