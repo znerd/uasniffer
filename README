@@ -13,8 +13,8 @@ runtime environment, version 1.5 or higher.
 
 This software requires the following to build (with 'ant jar'):
 
-   - J2SE 1.5 or Java SE 6
-   - Ant 1.7.1
+   - Java 1.5 or higher
+   - Ant 1.8.2 or higher
 
 To run the unit tests (using 'ant unittests'), the following libraries need to
 be in the classpath (or passed with 'ant -lib CLASSPATH'):
@@ -38,13 +38,3 @@ The result will be a JAR file:
 If you want to file a bug report or a feature request, please do so here:
 
    http://github.com/znerd/uasniffer/issues
-
-This software has been developed by PensioenPage B.V., see:
-
-   https://www.pensioenpage.com/
-
- Developers that contributed to the code:
-
-   Anthony Goubard    -  anthony.goubard@japplis.com
-   Mees Witteman      -  mees@wittemansoftware.nl
-   Ernst de Haan      -  ernst@pensioenpage.com
