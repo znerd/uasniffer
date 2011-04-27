@@ -12,8 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Tests for the <code>Sniffer</code> class.
  *
- * @version $Revision: 9774 $ $Date: 2009-06-26 10:25:17 +0200 (vr, 26 jun 2009) $
- * @author <a href="mailto:ernst@pensioenpage.com">Ernst de Haan</a>
+ * @author <a href="mailto:ernst@ernstdehaan.com">Ernst de Haan</a>
  */
 public class SnifferTests extends Object {
 
