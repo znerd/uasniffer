@@ -1,35 +1,24 @@
-// Copyright 2007-2009, PensioenPage B.V.
-package com.pensioenpage.jynx.uasniffer;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.xins.common.MandatoryArgumentChecker;
-import org.xins.common.xml.Element;
+// BSD-licensed, see COPYRIGHT file
+// Copyright 2011, Ernst de Haan
+package org.znerd.uasniffer;
 
 /**
- * User agent sniffer.
+ * Class responsible for determining the user agent details.
  * 
- * @version $Revision: 10153 $ $Date: 2009-08-24 12:22:25 +0200 (ma, 24 aug 2009) $
  * @author <a href="mailto:anthony.goubard@japplis.com">Anthony Goubard</a>
  * @author <a href="mailto:mees@wittemansoftware.nl">Mees Witteman</a>
  * @author <a href="mailto:ernst@ernstdehaan.com">Ernst de Haan</a>
  */
-public final class Sniffer extends Object {
+public final class Sniffer {
 
    /**
-    * Analyzes the specified user agent string. The string is typically the
-    * value of a <em>User-Agent</em> HTTP request header.
+    * Analyzes the specified user agent string.
     *
     * @param agentString
-    *    the user agent string, or <code>null</code>.
+    *    the user agent string, cannot be <code>null</code>.
     *
     * @return
-    *    an {@link UserAgent} that describes the user agent,
+    *    an {@link UserAgent} instance that describes the user agent,
     *    never <code>null</code>.
     *
     * @throws IllegalArgumentException
@@ -38,464 +27,481 @@ public final class Sniffer extends Object {
    public static final UserAgent analyze(String agentString)
    throws IllegalArgumentException {
 
-      // Check preconditions
-      if (agentString == null) {
-         throw new IllegalArgumentException("agentString == null");
-      }
+      UserAgent ua = new UserAgent(agentString);
+      analyze(ua);
 
-      UserAgent                 ua = new UserAgent(agentString);
-      String normalizedAgentString = agentString.toLowerCase().replace('_', '.');
-
-      return analyzeImpl(ua, normalizedAgentString);
+      return ua;
    }
 
-   private static final UserAgent analyzeImpl(UserAgent ua, String agentString) {
+   private static final void analyze(final UserAgent ua) {
 
-      // Android
-      if (agentStringLC.contains("android")) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDevice     (UserAgent.Type.ANDROID);
-         ua.setTelProtocol(true);
-         ua.setScripting  (true);
-         ua.setFlash      (true);
+      String agentString = ua.getLowerCaseAgentString();
 
-      // Palm Pre
-      } else if (agentStringLC.contains("webos/")) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDevice     (UserAgent.Type.PALM_PRE);
-         ua.setTelProtocol(true);
-         ua.setScripting  (true);
+      // Detect specific devices
+      boolean    android = agentString.contains("android");
+      boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone");
+
+      // Mobile devices
+      boolean          matchFound = false;
+      String               uaType = "desktop";
+      boolean supportsTelProtocol = false;
+      boolean     supportsScripts = true;
+      boolean       supportsFlash = true;
+      boolean           isBrowser = true;
+      for (int i=0; i < UA_MOBILE_DEVICE_SNIPPETS.length; i++) {
+         if (agentString.contains(UA_MOBILE_DEVICE_SNIPPETS[i])) {
+            matchFound          = true;
+            uaType              = "mobile";
+            supportsTelProtocol = true;
+            supportsScripts     = false;
+            supportsFlash       = false;
+
+            for (int j=0; j < UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT.length; j++) {
+               if (agentString.contains(UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT[j])) {
+                  supportsTelProtocol = false;
+               }
+            }
+         }
+      }
 
       // iPod
-      } else if (agentStringLC.contains("ipod")) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDevice     (UserAgent.Type.APPLE_TOUCH);
-         ua.setScripting  (true);
+      if (!matchFound && agentString.contains("ipod")) {
+         matchFound          = true;
+         uaType              = "desktop";
+         supportsTelProtocol = false;
+         supportsScripts     = true;
+         supportsFlash       = false;
 
       // iPhone
-      } else if (agentStringLC.contains("iphone")) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDevice     (UserAgent.Type.APPLE_TOUCH);
-         ua.setTelProtocol(true);
-         ua.setScripting  (true);
+      } else if (!matchFound && agentString.contains("iphone")) {
+         matchFound          = true;
+         uaType              = "desktop";
+         supportsTelProtocol = true;
+         supportsScripts     = true;
+         supportsFlash       = false;
 
-      } else if (agentStringLC.contains("blackberry")) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDevice     (UserAgent.Type.BLACKBERRY);
-         ua.setTelProtocol(true);
-         ua.setScripting  (true);
+      // Android
+      } else if (!matchFound && agentString.contains("android")) {
+         matchFound          = true;
+         uaType              = "desktop";
+         supportsTelProtocol = true;
+         supportsScripts     = true;
+         supportsFlash       = false;
 
-      // Less advanced mobile devices
-      } else if (isMobileDevice(agentStringLC)) {
-         ua.setHuman      (true);
-         ua.setMobile     (true);
-         ua.setDisplayArea(UserAgent.DisplayArea.SMALL);
-         ua.setTelProtocol(isMobileWithTelSupport(agentStringLC));
+      // Palm Pre
+      } else if (!matchFound && agentString.contains("pre/")) {
+         matchFound          = true;
+         uaType              = "desktop";
+         supportsTelProtocol = true;
+         supportsScripts     = true;
+         supportsFlash       = false;
 
       // Bots
-      } else if (isBot(agentStringLC)) {
-         // default values apply: no optional features supported
+      } else if (!matchFound) {
+         for (int i=0; i < UA_BOT_SNIPPETS.length; i++) {
+            if (agentString.contains(UA_BOT_SNIPPETS[i])) {
+               matchFound          = true;
+               uaType              = "bot";
+               supportsTelProtocol = false;
+               supportsScripts     = false;
+               supportsFlash       = false;
+               isBrowser           = false;
+            }
+         }
+      }
 
-      // Default is a desktop browser
+      ua.setBrowser           (isBrowser);
+      ua.setType              (uaType);
+      ua.setTelProtocolSupport(supportsTelProtocol);
+      ua.setJavaScriptSupport (supportsScripts);
+      ua.setFlashSupport      (supportsFlash);
+
+      // Categorize Device
+      if (supportsTelProtocol) {
+         ua.addName("Device-Phone");
       } else {
-         ua.setHuman    (true);
-         ua.setDevice   (UserAgent.Type.DESKTOP);
-         ua.setScripting(true);
-         ua.setFlash    (true);
+         ua.addName("Device-NoPhone");
+      }
+      if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
+         ua.addName("Device-Mobile");
+      } else if ("bot".equals(uaType)) {
+         ua.addName("Device-Bot");
+      } else {
+         ua.addName("Device-Desktop");
+      }
+      if (appleTouch) {
+         ua.addName("Device-AppleTouch");
+         if (agentString.contains("ipod")) {
+            ua.addName("Device-AppleTouch-iPod");
+         } else {
+            ua.addName("Device-AppleTouch-iPhone");
+         }
+      } else if (agentString.contains("blackberry")) {
+         analyze(ua, agentString, "Device-Blackberry", "blackberry", 1, false);
       }
 
       // Detect OS, browser engine and browser
-      if (! ua.isBot()) {
-         detectOS           (agentStringLC, ua);
-         detectBrowserEngine(agentStringLC, ua);
-         detectBrowser      (agentStringLC, ua);
+      if (! "bot".equals(uaType)) {
+         detectOS           (ua);
+         detectBrowserEngine(ua);
+         detectBrowser      (ua);
       }
    }
 
-   private static boolean matchesSnippet(String agentString, String[] snippets) {
-      for (int i = 0; i < snippets.length; i++) {
-         if (agentString.contains(snippets[i])) {
-            return true;
+   private static final void detectOS(UserAgent ua) {
+
+      String agentString = ua.getLowerCaseAgentString();
+
+      // Linux
+      if (agentString.contains("linux")) {
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-Linux");
+         if (agentString.contains("linux 2.")) {
+            analyze(ua, agentString, "BrowserOS-Linux", "linux ");
          }
-      }
-      return false;
-   }
 
-   private static boolean isMobileDevice(String agentString) {
-      return matchesSnippet(agentString, UA_MOBILE_DEVICE_SNIPPETS);
-   }
-
-   private static boolean isMobileWithTelSupport(String agentString) {
-      return matchesSnippet(agentString, UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT);
-   }
-
-   private static boolean isBot(String agentString) {
-      return matchesSnippet(agentString, UA_BOT_SNIPPETS);
-   }
-
-   private static final void detectOS(String agentString, Set<String> names) {
-
-      // Android
-      if (ua.isAndroid()) {
-         applyOS(ua, UserAgent.OS.ANDROID, agentString, "android ");
+         // Android
+         if (agentString.contains("android")) {
+            analyze(ua, agentString, "BrowserOS-Linux-Android", "android ");
+         }
 
       // webOS, by Palm
-      } else if (ua.isPalmPre()) {
-         applyOS(ua, UserAgent.OS.WEB_OS, agentString, "webos/");
+      } else if (agentString.contains("webos/")) {
+         analyze(ua, agentString, "BrowserOS-WebOS", "webos/");
 
-      // iPhone OS
-      } else if (ua.isAppleTouch()) {
-         applyOS(ua, UserAgent.OS.IPHONE_OS, agentString, "iPhone OS ");
+      // iPhone OS (detect before Mac OS)
+      } else if (agentString.contains("iphone") || agentString.contains("ipod")) {
+         analyze(ua, agentString.replace('_', '.'), "BrowserOS-iPhoneOS", "iPhone OS ");
 
-      // Mac OS X
-      } else if (agentString.contains("mac os x")) {
-         ua.addOS(UserAgent.OS.UNIX_OR_LINUX);
-         ua.addOS(UserAgent.OS.MAC_OS, new int[] { 10 });
-
-         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x ",              0, false);
-         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x tiger ",        0, false);
-         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x leopard ",      0, false);
-         applyOS(ua, UserAgent.OS.MAC_OS, agentString, "mac os x snow leopard ", 0, false);
-
-      // Older Mac OS (not Mac OS X)
+      // Mac OS
       } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
-         ua.addOS(UserAgent.OS.MAC_OS);
+
+         ua.addName("BrowserOS-MacOS");
+
+         // Mac OS X
+         if (agentString.contains("mac os x")) {
+            ua.addName("BrowserOS-NIX");
+            ua.addName("BrowserOS-MacOS-10");
+            analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x ",              0, false);
+            analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x tiger ",        0, false);
+            analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x leopard ",      0, false);
+            analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x snow leopard ", 0, false);
+            analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x lion ",         0, false);
+         }
 
       // Windows
       } else if (agentString.contains("windows") || agentString.contains("win3.") || agentString.contains("win9") || agentString.contains("winnt") || agentString.contains("wince")) {
-         ua.addOS(UserAgent.OS.WINDOWS);
-
+         ua.addName("BrowserOS-Windows");
          if (agentString.contains("windows nt")) {
-            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "windows nt ", 2, true);
+            analyze(ua, agentString, "BrowserOS-Windows-NT", "windows nt ", 2, true);
          } else if (agentString.contains("windows 5.") || agentString.contains("windows 6.")) {
-            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "windows ", 2, true);
+            analyze(ua, agentString, "BrowserOS-Windows-NT", "windows ", 2, false);
          } else if (agentString.contains("windows vista")) {
-            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 6, 0 });
+            analyze(ua, "nt/6.0", "BrowserOS-Windows-NT", "nt/", 2, false);
          } else if (agentString.contains("windows xp")) {
-            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 1 });
+            analyze(ua, "nt/5.1", "BrowserOS-Windows-NT", "nt/", 2, false);
          } else if (agentString.contains("windows 2000")) {
-            ua.addOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 0 });
+            analyze(ua, "nt/5.0", "BrowserOS-Windows-NT", "nt/", 2, false);
          } else if (agentString.contains("winnt")) {
-            applyOS(ua, UserAgent.OS.WINDOWS_NT, agentString, "winnt", 2, true);
+            analyze(ua, agentString, "BrowserOS-Windows-NT", "winnt", 2, true);
 
          // Windows ME (needs to be checked before Windows 98)
          } else if (agentString.contains("win 9x 4.90") || agentString.contains("windows me")) {
-            ua.addOS(UserAgent.OS.WINDOWS_ME);
+            ua.addName("BrowserOS-Windows-ME");
 
          // Windows 98
          } else if (agentString.contains("windows 98") || agentString.contains("win98")) {
-            ua.addOS(UserAgent.OS.WINDOWS_98);
+            ua.addName("BrowserOS-Windows-98");
 
          // Windows 95
          } else if (agentString.contains("windows 95") || agentString.contains("win95")) {
-            ua.addOS(UserAgent.OS.WINDOWS_95);
+            ua.addName("BrowserOS-Windows-95");
 
          // Windows Mobile
          } else if (agentString.contains("windows mobile") || agentString.contains("windows; ppc") || agentString.contains("windows ce") || agentString.contains("wince")) {
-            applyOS(ua, UserAgent.OS.WINDOWS_MOBILE, agentString, "windows mobile ", 3, true);
+            analyze(ua, agentString, "BrowserOS-Windows-Mobile", "windows mobile ", 3, true);
 
          // Windows 3.x
          } else if (agentString.contains("windows 3.")) {
-            applyOS(ua, UserAgent.OS.WINDOWS, agentString, "windows ", 3, true);
-            analyze(agentString, names, "BrowserOS-Windows", "windows ", 3, true);
+            analyze(ua, agentString, "BrowserOS-Windows", "windows ", 3, true);
          } else if (agentString.contains("win3.")) {
             int    indexWin3 = agentString.indexOf("win3.");
             int indexWindows = agentString.indexOf("windows");
-            String         s = (indexWindows >= 0 && indexWindows < indexWin3)
-                             ? agentString.substring(indexWindows + 1)
-                             : agentString;
+            String         s = (indexWindows >= 0 && indexWindows < indexWin3) ? agentString.substring(indexWindows + 1) : agentString;
 
-            applyOS(ua, UserAgent.OS.WINDOWS, s, "win", 3, true);
+            analyze(ua, s, "BrowserOS-Windows", "win", 3, true);
          }
 
          // Add some marketing names for various Windows versions
-         if (ua.isOS(UserAgent.OS.WINDOWS_NT, new int[] { 5, 0 })) {
-            ua.addOS(UserAgent.OS.WINDOWS_2000);
-         } else if (names.contains("BrowserOS-Windows-NT-5")) {
-            ua.addOS(UserAgent.OS.WINDOWS_XP);
-         } else if (names.contains("BrowserOS-Windows-NT-6-0")) {
-            ua.addOS(UserAgent.OS.WINDOWS_VISTA);
-            addName(names, "BrowserOS-Windows-Vista");
-         } else if (names.contains("BrowserOS-Windows-NT-6-1")) {
-            ua.addOS(UserAgent.OS.WINDOWS_SEVEN);
-         }
-
-      // Linux
-      } else if (agentString.contains("linux")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-Linux");
-         if (agentString.contains("linux 2.")) {
-            analyze(agentString, names, "BrowserOS-Linux", "linux ");
+         if (ua.hasName("BrowserOS-Windows-NT-5-0")) {
+            ua.addName("BrowserOS-Windows-2000");
+         } else if (ua.hasName("BrowserOS-Windows-NT-5")) {
+            ua.addName("BrowserOS-Windows-XP");
+         } else if (ua.hasName("BrowserOS-Windows-NT-6-0")) {
+            ua.addName("BrowserOS-Windows-Vista");
+         } else if (ua.hasName("BrowserOS-Windows-NT-6-1")) {
+            ua.addName("BrowserOS-Windows-7");
          }
 
       // DragonFlyBSD, extra check
       } else if (agentString.contains("dragonfly")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-BSD");
-         addName(names, "BrowserOS-BSD-DragonFlyBSD");
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-BSD");
+         ua.addName("BrowserOS-BSD-DragonFlyBSD");
 
       // Other BSD variants
       } else if (agentString.contains("bsd")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-BSD");
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-BSD");
          if (agentString.contains("netbsd")) {
-            addName(names, "BrowserOS-BSD-NetBSD");
+            ua.addName("BrowserOS-BSD-NetBSD");
          } else if (agentString.contains("openbsd")) {
-            addName(names, "BrowserOS-BSD-OpenBSD");
+            ua.addName("BrowserOS-BSD-OpenBSD");
          } else if (agentString.contains("freebsd")) {
-            addName(names, "BrowserOS-BSD-FreeBSD");
+            ua.addName("BrowserOS-BSD-FreeBSD");
          }
 
       // AIX
       } else if (agentString.contains("aix")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-AIX");
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-AIX");
 
       // IRIX
       } else if (agentString.contains("irix")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-IRIX");
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-IRIX");
 
       // HP-UX
       } else if (agentString.contains("hp-ux")) {
-         addName(names, "BrowserOS-NIX");
-         addName(names, "BrowserOS-HPUX");
+         ua.addName("BrowserOS-NIX");
+         ua.addName("BrowserOS-HPUX");
 
       // Sun Solaris
       } else if (agentString.contains("sunos")) {
-         addName(names, "BrowserOS-NIX");
-         analyze(agentString, names, "BrowserOS-Solaris", "sunos ", 1, false);
+         ua.addName("BrowserOS-NIX");
+         analyze(ua, agentString, "BrowserOS-Solaris", "sunos ", 1, false);
 
-      // BeOS
+      // Sun Solaris
       } else if (agentString.contains("beos")) {
-         addName(names, "BrowserOS-BeOS");
+         ua.addName("BrowserOS-BeOS");
 
       // OS/2 (a.k.a. Ecomstation)
       } else if (agentString.contains("(os/2")) {
-         analyze(agentString, names, "BrowserOS-OS2", "warp ", 1, false);
+         analyze(ua, agentString, "BrowserOS-OS2", "warp ", 1, false);
       }
    }
 
-   private static final void detectBrowserEngine(String ua, Set<String> names) {
+   private static final void detectBrowserEngine(UserAgent ua) {
+
+      String agentString = ua.getLowerCaseAgentString();
 
       // Apple WebKit
-      if (ua.contains("applewebkit/")) {
-         analyze(ua, names, "BrowserEngine-WebKit", "applewebkit/", 4, false);
+      if (agentString.contains("applewebkit/")) {
+         analyze(ua, agentString, "BrowserEngine-WebKit", "applewebkit/", 4, false);
 
       // Mozilla Gecko
-      } else if (ua.contains("gecko/")) {
-         analyze(ua, names, "BrowserEngine-Gecko", "rv:", 4, false);
+      } else if (agentString.contains("gecko/")) {
+         analyze(ua, agentString, "BrowserEngine-Gecko", "rv:", 4, false);
 
       // Opera Presto
-      } else if (ua.contains("presto/")) {
-         analyze(ua, names, "BrowserEngine-Presto", "presto/", 3, false);
-      } else if (ua.contains("presto")) {
-         analyze(ua, names, "BrowserEngine-Presto", "presto ", 3, false);
+      } else if (agentString.contains("presto/")) {
+         analyze(ua, agentString, "BrowserEngine-Presto", "presto/", 3, false);
+      } else if (agentString.contains("presto")) {
+         analyze(ua, agentString, "BrowserEngine-Presto", "presto ", 3, false);
 
       // Microsoft Trident
-      } else if (ua.contains("trident/")) {
-         analyze(ua, names, "BrowserEngine-Trident", "trident/", 3, false);
-      } else if (ua.contains("trident")) {
-         analyze(ua, names, "BrowserEngine-Trident", "trident ", 3, false);
+      } else if (agentString.contains("trident/")) {
+         analyze(ua, agentString, "BrowserEngine-Trident", "trident/", 3, false);
+      } else if (agentString.contains("trident")) {
+         analyze(ua, agentString, "BrowserEngine-Trident", "trident ", 3, false);
 
       // KDE KHTML
-      } else if (ua.contains("khtml/")) {
-         analyze(ua, names, "BrowserEngine-KHTML", "khtml/", 3, false);
+      } else if (agentString.contains("khtml/")) {
+         analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
       }
    }
 
-   private static final void detectBrowser(String ua, Set<String> names) {
+   private static final void detectBrowser(UserAgent ua) {
+
+      String agentString = ua.getLowerCaseAgentString();
 
       // Lunascape, can use different rendering engines
       // E.g.: Lunascape5 (Webkit) - Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/528+ (KHTML, like Gecko, Safari/528.0) Lunascape/5.0.3.0
-      if (ua.contains("lunascape")) {
-         analyze(ua, names, "Browser-Lunascape", "lunascape ", 4, false);
-         analyze(ua, names, "Browser-Lunascape", "lunascape/", 4, false);
+      if (agentString.contains("lunascape")) {
+         analyze(ua, agentString, "Browser-Lunascape", "lunascape ", 4, false);
+         analyze(ua, agentString, "Browser-Lunascape", "lunascape/", 4, false);
 
       // Maxthon
-      } else if (ua.contains("maxthon")) {
-         analyze(ua, names, "Browser-Maxthon", "maxthon ");
+      } else if (agentString.contains("maxthon")) {
+         analyze(ua, agentString, "Browser-Maxthon", "maxthon ");
 
       // Konqueror (needs to be detected before Gecko-based browsers)
       // E.g.: Mozilla/5.0 (compatible; Konqueror/4.1; Linux) KHTML/4.1.2 (like Gecko)
-      } else if (ua.contains("konqueror")) {
-         analyze(ua, names, "Browser-Konqueror", "konqueror/", 2, false);
-         addName(names, "BrowserEngine-KHTML");
+      } else if (agentString.contains("konqueror")) {
+         analyze(ua, agentString, "Browser-Konqueror", "konqueror/", 2, false);
+         ua.addName("BrowserEngine-KHTML");
 
       // Fennec
       // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.9.2a1pre) Gecko/20090317 Fennec/1.0b1
       //       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1b2pre) Gecko/20081015 Fennec/1.0a1
       //       Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20090322 Fennec/1.0b2pre
-      } else if (ua.contains("fennec")) {
-         analyze(ua, names, "Browser-Fennec", "fennec/");
+      } else if (agentString.contains("fennec")) {
+         analyze(ua, agentString, "Browser-Fennec", "fennec/");
 
       // Epiphany
       // E.g.: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.3) Gecko/20041007 Epiphany/1.4.7
-      } else if (ua.contains("epiphany")) {
-         analyze(ua, names, "Browser-Epiphany", "epiphany/");
+      } else if (agentString.contains("epiphany")) {
+         analyze(ua, agentString, "Browser-Epiphany", "epiphany/");
 
       // Flock (needs to be detected before Firefox)
       // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.18) Gecko/20081107 Firefox/2.0.0.18 Flock/1.2.7
-      } else if (ua.contains("flock")) {
-         analyze(ua, names, "Browser-Flock", "flock/");
+      } else if (agentString.contains("flock")) {
+         analyze(ua, agentString, "Browser-Flock", "flock/");
 
       // Camino (needs to be detected before Firefox)
       // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; nl; rv:1.8.1.14) Gecko/20080512 Camino/1.6.1 (MultiLang) (like Firefox/2.0.0.14)
-      } else if (ua.contains("camino")) {
-         analyze(ua, names, "Browser-Camino", "camino/");
+      } else if (agentString.contains("camino")) {
+         analyze(ua, agentString, "Browser-Camino", "camino/");
 
       // SeaMonkey
       // E.g.: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1b3pre) Gecko/20090302 SeaMonkey/2.0b1pre
-      } else if (ua.contains("seamonkey/")) {
-         analyze(ua, names, "Browser-SeaMonkey", "seamonkey/");
+      } else if (agentString.contains("seamonkey/")) {
+         analyze(ua, agentString, "Browser-SeaMonkey", "seamonkey/");
 
       // SeaMonkey (again)
       // E.g.: Seamonkey-1.1.13-1(X11; U; GNU Fedora fc 10) Gecko/20081112
-      } else if (ua.contains("seamonkey-")) {
-         analyze(ua, names, "Browser-SeaMonkey", "seamonkey-");
-         addName(names, "BrowserEngine-Gecko");
+      } else if (agentString.contains("seamonkey-")) {
+         analyze(ua, agentString, "Browser-SeaMonkey", "seamonkey-");
+         ua.addName("BrowserEngine-Gecko");
 
       // Netscape Navigator (needs to be detected before Firefox)
       // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.5pre) Gecko/20070712 Firefox/2.0.0.4 Navigator/9.0b2
-      } else if (ua.contains("navigator/")) {
-         analyze(ua, names, "Browser-Netscape", "navigator/");
-         addName(names, "BrowserEngine-Gecko");
+      } else if (agentString.contains("navigator/")) {
+         analyze(ua, agentString, "Browser-Netscape", "navigator/");
+         ua.addName("BrowserEngine-Gecko");
 
       // Firefox
-      } else if (ua.contains("firefox")) {
-         analyze(ua, names, "Browser-Firefox", "firefox/");
-      } else if (ua.contains("minefield/")) {
-         analyze(ua, names, "Browser-Firefox", "minefield/");
-      } else if (ua.contains("namoroka/")) {
-         analyze(ua, names, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
-      } else if (ua.contains("shiretoko/")) {
-         analyze(ua, names, "Browser-Firefox", "shiretoko/"); // Firefox 3.5 pre-releases
-      } else if (ua.contains("firebird/")) {
-         analyze(ua, names, "Browser-Firefox", "firebird/"); // Before 1.0
-      } else if (ua.contains("phoenix/")) {
-         analyze(ua, names, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before Firebird code-name)
+      } else if (agentString.contains("firefox")) {
+         analyze(ua, agentString, "Browser-Firefox", "firefox/");
+      } else if (agentString.contains("minefield/")) {
+         analyze(ua, agentString, "Browser-Firefox", "minefield/");
+      } else if (agentString.contains("namoroka/")) {
+         analyze(ua, agentString, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
+      } else if (agentString.contains("shiretoko/")) {
+         analyze(ua, agentString, "Browser-Firefox", "shiretoko/"); // Firefox 3.5 pre-releases
+      } else if (agentString.contains("firebird/")) {
+         analyze(ua, agentString, "Browser-Firefox", "firebird/"); // Before 1.0
+      } else if (agentString.contains("phoenix/")) {
+         analyze(ua, agentString, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before Firebird code-name)
 
       // Opera
-      } else if (ua.startsWith("opera/")) {
+      } else if (agentString.startsWith("opera/")) {
 
-         addName(names, "BrowserEngine-Presto");
-         addName(names, "Browser-Opera");
+         ua.addName("BrowserEngine-Presto");
+         ua.addName("Browser-Opera");
 
          // Opera Mobile
-         if (ua.contains("mobi/")) {
-            analyze(ua, names, "Browser-OperaMobile", ua.contains("version/") ? "version/" : "opera/", 3, true);
+         if (agentString.contains("mobi/")) {
+            analyze(ua, agentString, "Browser-OperaMobile", agentString.contains("version/") ? "version/" : "opera/", 3, true);
 
          // Opera Mini
-         } else if (ua.contains("mini/")) {
-            analyze(ua, names, "Browser-OperaMini", "mini/", 3, true);
+         } else if (agentString.contains("mini/")) {
+            analyze(ua, agentString, "Browser-OperaMini", "mini/", 3, true);
 
          // Opera Desktop
          } else {
-            analyze(ua, names, "Browser-OperaDesktop", ua.contains("version/") ? "version/" : "opera/", 3, true);
+            analyze(ua, agentString, "Browser-OperaDesktop", agentString.contains("version/") ? "version/" : "opera/", 3, true);
          }
 
       // Opera (older releases)
-      } else if (ua.contains("opera")) {
-         addName(names, "Browser-Opera");
-         analyze(ua, names, "Browser-OperaDesktop", "opera ");
-         addName(names, "BrowserEngine-Presto");
+      } else if (agentString.contains("opera")) {
+         ua.addName("Browser-Opera");
+         analyze(ua, agentString, "Browser-OperaDesktop", "opera ");
+         ua.addName("BrowserEngine-Presto");
 
       // Palm Pre browser - this one needs to be checked before Safari
-      } else if (ua.contains("pre/")) {
-         analyze(ua, names, "Browser-PalmPreBrowser", "version/");
+      } else if (agentString.contains("pre/")) {
+         analyze(ua, agentString, "Browser-PalmPreBrowser", "version/");
 
       // OmniWeb - this one needs to be checked before Safari
-      } else if (ua.contains("omniweb")) {
-         addName(names, "Browser-OmniWeb");
+      } else if (agentString.contains("omniweb")) {
+         ua.addName("Browser-OmniWeb");
 
       // Google Chrome - this one needs to be checked before Safari
       // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.
-      } else if (ua.contains("chrome")) {
-         analyze(ua, names, "Browser-Chrome", "chrome/", 4, false);
+      } else if (agentString.contains("chrome")) {
+         analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
 
       // Apple Safari
-      } else if (ua.contains("safari")) {
-         addName(names, "BrowserEngine-WebKit");
-         addName(names, "Browser-Safari"      );
+      } else if (agentString.contains("safari")) {
+         ua.addName("BrowserEngine-WebKit");
+         ua.addName("Browser-Safari"      );
 
-         if (ua.contains("mobile/") || ua.contains("android")) {
-            analyze(ua, names, "Browser-MobileSafari", "version/");
+         if (agentString.contains("mobile/") || agentString.contains("android")) {
+            analyze(ua, agentString, "Browser-MobileSafari", "version/");
          } else {
-            analyze(ua, names, "Browser-DesktopSafari", "version/");
+            analyze(ua, agentString, "Browser-DesktopSafari", "version/");
          }
 
       // Netscape (again)
-      } else if (ua.contains("netscape6")) {
-         analyze(ua, names, "Browser-Netscape", "netscape6/");
-         addName(names, "Browser-Netscape");
-         addName(names, "Browser-Netscape-6");
-         addName(names, "BrowserEngine-Gecko");
-      } else if (ua.contains("netscape")) {
-         analyze(ua, names, "Browser-Netscape", "netscape/", 3, true);
-         addName(names, "BrowserEngine-Gecko");
+      } else if (agentString.contains("netscape6")) {
+         analyze(ua, agentString, "Browser-Netscape", "netscape6/");
+         ua.addName("Browser-Netscape");
+         ua.addName("Browser-Netscape-6");
+         ua.addName("BrowserEngine-Gecko");
+      } else if (agentString.contains("netscape")) {
+         analyze(ua, agentString, "Browser-Netscape", "netscape/", 3, true);
+         ua.addName("BrowserEngine-Gecko");
 
       // iCab
       // E.g.: iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)
-      } else if (ua.contains("icab")) {
-         analyze(ua, names, "Browser-iCab", "icab/");
-         analyze(ua, names, "Browser-iCab", "icab ");
+      } else if (agentString.contains("icab")) {
+         analyze(ua, agentString, "Browser-iCab", "icab/");
+         analyze(ua, agentString, "Browser-iCab", "icab ");
 
          // iCab 4 uses the WebKit rendering engine, although the user agent
          // string does not advertise that
-         if (names.contains("Browser-iCab-4")) {
-            addName(names, "BrowserEngine-WebKit");
+         if (ua.hasName("Browser-iCab-4")) {
+            ua.addName("BrowserEngine-WebKit");
          }
 
       // Internet Explorer
-      } else if (ua.contains("msie")) {
-         addName(names, "BrowserEngine-Trident");
-         addName(names, "Browser-MSIE"         );
+      } else if (agentString.contains("msie")) {
+         ua.addName("BrowserEngine-Trident");
+         ua.addName("Browser-MSIE"         );
 
          // Mobile IE
-         if (ua.contains("iemobile")) {
-            analyze(ua, names, "Browser-MobileMSIE", "iemobile ", 3, true);
-         } else if (names.contains("BrowserOS-Windows-Mobile")) {
-            addName(names, "Browser-MobileMSIE");
+         if (agentString.contains("iemobile")) {
+            analyze(ua, agentString, "Browser-MobileMSIE", "iemobile ", 3, true);
+         } else if (ua.hasName("BrowserOS-Windows-Mobile")) {
+            ua.addName("Browser-MobileMSIE");
          } else {
-            analyze(ua, names, "Browser-DesktopMSIE", "msie ", 3, true);
+            analyze(ua, agentString, "Browser-DesktopMSIE", "msie ", 3, true);
          }
 
       // Netscape 4
-      } else if (! ua.contains("(compatible") && (ua.startsWith("mozilla/4.") || ua.startsWith("mozilla/3."))) {
-         analyze(ua, names, "Browser-Netscape", "mozilla/", 3, true);
+      } else if (! agentString.contains("(compatible") && (agentString.startsWith("mozilla/4.") || agentString.startsWith("mozilla/3."))) {
+         analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
       }
    }
 
-   private static final void addName(Set<String> names, String newName) {
-      if (! names.contains(newName)) {
-         names.add(newName);
-      }
+   private static final void analyze(UserAgent ua, String agentString, String basicName, String versionPrefix) {
+      analyze(ua, agentString, basicName, versionPrefix, 3, false);
    }
 
-   private static final void analyze(String ua, Set<String> names, String basicName, String versionPrefix) {
-      analyze(ua, names, basicName, versionPrefix, 3, false);
-   }
+   private static final void analyze(UserAgent ua, String agentString, String basicName, String versionPrefix, int minVersionParts, boolean splitSecondVersionPart) {
 
-   private static final void analyze(String ua, Set<String> names, String basicName, String versionPrefix, int minVersionParts, boolean splitSecondVersionPart) {
-
-      // Normalize the arguments
-      ua            =            ua.toLowerCase();
       versionPrefix = versionPrefix.toLowerCase();
 
       // First add the basic name
-      addName(names, basicName);
+      ua.addName(basicName);
 
       // Find the location of the version number after the prefix
-      int index = ua.indexOf(versionPrefix);
+      int index = agentString.indexOf(versionPrefix);
       if (index >= 0) {
 
          // Get the version number in a string
-         String version = cutVersionEnd(ua.substring(index + versionPrefix.length()).trim());
+         String version = cutVersionEnd(agentString.substring(index + versionPrefix.length()).trim());
          // XXX: System.err.println("User agent \"" + ua + "\": Found version number \"" + version + "\".");
 
          if (version.length() > 0) {
@@ -505,7 +511,7 @@ public final class Sniffer extends Object {
 
             // First version part can always be done immediately
             String specificName = basicName + '-' + versionParts[0];
-            addName(names, specificName);
+            ua.addName(specificName);
 
             int versionPartsFound;
             if (splitSecondVersionPart && versionParts.length == 2) {
@@ -514,20 +520,20 @@ public final class Sniffer extends Object {
                String secondVersionPart = versionParts[1];
                for (int i = 0; i < secondVersionPart.length(); i++) {
                   specificName += "-" + secondVersionPart.charAt(i);
-                  addName(names, specificName);
+                  ua.addName(specificName);
                   versionPartsFound++;
                }
             } else {
                for (int i = 1; i < versionParts.length; i++) {
                   specificName += '-' + versionParts[i];
-                  addName(names, specificName);
+                  ua.addName(specificName);
                }
                versionPartsFound = versionParts.length;
             }
 
             for (int i = versionPartsFound; i < minVersionParts; i++) {
                specificName += "-0";
-               addName(names, specificName);
+               ua.addName(specificName);
             }
          }
       }
@@ -548,10 +554,6 @@ public final class Sniffer extends Object {
    }
 
 
-   //-------------------------------------------------------------------------
-   // Class fields
-   //-------------------------------------------------------------------------
-
    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] {
       "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry"
    };
@@ -564,14 +566,6 @@ public final class Sniffer extends Object {
       "spider", "bot", "crawl", "miner", "checker", "java", "pingdom"
    };
 
-
-   //-------------------------------------------------------------------------
-   // Constructors
-   //-------------------------------------------------------------------------
-
-   /**
-    * Constructs a new <code>Sniffer</code> instance.
-    */
    private Sniffer() {
       // empty
    }
