@@ -1,8 +1,6 @@
-// Copyright 2007-2009, PensioenPage B.V.
-package com.pensioenpage.albizia.delichon.tests.http;
-
-import com.pensioenpage.albizia.delichon.math.Rounding;
-import com.pensioenpage.albizia.delichon.http.UserAgentSniffer;
+// BSD-licensed, see COPYRIGHT file
+// Copyright 2011, Ernst de Haan
+package org.znerd.uasniffer;
 
 import java.io.*;
 import java.util.*;
@@ -11,32 +9,31 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import org.xins.common.MandatoryArgumentChecker;
-import org.xins.common.text.TextUtils;
-import org.xins.common.xml.Element;
-
 /**
- * Tests for the <code>UserAgentSniffer</code> class.
+ * Tests for the <code>Sniffer</code> class.
  *
  * @version $Revision: 9774 $ $Date: 2009-06-26 10:25:17 +0200 (vr, 26 jun 2009) $
  * @author <a href="mailto:ernst@pensioenpage.com">Ernst de Haan</a>
  */
-public class UserAgentSnifferTests extends Object {
+public class SnifferTests extends Object {
 
-   //-------------------------------------------------------------------------
-   // Fields
-   //-------------------------------------------------------------------------
+   private static boolean isEmpty(String s) {
+      return s == null || s.length() < 1;
+   }
+
+   private static String quote(Object obj) {
+      if (obj == null) {
+         return "(null)";
+      } else {
+         return "\"" + obj.toString() + '"';
+      }
+   }
 
    private TestData _testData;
 
-
-   //-------------------------------------------------------------------------
-   // Methods
-   //-------------------------------------------------------------------------
-
    @Before
    public void loadTestData() throws Exception {
-      InputStream byteStream = getClass().getResourceAsStream("UserAgentSnifferTests-input.txt");
+      InputStream byteStream = getClass().getResourceAsStream("SnifferTests-input.txt");
       Reader      charStream = new InputStreamReader(byteStream, "UTF-8");
       LineNumberReader lines = new LineNumberReader(charStream);
 
@@ -54,7 +51,7 @@ public class UserAgentSnifferTests extends Object {
          String agentString = entry.getAgentString();
 
          long    testStart = System.currentTimeMillis();
-         Element       xml = UserAgentSniffer.buildElement(agentString);
+         UserAgent      ua = Sniffer.analyze(agentString);
          long testDuration = System.currentTimeMillis() - testStart;
 
          // System.out.println(getClass().getSimpleName() + ": Sniffed in " + testDuration + " ms: " + agentString);
@@ -64,16 +61,11 @@ public class UserAgentSnifferTests extends Object {
             maxTestDurationUA = agentString;
          }
 
-         assertEquals("UserAgent", xml.getLocalName()        );
-         assertNull  (             xml.getNamespacePrefix()  );
-         assertNull  (             xml.getNamespaceURI()     );
-         assertEquals(agentString, xml.getAttribute("string"));
+         assertEquals(agentString,               ua.getAgentString()         );
+         assertEquals(agentString.toLowerCase(), ua.getLowerCaseAgentString());
 
-         // Find all <Recognized> names
-         Collection<String> actualNames = new HashSet<String>();
-         for (Element child : xml.getChildElements("Recognized")) {
-            actualNames.add(child.getAttribute("name"));
-         }
+         // Find all recognized names
+         Collection<String> actualNames = ua.getNames();
 
          // Compare expected and recognized
          Collection<String> actualNames2 = new HashSet<String>(actualNames);
@@ -101,7 +93,7 @@ public class UserAgentSnifferTests extends Object {
 
       long      duration = System.currentTimeMillis() - start;
       int      testCount = _testData.getEntries().size();
-      double timePerTest = Rounding.roundDecimals(((double) duration) / ((double) testCount), 2);
+      double timePerTest = ((double) duration) / ((double) testCount);
       System.out.println(getClass().getSimpleName() + ": Performed " + testCount + " tests in " + duration + " ms (which is " + timePerTest + " ms per user agent sniff, on average). Max duration was " + maxTestDuration + " ms, for user agent: \"" + maxTestDurationUA + "\".");
    }
 
@@ -118,9 +110,6 @@ public class UserAgentSnifferTests extends Object {
 
       TestData(LineNumberReader reader)
       throws IllegalArgumentException, IOException {
-
-         // Check preconditions
-         MandatoryArgumentChecker.check("reader", reader);
 
          _entries = new ArrayList<Entry>();
 
@@ -206,16 +195,16 @@ public class UserAgentSnifferTests extends Object {
          throws IllegalArgumentException {
 
             // Check preconditions
-            if (TextUtils.isEmpty(agentString)) {
-               throw new IllegalArgumentException("agentString (" + TextUtils.quote(agentString) + ") is null or empty.");
+            if (isEmpty(agentString)) {
+               throw new IllegalArgumentException("agentString (" + quote(agentString) + ") is null or empty.");
             } else if (outputStrings == null) {
-               throw new IllegalArgumentException("outputStrings " + TextUtils.quote(outputStrings) + " == null (for agent string \"" + agentString + "\")");
+               throw new IllegalArgumentException("outputStrings " + quote(outputStrings) + " == null (for agent string \"" + agentString + "\")");
             }
 
             // Copy all output strings
             _outputStrings = new ArrayList<String>();
             for (String s : outputStrings) {
-               if (TextUtils.isEmpty(s)) {
+               if (isEmpty(s)) {
                   throw new IllegalArgumentException("One of the output strings is null or empty (for agent string \"" + agentString + "\")");
                } else if (_outputStrings.contains(s)) {
                   throw new IllegalArgumentException("Found duplicate output string \"" + s + "\" (for agent string \"" + agentString + "\")");

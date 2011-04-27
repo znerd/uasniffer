@@ -1,6 +1,8 @@
 // Copyright 2011, Ernst de Haan
 package org.znerd.uasniffer;
 
+import java.util.Set;
+
 /**
  * Information about an analyzed user agent.
  * 
@@ -23,6 +25,10 @@ public final class UserAgent {
    }
 
    public void addName(String name) {
+   }
+
+   public Set<String> getNames() {
+      return null;
    }
 
    public boolean hasName(String name) {
