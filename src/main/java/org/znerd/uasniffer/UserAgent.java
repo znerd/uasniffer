@@ -44,18 +44,39 @@ public final class UserAgent {
       return _names.contains(name);
    }
 
-   public void setBrowser(boolean b) {
+   void setBrowser(boolean b) {
+      _browser = b;
    }
 
-   public void setType(String t) {
+   private boolean _browser;
+
+   void setType(String t) {
+      _type = t;
    }
 
-   public void setJavaScriptSupport(boolean b) {
+   void setJavaScriptSupport(boolean b) {
+      _js = b;
    }
+
+   private boolean _js;
 
    public void setFlashSupport(boolean b) {
+      _flash = b;
    }
 
+   private boolean _flash;
+
    public void setTelProtocolSupport(boolean b) {
+      _telProtoSupport = b;
+   }
+
+   private boolean _telProtoSupport;
+
+   public String getCombinedString() {
+      String s;
+      for (String name : _names) {
+         s += " " + name;
+      }
+      return s;
    }
 }
