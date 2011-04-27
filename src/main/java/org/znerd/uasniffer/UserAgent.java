@@ -1,6 +1,7 @@
 // Copyright 2011, Ernst de Haan
 package org.znerd.uasniffer;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -14,25 +15,33 @@ public final class UserAgent {
       if (agentString == null) {
          throw new IllegalArgumentException("agentString == null");
       }
+      _string   = agentString;
+      _stringLC = agentString.toLowerCase();
+      _names    = new HashSet<String>();
    }
 
+   private final String _string;
+   private final String _stringLC;
+   private final HashSet<String> _names;
+
    public String getAgentString() {
-      return null;
+      return _string;
    }
 
    public String getLowerCaseAgentString() {
-      return null;
+      return _stringLC;
    }
 
    public void addName(String name) {
+      _names.add(name);
    }
 
    public Set<String> getNames() {
-      return null;
+      return _names;
    }
 
    public boolean hasName(String name) {
-      return false;
+      return _names.contains(name);
    }
 
    public void setBrowser(boolean b) {

@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  *
  * @author <a href="mailto:ernst@ernstdehaan.com">Ernst de Haan</a>
  */
-public class SnifferTests extends Object {
+public class SnifferTest extends Object {
 
    private static boolean isEmpty(String s) {
       return s == null || s.length() < 1;
@@ -32,7 +32,8 @@ public class SnifferTests extends Object {
 
    @Before
    public void loadTestData() throws Exception {
-      InputStream byteStream = getClass().getResourceAsStream("SnifferTests-input.txt");
+      Class            clazz = getClass();
+      InputStream byteStream = clazz.getResourceAsStream(clazz.getSimpleName() + "-input.txt");
       Reader      charStream = new InputStreamReader(byteStream, "UTF-8");
       LineNumberReader lines = new LineNumberReader(charStream);
 
