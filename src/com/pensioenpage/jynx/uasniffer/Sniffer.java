@@ -17,24 +17,9 @@ import org.xins.common.xml.Element;
  * @version $Revision: 10153 $ $Date: 2009-08-24 12:22:25 +0200 (ma, 24 aug 2009) $
  * @author <a href="mailto:anthony.goubard@japplis.com">Anthony Goubard</a>
  * @author <a href="mailto:mees@wittemansoftware.nl">Mees Witteman</a>
- * @author <a href="mailto:ernst@pensioenpage.com">Ernst de Haan</a>
+ * @author <a href="mailto:ernst@ernstdehaan.com">Ernst de Haan</a>
  */
 public final class Sniffer extends Object {
-
-   //-------------------------------------------------------------------------
-   // Class fields
-   //-------------------------------------------------------------------------
-
-   /**
-    * An instance of this class, to avoid that the unit test coverage
-    * complains about the constructor not being called.
-    */
-   private static final Object FOOL_COVERAGE = new Sniffer();
-
-
-   //-------------------------------------------------------------------------
-   // Class functions
-   //-------------------------------------------------------------------------
 
    /**
     * Analyzes the specified user agent string. The string is typically the
