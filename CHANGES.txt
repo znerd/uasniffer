@@ -5,4 +5,4 @@
 * Detecting Chrome OS.
 * Properly detecting WebKit-based Flock releases.
 * Supporting 4 levels in Flock versions.
-* Added unit tests for several newer browsers.
+* Added several agent strings for unit testing.
