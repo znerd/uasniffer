@@ -245,6 +245,8 @@ public final class Sniffer {
             ua.addName("BrowserOS-Windows-Vista");
          } else if (ua.hasName("BrowserOS-Windows-NT-6-1")) {
             ua.addName("BrowserOS-Windows-7");
+         } else if (ua.hasName("BrowserOS-Windows-NT-6-2")) {
+            ua.addName("BrowserOS-Windows-8");
          }
 
       // DragonFlyBSD, extra check

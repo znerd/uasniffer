@@ -3,6 +3,7 @@
 * Detecting RockMelt browser.
 * Detecting Chrome Frame engine inside MSIE.
 * Detecting Chrome OS.
+* Detecting Windows 8.
 * Properly detecting WebKit-based Flock releases.
 * Supporting 4 levels in Flock versions.
 * Added several agent strings for unit testing.
