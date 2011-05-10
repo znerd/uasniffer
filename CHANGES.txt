@@ -1,0 +1,5 @@
+--- CHANGES SINCE UASNIFFER 0.2 ----------------------------------------------
+
+* Added support for RockMelt browser.
+* Added support for Chrome OS.
+* Added test for Chrome 12 agent string.
