@@ -165,6 +165,10 @@ public final class Sniffer {
             analyze(ua, agentString, "BrowserOS-Linux-Android", "android ");
          }
 
+      // Google Chrome OS
+      } else if (agentString.contains("cros ")) {
+         ua.addName("BrowserOS-CrOS");
+
       // webOS, by Palm
       } else if (agentString.contains("webos/")) {
          analyze(ua, agentString, "BrowserOS-WebOS", "webos/");
@@ -426,6 +430,11 @@ public final class Sniffer {
       // OmniWeb - this one needs to be checked before Safari
       } else if (agentString.contains("omniweb")) {
          ua.addName("Browser-OmniWeb");
+
+      // RockMelt - this one needs to be checked before Google Chrome
+      // e.g.: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
+      } else if (agentString.contains("rockmelt")) {
+         analyze(ua, agentString, "Browser-RockMelt", "rockmelt/", 4, false);
 
       // Google Chrome - this one needs to be checked before Safari
       // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.
