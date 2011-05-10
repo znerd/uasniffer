@@ -6,6 +6,7 @@
 * Detecting Windows 8.
 * Detecting iPad.
 * Detecting old NCSA Mosaic browsers
+* Detecting Android tablets.
 * Properly detecting (newer) WebKit-based Flock releases.
 * Supporting 4 levels in Flock versions.
 * Added several agent strings for unit testing.

@@ -97,7 +97,7 @@ public final class Sniffer {
          supportsFlash       = false;
 
       // Android
-      } else if (!matchFound && agentString.contains("android")) {
+      } else if (!matchFound && !isTablet && agentString.contains("android")) {
          matchFound          = true;
          uaType              = "desktop";
          supportsTelProtocol = true;
