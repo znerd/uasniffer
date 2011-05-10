@@ -513,6 +513,128 @@ BrowserOS-Linux
 BrowserLocale-en
 BrowserLocale-en-US
 
+# Chrome 4 on Chrome OS
+Mozilla/5.0 (X11; U; CrOS i686 9.10.0; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.253.0 Safari/532.5
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-4
+Browser-Chrome-4-0
+Browser-Chrome-4-0-253
+Browser-Chrome-4-0-253-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-532
+BrowserEngine-WebKit-532-5
+BrowserEngine-WebKit-532-5-0
+BrowserEngine-WebKit-532-5-0-0
+BrowserOS-CrOS
+
+# Chrome 11 on Mac OS X Snow Leopard
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_6) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.698.0 Safari/534.24
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-11
+Browser-Chrome-11-0
+Browser-Chrome-11-0-698
+Browser-Chrome-11-0-698-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-24
+BrowserEngine-WebKit-534-24-0
+BrowserEngine-WebKit-534-24-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-6
+BrowserOS-MacOS-10-6-6
+
+# Chrome 12 on Windows XP
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/534.25 (KHTML, like Gecko) Chrome/12.0.706.0 Safari/534.25
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-12
+Browser-Chrome-12-0
+Browser-Chrome-12-0-706
+Browser-Chrome-12-0-706-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-25
+BrowserEngine-WebKit-534-25-0
+BrowserEngine-WebKit-534-25-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Chromium 12 on Ubuntu Linux
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.703.0 Chrome/12.0.703.0 Safari/534.24
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-12
+Browser-Chrome-12-0
+Browser-Chrome-12-0-703
+Browser-Chrome-12-0-703-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-24
+BrowserEngine-WebKit-534-24-0
+BrowserEngine-WebKit-534-24-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+
+
+#-----------------------------------------------------------------------------
+# RockMelt
+#-----------------------------------------------------------------------------
+
+# RockMelt 0.9.8.48.51 on Windows 7
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-9
+Browser-RockMelt-0-9-48
+Browser-RockMelt-0-9-48-51
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-13
+BrowserEngine-WebKit-534-13-0
+BrowserEngine-WebKit-534-13-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+BrowserLocale-en
+BrowserLocale-en-US
+
+# RockMelt 0.9.48.51 on Mac OS X Snow Leopard (10.6.6)
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-9
+Browser-RockMelt-0-9-48
+Browser-RockMelt-0-9-48-51
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-13
+BrowserEngine-WebKit-534-13-0
+BrowserEngine-WebKit-534-13-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-6
+BrowserOS-MacOS-10-6-6
+BrowserLocale-en
+BrowserLocale-en-US
+
 
 #-----------------------------------------------------------------------------
 # Internet Explorer (desktop)
@@ -1999,6 +2121,24 @@ BrowserOS-NIX
 BrowserOS-Linux
 BrowserLocale-en
 BrowserLocale-en-US
+
+# Firefox 4.0.1 on Mac OS X 10.6
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-2
+BrowserEngine-Gecko-2-0
+BrowserEngine-Gecko-2-0-1
+BrowserEngine-Gecko-2-0-1-0
+Browser-Firefox
+Browser-Firefox-4
+Browser-Firefox-4-0
+Browser-Firefox-4-0-1
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-6
 
 
 #-----------------------------------------------------------------------------
