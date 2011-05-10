@@ -357,10 +357,11 @@ public final class Sniffer {
       } else if (agentString.contains("epiphany")) {
          analyze(ua, agentString, "Browser-Epiphany", "epiphany/");
 
-      // Flock (needs to be detected before Firefox)
+      // Flock (needs to be detected before Firefox and Chrome)
       // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.18) Gecko/20081107 Firefox/2.0.0.18 Flock/1.2.7
+      // or:   Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.2.4599 Chrome/7.0.517.442 Safari/534.7
       } else if (agentString.contains("flock")) {
-         analyze(ua, agentString, "Browser-Flock", "flock/");
+         analyze(ua, agentString, "Browser-Flock", "flock/", 4, false);
 
       // Camino (needs to be detected before Firefox)
       // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; nl; rv:1.8.1.14) Gecko/20080512 Camino/1.6.1 (MultiLang) (like Firefox/2.0.0.14)

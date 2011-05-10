@@ -2,5 +2,7 @@
 
 * Added support for RockMelt browser.
 * Added support for Chrome OS.
+* Added support for WebKit-based Flock releases.
+* Supporting 4 levels in Flock versions.
 * Added tests for several newer Chrome agent strings.
 * Added test for Firefox 4.0.1 on Mac OS X.
