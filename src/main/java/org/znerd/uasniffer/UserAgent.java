@@ -54,6 +54,8 @@ public final class UserAgent {
       _type = t;
    }
 
+   private String _type;
+
    void setJavaScriptSupport(boolean b) {
       _js = b;
    }
@@ -73,7 +75,7 @@ public final class UserAgent {
    private boolean _telProtoSupport;
 
    public String getCombinedString() {
-      String s;
+      String s = "";
       for (String name : _names) {
          s += " " + name;
       }
