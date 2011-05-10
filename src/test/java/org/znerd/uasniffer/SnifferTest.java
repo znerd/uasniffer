@@ -72,8 +72,6 @@ public class SnifferTest extends Object {
          for (String expectedName : entry.getOutputStrings()) {
             if (actualNames.contains(expectedName)) {
                actualNames.remove(expectedName);
-            } else if (expectedName.startsWith("BrowserLocale-")) {
-               // skip (TODO)
             } else {
                String message = "For agent string \"" + agentString + "\": Missing expected name \"" + expectedName + "\".";
                System.out.println(message);

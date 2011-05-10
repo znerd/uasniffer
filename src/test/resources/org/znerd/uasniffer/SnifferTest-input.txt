@@ -59,8 +59,8 @@ BrowserOS-WebOS
 BrowserOS-WebOS-1
 BrowserOS-WebOS-1-0
 BrowserOS-WebOS-1-0-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -84,8 +84,8 @@ BrowserOS-Linux-Android
 BrowserOS-Linux-Android-0
 BrowserOS-Linux-Android-0-5
 BrowserOS-Linux-Android-0-5-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Android phone (HTC Dream)
 Mozilla/5.0 (Linux; U; Android 1.0; en-us; dream) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2
@@ -107,12 +107,35 @@ BrowserOS-Linux-Android
 BrowserOS-Linux-Android-1
 BrowserOS-Linux-Android-1-0
 BrowserOS-Linux-Android-1-0-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
+
+# HTC Legend
+Mozilla/5.0 (Linux; U; Android 2.2; fr-lu; HTC Legend Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+Device-Mobile
+Device-Phone
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-4
+Browser-MobileSafari-4-0
+Browser-MobileSafari-4-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-1
+BrowserEngine-WebKit-533-1-0
+BrowserEngine-WebKit-533-1-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+BrowserOS-Linux-Android-2
+BrowserOS-Linux-Android-2-2
+BrowserOS-Linux-Android-2-2-0
+# TODO BrowserLocale-fr
+# TODO BrowserLocale-fr-LU
 
 
 #-----------------------------------------------------------------------------
-# Apple touch devices: iPhone and iPod touch
+# Apple touch devices: iPhone, iPod touch, iPad
 #-----------------------------------------------------------------------------
 
 # Apple iPhone
@@ -131,7 +154,7 @@ Browser-MobileSafari
 Browser-MobileSafari-3
 Browser-MobileSafari-3-0
 Browser-MobileSafari-3-0-0
-BrowserOS-iPhoneOS
+BrowserOS-iOS
 
 # Apple iPhone 3G
 Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_0 like Mac OS X; en-us) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A345 Safari/525.20
@@ -149,12 +172,12 @@ BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-18
 BrowserEngine-WebKit-525-18-1
 BrowserEngine-WebKit-525-18-1-0
-BrowserLocale-en
-BrowserLocale-en-US
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-2
-BrowserOS-iPhoneOS-2-0
-BrowserOS-iPhoneOS-2-0-0
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
+BrowserOS-iOS
+BrowserOS-iOS-2
+BrowserOS-iOS-2-0
+BrowserOS-iOS-2-0-0
 
 # Apple iPod Touch
 Mozila/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3
@@ -172,8 +195,8 @@ BrowserEngine-WebKit-420
 BrowserEngine-WebKit-420-1
 BrowserEngine-WebKit-420-1-0
 BrowserEngine-WebKit-420-1-0-0
-BrowserOS-iPhoneOS
-BrowserLocale-en
+BrowserOS-iOS
+# TODO BrowserLocale-en
 
 # Apple iPod Touch (late 2008)
 Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; en-us) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20
@@ -191,12 +214,12 @@ BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-18
 BrowserEngine-WebKit-525-18-1
 BrowserEngine-WebKit-525-18-1-0
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-2
-BrowserOS-iPhoneOS-2-0
-BrowserOS-iPhoneOS-2-0-0
-BrowserLocale-en
-BrowserLocale-en-US
+BrowserOS-iOS
+BrowserOS-iOS-2
+BrowserOS-iOS-2-0
+BrowserOS-iOS-2-0-0
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # iPhone on iPhone OS 2.2.1
 Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_2_1 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5H11 Safari/525.20
@@ -214,12 +237,12 @@ BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-18
 BrowserEngine-WebKit-525-18-1
 BrowserEngine-WebKit-525-18-1-0
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-2
-BrowserOS-iPhoneOS-2-2
-BrowserOS-iPhoneOS-2-2-1
-BrowserLocale-de
-BrowserLocale-de-DE
+BrowserOS-iOS
+BrowserOS-iOS-2
+BrowserOS-iOS-2-2
+BrowserOS-iOS-2-2-1
+# TODO BrowserLocale-de
+# TODO BrowserLocale-de-DE
 
 # iPod Touch on iPhone OS 3.0 (beta)
 Mozilla/5.0 (iPod; CPU iPhone OS 3_0 like Mac OS X; ru-ru) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5G77 Safari/525.20
@@ -237,12 +260,12 @@ BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-18
 BrowserEngine-WebKit-525-18-1
 BrowserEngine-WebKit-525-18-1-0
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-3
-BrowserOS-iPhoneOS-3-0
-BrowserOS-iPhoneOS-3-0-0
-BrowserLocale-ru
-BrowserLocale-ru-RU
+BrowserOS-iOS
+BrowserOS-iOS-3
+BrowserOS-iOS-3-0
+BrowserOS-iOS-3-0-0
+# TODO BrowserLocale-ru
+# TODO BrowserLocale-ru-RU
 
 # iPhone simulator
 Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.11 (KHTML, like Gecko) Version/3.1.1 Mobile/7A238j Safari/525.20
@@ -260,12 +283,12 @@ BrowserEngine-WebKit-528
 BrowserEngine-WebKit-528-11
 BrowserEngine-WebKit-528-11-0
 BrowserEngine-WebKit-528-11-0-0
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-3
-BrowserOS-iPhoneOS-3-0
-BrowserOS-iPhoneOS-3-0-0
-BrowserLocale-en
-BrowserLocale-en-US
+BrowserOS-iOS
+BrowserOS-iOS-3
+BrowserOS-iOS-3-0
+BrowserOS-iOS-3-0-0
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # iPhone on iPhone OS 3.0 (final)
 Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A312g Safari/528.16
@@ -283,12 +306,59 @@ BrowserEngine-WebKit-528
 BrowserEngine-WebKit-528-18
 BrowserEngine-WebKit-528-18-0
 BrowserEngine-WebKit-528-18-0-0
-BrowserOS-iPhoneOS
-BrowserOS-iPhoneOS-3
-BrowserOS-iPhoneOS-3-0
-BrowserOS-iPhoneOS-3-0-0
-BrowserLocale-en
-BrowserLocale-en-US
+BrowserOS-iOS
+BrowserOS-iOS-3
+BrowserOS-iOS-3-0
+BrowserOS-iOS-3-0-0
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
+
+# iPhone on iOS 4.3 (German)
+Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; de-de) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8F190
+Device-Mobile
+Device-Phone
+Device-AppleTouch
+Device-AppleTouch-iPhone
+# TODO Browser-Safari
+# TODO Browser-MobileSafari
+# TODO Browser-MobileSafari-4
+# TODO Browser-MobileSafari-4-3
+# TODO Browser-MobileSafari-4-3-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-17
+BrowserEngine-WebKit-533-17-9
+BrowserEngine-WebKit-533-17-9-0
+BrowserOS-iOS
+BrowserOS-iOS-4
+BrowserOS-iOS-4-3
+BrowserOS-iOS-4-3-0
+# TODO BrowserLocale-de
+# TODO BrowserLocale-de-DE
+
+# iPad running iOS
+Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+Device-Mobile
+Device-NoPhone
+Device-Tablet
+Device-AppleTouch
+Device-AppleTouch-iPad
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-5
+Browser-MobileSafari-5-0
+Browser-MobileSafari-5-0-2
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-17
+BrowserEngine-WebKit-533-17-9
+BrowserEngine-WebKit-533-17-9-0
+BrowserOS-iOS
+BrowserOS-iOS-4
+BrowserOS-iOS-4-2
+BrowserOS-iOS-4-2-1
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -308,7 +378,7 @@ BrowserEngine-WebKit-522-0-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # OmniWeb 4.1-v422
 Mozilla/4.5 (compatible; OmniWeb/4.1-v422; Mac_PowerPC)
@@ -344,8 +414,8 @@ BrowserEngine-WebKit-125-4-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-it
-BrowserLocale-it-IT
+# TODO BrowserLocale-it
+# TODO BrowserLocale-it-IT
 
 # OmniWeb v622.3.0
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US) AppleWebKit/525.18 (KHTML, like Gecko, Safari/525.20) OmniWeb/v622.3.0.105198
@@ -360,8 +430,8 @@ BrowserEngine-WebKit-525-18-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # OmniWeb v622.8.0
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US) AppleWebKit/528.16 (KHTML, like Gecko, Safari/528.16) OmniWeb/v622.8.0.112941
@@ -376,8 +446,8 @@ BrowserEngine-WebKit-528-16-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -465,8 +535,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-6
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Chrome 0.2 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13
@@ -487,8 +557,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Chrome 1.0 on Windows Vista
 Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/525.19 (KHTML, like Gecko) Chrome/1.0.154.43 Safari/525.19
@@ -509,8 +579,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Chrome 1.0 on Windows 7
 Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/525.19 (KHTML, like Gecko) Chrome/1.0.154.43 Safari/525.19
@@ -531,8 +601,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Pre-release version of Google Chrome 2.0 on Linux
 Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US) AppleWebKit/530.7 (KHTML, like Gecko) Chrome/2.0.175.0 Safari/530.7
@@ -550,8 +620,8 @@ BrowserEngine-WebKit-530-7-0
 BrowserEngine-WebKit-530-7-0-0
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Chrome 2.0 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/530.8 (KHTML, like Gecko) Chrome/2.0.178.0 Safari/530.8
@@ -572,8 +642,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Google Chrome 3.0 (unofficial) on Linux
 Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/531.0 (KHTML, like Gecko) Chrome/3.0.190.0 Safari/531.0
@@ -591,8 +661,8 @@ BrowserEngine-WebKit-531-0-0
 BrowserEngine-WebKit-531-0-0-0
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Chrome 4 on Chrome OS
 Mozilla/5.0 (X11; U; CrOS i686 9.10.0; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.253.0 Safari/532.5
@@ -691,8 +761,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # RockMelt 0.9.48.51 on Mac OS X Snow Leopard (10.6.6)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
@@ -713,8 +783,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-6
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -894,7 +964,7 @@ Browser-DesktopMSIE-5-1
 Browser-DesktopMSIE-5-1-7
 BrowserEngine-Trident
 BrowserOS-MacOS
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Internet Explorer 5.22 on Mac OS
 Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC) 
@@ -1586,8 +1656,8 @@ BrowserEngine-WebKit-85-7-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-de
-BrowserLocale-de-DE
+# TODO BrowserLocale-de
+# TODO BrowserLocale-de-DE
 
 # Old version of Safari (1.2?) on a Mac OS X (PPC) machine
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125
@@ -1603,7 +1673,7 @@ BrowserEngine-WebKit-124-0-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Safari 3.1 on a Mac OS X (PPC) machine (10.4 Tiger)
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; nl-nl) AppleWebKit/525.13 (KHTML, like Gecko) Version/3.1 Safari/525.13
@@ -1624,8 +1694,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-4
 BrowserOS-MacOS-10-4-11
-BrowserLocale-nl
-BrowserLocale-NL
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-NL
 
 # Safari 3.1.2 on a Mac OS X (Intel) machine (10.5 Leopard)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_5; nl-nl) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1
@@ -1646,8 +1716,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-5
-BrowserLocale-nl
-BrowserLocale-NL
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-NL
 
 # Safari 3.2 on Mac OS X (Intel machine)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_5; nl-nl) AppleWebKit/525.26.2 (KHTML, like Gecko) Version/3.2 Safari/525.26.12
@@ -1668,8 +1738,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-5
-BrowserLocale-nl
-BrowserLocale-NL
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-NL
 
 # Safari 3.1.2 on a Windows XP machine
 Mozilla/5.0 (Windows; U; Windows NT 5.1; nl-NL) AppleWebKit/525.19 (KHTML, like Gecko) Version/3.1.2 Safari/525.21
@@ -1690,8 +1760,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
-BrowserLocale-NL
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-NL
 
 # Safari 4 Developer Preview 1 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/526.11 (KHTML, like Gecko) Version/4.0dp1 Safari/526.12.2
@@ -1712,8 +1782,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Safari 4 Developer Preview 1 on Mac OS X 10.5.6 (British English)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-gb) AppleWebKit/528.10+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2
@@ -1734,8 +1804,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-6
-BrowserLocale-en
-BrowserLocale-en-GB
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-GB
 
 # Safari 4 Beta on Mac OS X 10.5.6
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; nl-nl) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16
@@ -1756,8 +1826,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-6
-BrowserLocale-nl
-BrowserLocale-nl-NL
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-nl-NL
 
 
 #-----------------------------------------------------------------------------
@@ -1775,7 +1845,7 @@ Browser-OperaDesktop-5-0
 Browser-OperaDesktop-5-0-0
 BrowserEngine-Presto
 BrowserOS-MacOS
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera 6.0 on Windows 2000
 Mozilla/4.0 (compatible; MSIE 5.0; Windows 2000) Opera 6.0 [en]
@@ -1792,7 +1862,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-0
 BrowserOS-Windows-2000
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera 7.23 on Windows 98
 Opera/7.23 (Windows 98; U) [en]
@@ -1806,7 +1876,7 @@ Browser-OperaDesktop-7-2-3
 BrowserEngine-Presto
 BrowserOS-Windows
 BrowserOS-Windows-98
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera Desktop 9.26 on Windows XP
 Opera/9.26 (Windows NT 5.1; U; nl)
@@ -1823,7 +1893,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Opera 9.61 on Mac OS X 10.5 (Leopard)
 Opera/9.61 (Macintosh; Intel Mac OS X; U; nl) Presto/2.1.1
@@ -1841,7 +1911,7 @@ BrowserEngine-Presto-2-1-1
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Opera 10.00 (beta?) on Mac OS X
 Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
@@ -1859,7 +1929,7 @@ BrowserEngine-Presto-2-2-15
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 
 #-----------------------------------------------------------------------------
@@ -1876,7 +1946,7 @@ Browser-OperaMini-1
 Browser-OperaMini-1-1
 Browser-OperaMini-1-1-7621
 BrowserEngine-Presto
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera Mini 4.0
 Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.9800/209; U; en)
@@ -1888,7 +1958,7 @@ Browser-OperaMini-4
 Browser-OperaMini-4-0
 Browser-OperaMini-4-0-9800
 BrowserEngine-Presto
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera Mini 4.1
 Opera/9.60 (J2ME/MIDP; Opera Mini/4.1.11320/608; U; en) Presto/2.2.0
@@ -1903,7 +1973,7 @@ BrowserEngine-Presto
 BrowserEngine-Presto-2
 BrowserEngine-Presto-2-2
 BrowserEngine-Presto-2-2-0
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 
 #-----------------------------------------------------------------------------
@@ -1922,7 +1992,7 @@ Browser-OperaMobile-9-5-1
 BrowserEngine-Presto
 BrowserOS-Windows
 BrowserOS-Windows-Mobile
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera Mobile 9.7 (beta) on Windows Mobile
 Opera/9.7 (Windows Mobile; HTC PPC; Opera Mobi/35166; U; en) Presto 2.2.1
@@ -1939,7 +2009,7 @@ BrowserEngine-Presto-2-2
 BrowserEngine-Presto-2-2-1
 BrowserOS-Windows
 BrowserOS-Windows-Mobile
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Opera 10.00 mobile
 # Made up
@@ -1957,8 +2027,8 @@ BrowserEngine-Presto-2-2
 BrowserEngine-Presto-2-2-33
 BrowserOS-Windows
 BrowserOS-Windows-Mobile
-BrowserLocale-it
-BrowserLocale-it-IT
+# TODO BrowserLocale-it
+# TODO BrowserLocale-it-IT
 
 
 #-----------------------------------------------------------------------------
@@ -1982,8 +2052,8 @@ BrowserOS-Windows
 BrowserOS-Windows-NT
 BrowserOS-Windows-NT-4
 BrowserOS-Windows-NT-4-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 0.6 (at the time known as Firebird)
 Mozilla/5.0 (X11; U; SunOS sun4u; en-US; rv:1.4b) Gecko/20030517 Mozilla Firebird/0.6
@@ -2000,8 +2070,8 @@ Browser-Firefox-0-6
 Browser-Firefox-0-6-0
 BrowserOS-NIX
 BrowserOS-Solaris
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 0.7 (at the time known as Firebird)
 Mozilla/5.0 (Windows; U; Win95; en-US; rv:1.5) Gecko/20031007 Firebird/0.7
@@ -2018,8 +2088,8 @@ Browser-Firefox-0-7
 Browser-Firefox-0-7-0
 BrowserOS-Windows
 BrowserOS-Windows-95
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 1.0 on Windows NT 4.0
 Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.7.5) Gecko/20041107 Firefox/1.0
@@ -2038,8 +2108,8 @@ BrowserOS-Windows
 BrowserOS-Windows-NT
 BrowserOS-Windows-NT-4
 BrowserOS-Windows-NT-4-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 1.0.5 on Windows ME
 Mozilla/5.0 (Windows; U; Win 9x 4.90; en-US; rv:1.7.9) Gecko/20050711 Firefox/1.0.5
@@ -2056,8 +2126,8 @@ BrowserEngine-Gecko-1-7-9
 BrowserEngine-Gecko-1-7-9-0
 BrowserOS-Windows
 BrowserOS-Windows-ME
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 1.0.7 on OS/2 Warp 4.5
 Mozilla/5.0 (OS/2; U; Warp 4.5; en-US; rv:1.7.12) Gecko/20050922 Firefox/1.0.7
@@ -2075,8 +2145,8 @@ Browser-Firefox-1-0-7
 BrowserOS-OS2
 BrowserOS-OS2-4
 BrowserOS-OS2-4-5
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 1.5.0.12 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; nl; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12
@@ -2097,7 +2167,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Firefox 2.0.0.7 on Windows NT 3.51
 Mozilla/5.0 (Windows; U; WinNT3.51; en-US; rv:1.8.1.7) Gecko/20070914 Firefox/2.0.0.7
@@ -2118,8 +2188,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-3
 BrowserOS-Windows-NT-3-5
 BrowserOS-Windows-NT-3-5-1
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 2.0.0.15 on Linux
 Mozilla/5.0 (X11; U; Linux i586; en-US; rv:1.8.1.15) Gecko/20080703 Mandriva/2.0.0.15-1mdv2009.0 (2009.0) Firefox/2.0.0.15
@@ -2137,8 +2207,8 @@ BrowserEngine-Gecko-1-8-1
 BrowserEngine-Gecko-1-8-1-15
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 2.0.0.16 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; nl; rv:1.8.1.16) Gecko/20080702 Firefox/2.0.0.16
@@ -2159,7 +2229,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Firefox 2.0.0.17 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; nl; rv:1.8.1.17) Gecko/20080829 Firefox/2.0.0.17
@@ -2180,7 +2250,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Firefox 3.0 (alpha 2) on FreeBSD
 Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.9a2) Gecko/20080530 Firefox/3.0a2
@@ -2198,8 +2268,8 @@ BrowserEngine-Gecko-1-9-0-0
 BrowserOS-NIX
 BrowserOS-BSD
 BrowserOS-BSD-FreeBSD
-BrowserLocale-en
-BrowserLocale-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-US
 
 # Firefox pre-release (Minefield) on Mac OS X 10.6 (Snow Leopard)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6.0; en-US; rv:1.9.0.7) Gecko/2009030517 Minefield/3.0.7
@@ -2219,8 +2289,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 3.0 on Sun Solaris
 Mozilla/5.0 (X11; U; SunOS sun4u; it-IT; ) Gecko/20080000 Firefox/3.0
@@ -2233,8 +2303,8 @@ Browser-Firefox-3-0-0
 BrowserEngine-Gecko
 BrowserOS-NIX
 BrowserOS-Solaris
-BrowserLocale-it
-BrowserLocale-it-IT
+# TODO BrowserLocale-it
+# TODO BrowserLocale-it-IT
 
 # Firefox 3.0 on Mac OS X 10.6 (Snow Leopard)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9) Gecko/2008061712 Firefox/3.0
@@ -2253,8 +2323,8 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 3.0 on Windows XP (with Gecko 1.9)
 Mozilla/5.0 (Windows; U; Windows NT 5.1; nl; rv:1.9) Gecko/2008052906 Firefox/3.0
@@ -2274,7 +2344,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Firefox 3.0.1 on Windows Vista
 Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.0.1) Gecko/2008070208 Firefox/3.0.1
@@ -2294,8 +2364,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 3.1 (beta 1) on Mac OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b1) Gecko/20081007 Firefox/3.1b1
@@ -2314,8 +2384,8 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 3.5 RC1 build 1 on Mac OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; nl; rv:1.9.1) Gecko/20090612 Firefox/3.5
@@ -2334,7 +2404,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
-BrowserLocale-nl
+# TODO BrowserLocale-nl
 
 # Firefox pre-release (Shiretoko) 3.5b5pre
 Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1b5pre) Gecko/20090519 Shiretoko/3.5b5pre
@@ -2354,8 +2424,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox pre-release (Namoroka) 3.6a1 on Mac OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.2a1) Gecko/20090806 Namoroka/3.6a1
@@ -2374,8 +2444,8 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox pre-release (Minefield) 4.0a1pre on Linux
 # (made up)
@@ -2393,8 +2463,8 @@ Browser-Firefox-4-0
 Browser-Firefox-4-0-0
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Firefox 4.0.1 on Mac OS X 10.6
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1
@@ -2439,7 +2509,7 @@ Browser-Netscape-4-0
 Browser-Netscape-4-0-8
 BrowserOS-Windows
 BrowserOS-Windows-NT
-BrowserLocale-de
+# TODO BrowserLocale-de
 
 # Netscape 4.77 on IRIX
 Mozilla/4.77C-SGI [en] (X11; I; IRIX64 6.5 IP30)
@@ -2451,7 +2521,7 @@ Browser-Netscape-4-7
 Browser-Netscape-4-7-7
 BrowserOS-NIX
 BrowserOS-IRIX
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Netscape 4.78 on Windows 95
 Mozilla/4.78 [fr] (Win95; U)
@@ -2463,7 +2533,7 @@ Browser-Netscape-4-7
 Browser-Netscape-4-7-8
 BrowserOS-Windows
 BrowserOS-Windows-95
-BrowserLocale-fr
+# TODO BrowserLocale-fr
 
 # Netscape 4.79 on Solaris
 Mozilla/4.79 [en] (X11; U; SunOS 5.7 sun4u)
@@ -2477,7 +2547,7 @@ BrowserOS-NIX
 BrowserOS-Solaris
 BrowserOS-Solaris-5
 BrowserOS-Solaris-5-7
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Netscape 6.02 on Windows 3.11
 Mozilla/6.35 Netscape/6.02 (Windows; I; Win3.11; es)
@@ -2492,7 +2562,7 @@ BrowserOS-Windows
 BrowserOS-Windows-3
 BrowserOS-Windows-3-1
 BrowserOS-Windows-3-1-1
-BrowserLocale-es
+# TODO BrowserLocale-es
 
 # Netscape 6.2.3 on Windows NT 4.0
 Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3
@@ -2511,8 +2581,8 @@ BrowserOS-Windows
 BrowserOS-Windows-NT
 BrowserOS-Windows-NT-4
 BrowserOS-Windows-NT-4-0
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 7.0 on AIX
 Mozilla/5.0 (X11; U; AIX 0048013C4C00; en-US; rv:1.0.1) Gecko/20021009 Netscape/7.0
@@ -2529,8 +2599,8 @@ BrowserEngine-Gecko-1-0-1
 BrowserEngine-Gecko-1-0-1-0
 BrowserOS-NIX
 BrowserOS-AIX
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 7.0 on HP-UX
 Mozilla/5.0 (X11; U; HP-UX 9000/785; es-ES; rv:1.0.1) Gecko/20020827 Netscape/7.0
@@ -2547,8 +2617,8 @@ BrowserEngine-Gecko-1-0-1
 BrowserEngine-Gecko-1-0-1-0
 BrowserOS-NIX
 BrowserOS-HPUX
-BrowserLocale-es
-BrowserLocale-es-ES
+# TODO BrowserLocale-es
+# TODO BrowserLocale-es-ES
 
 # Netscape 7.1 on Windows 98
 Mozilla/5.0 (Windows; U; Win98; ja-JP; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)
@@ -2565,8 +2635,8 @@ BrowserEngine-Gecko-1-4-0
 BrowserEngine-Gecko-1-4-0-0
 BrowserOS-Windows
 BrowserOS-Windows-98
-BrowserLocale-ja
-BrowserLocale-ja-JP
+# TODO BrowserLocale-ja
+# TODO BrowserLocale-ja-JP
 
 # Netscape 7.20 on Windows ME
 Mozilla/5.0 (Windows; U; Win 9x 4.90; en-US; rv:1.7.2) Gecko/20040804 Netscape/7.2 (ax)
@@ -2583,8 +2653,8 @@ BrowserEngine-Gecko-1-7-2
 BrowserEngine-Gecko-1-7-2-0
 BrowserOS-Windows
 BrowserOS-Windows-ME
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 8.1 on Linux
 Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5) Gecko/20060127 Netscape/8.1
@@ -2601,8 +2671,8 @@ BrowserEngine-Gecko-1-7-5
 BrowserEngine-Gecko-1-7-5-0
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 8.1.3 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.5) Gecko/20070321 Netscape/8.1.3
@@ -2622,8 +2692,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 9.0 beta 2 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.5pre) Gecko/20070712 Firefox/2.0.0.4 Navigator/9.0b2
@@ -2643,8 +2713,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 9.0.0.3 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.9pre) Gecko/20071102 Firefox/2.0.0.9 Navigator/9.0.0.3
@@ -2665,8 +2735,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 9.0.0.6 on Mac OS X (PPC)
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.12) Gecko/20080219 Firefox/2.0.0.12 Navigator/9.0.0.6
@@ -2685,8 +2755,8 @@ BrowserEngine-Gecko-1-8-1-12
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Netscape 9.0.0.6 on Linux
 Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.12) Gecko/20080219 Firefox/2.0.0.12 Navigator/9.0.0.6
@@ -2704,8 +2774,8 @@ BrowserEngine-Gecko-1-8-1
 BrowserEngine-Gecko-1-8-1-12
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -2727,8 +2797,8 @@ BrowserEngine-Gecko-1-8-1
 BrowserEngine-Gecko-1-8-1-13
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Mozilla SeaMonkey 1.1.10 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.15) Gecko/20080615 SeaMonkey/1.1.10
@@ -2748,8 +2818,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Mozilla SeaMonkey 1.1.13 on Linux:
 Seamonkey-1.1.13-1(X11; U; GNU Fedora fc 10) Gecko/20081112
@@ -2775,8 +2845,8 @@ BrowserEngine-Gecko-1-9
 BrowserEngine-Gecko-1-9-0
 BrowserEngine-Gecko-1-9-0-0
 BrowserOS-BeOS
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Mozilla SeaMonkey 2.0 (beta 1 pre-release) on Windows Vista
 Mozilla/5.0 (Windows; U; Windows NT 6.0; ru; rv:1.9.1b4pre) Gecko/20090419 SeaMonkey/2.0b1pre
@@ -2796,7 +2866,7 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-ru
+# TODO BrowserLocale-ru
 
 
 #-----------------------------------------------------------------------------
@@ -2827,7 +2897,7 @@ BrowserEngine-KHTML-3-4
 BrowserEngine-KHTML-3-4-2
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-de
+# TODO BrowserLocale-de
 
 # Konqueror 3.5 on NetBSD
 Mozilla/5.0 (compatible; Konqueror/3.5; NetBSD 4.0_RC3; X11) KHTML/3.5.7 (like Gecko)
@@ -2861,8 +2931,8 @@ BrowserOS-Linux-2
 BrowserOS-Linux-2-6
 BrowserOS-Linux-2-6-25
 BrowserOS-Linux-2-6-25-9
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Konqueror 3.5 on Gentoo Linux
 Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.9 (like Gecko) (Gentoo)
@@ -2894,8 +2964,8 @@ BrowserOS-Linux
 BrowserOS-Linux-2
 BrowserOS-Linux-2-6
 BrowserOS-Linux-2-6-24
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Konqueror 4.1 on DragonFlyBSD
 Mozilla/5.0 (compatible; Konqueror/4.1; DragonFly) KHTML/4.1.4 (like Gecko)
@@ -2943,8 +3013,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Konqueror 4.2 on Windows Server 2003 or Windows XP 64-bit (all optional components included in user agent string)
 Mozilla/5.0 (compatible; Konqueror/4.2; Windows 5.2; i686; nl, en-US, en) KHTML/4.2.0 (like Gecko)
@@ -2962,8 +3032,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-2
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Konqueror 4.2 on Windows Vista (all optional components included in user agent string)
 Mozilla/5.0 (compatible; Konqueror/4.2; Windows 6.0; i686; nl, en-US, en) KHTML/4.2.0 (like Gecko)
@@ -2981,8 +3051,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Konqueror 4.2 with KHTML 4.2.0 (none of the optional components included in user agent string)
 Mozilla/5.0 (compatible; Konqueror/4.2) KHTML/4.2.0 (like Gecko)
@@ -3031,7 +3101,7 @@ BrowserEngine-Gecko-1-8-1-16
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Camino 2.0 beta 3 on Mac OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en; rv:1.9.0.11) Gecko/2009060219 Camino/2.0b3 (like Firefox/3.0.11)
@@ -3050,7 +3120,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 
 #-----------------------------------------------------------------------------
@@ -3073,8 +3143,8 @@ BrowserEngine-Gecko-1-9-2-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -3100,8 +3170,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Flock 2.0 on Windows Vista
 Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.0.3) Gecko/2008100719 Firefox/3.0.3 Flock/2.0
@@ -3122,8 +3192,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Flock 2.0.3 on Mac OS X 10.4 (Tiger)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.0.5) Gecko/2008121716 Firefox/3.0.5 Flock/2.0.3
@@ -3143,8 +3213,8 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-4
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Flock 3.5 on Mac OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.3.4628 Chrome/7.0.517.450 Safari/534.7
@@ -3165,8 +3235,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-6
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Flock 3.5 on Windows 7
 Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.2.4599 Chrome/7.0.517.442 Safari/534.7
@@ -3187,8 +3257,8 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -3210,8 +3280,8 @@ BrowserEngine-Gecko-1-7-3
 BrowserEngine-Gecko-1-7-3-0
 BrowserOS-NIX
 BrowserOS-Linux
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------
@@ -3232,8 +3302,8 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-7
-BrowserLocale-de
-BrowserLocale-de-DE
+# TODO BrowserLocale-de
+# TODO BrowserLocale-de-DE
 
 
 #-----------------------------------------------------------------------------
@@ -3338,7 +3408,7 @@ BrowserEngine-Trident-4-5
 BrowserEngine-Trident-4-5-22
 BrowserOS-NIX
 BrowserOS-BSD
-BrowserLocale-en
+# TODO BrowserLocale-en
 
 # Made up
 MyOwnBrowser; BruteBSD 0.9; Trident/4.5.22:customized; en_us, en_gb, en_au; .NET
@@ -3350,8 +3420,8 @@ BrowserEngine-Trident-4-5
 BrowserEngine-Trident-4-5-22
 BrowserOS-NIX
 BrowserOS-BSD
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Made up
 MyOwnBrowser; BruteBSD 0.9; Trident/4.5.22(en_US)
@@ -3363,8 +3433,8 @@ BrowserEngine-Trident-4-5
 BrowserEngine-Trident-4-5-22
 BrowserOS-NIX
 BrowserOS-BSD
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Made up
 MyOwnBrowser; BruteBSD 0.9 (Trident/4.5.22) [en_US]
@@ -3376,8 +3446,8 @@ BrowserEngine-Trident-4-5
 BrowserEngine-Trident-4-5-22
 BrowserOS-NIX
 BrowserOS-BSD
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Made up
 MyOwnBrowser; BruteBSD  0.9; Trident  4.5.22/en_US
@@ -3389,8 +3459,8 @@ BrowserEngine-Trident-4-5
 BrowserEngine-Trident-4-5-22
 BrowserOS-NIX
 BrowserOS-BSD
-BrowserLocale-en
-BrowserLocale-en-US
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
 
 # Made up
 MyOwnBrowser; Win3.11 0.9; MSIE [en]

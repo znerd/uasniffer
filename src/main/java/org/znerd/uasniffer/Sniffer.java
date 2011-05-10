@@ -39,12 +39,13 @@ public final class Sniffer {
 
       // Detect specific devices
       boolean    android = agentString.contains("android");
-      boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone");
+      boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
 
       // Mobile devices
       boolean          matchFound = false;
       String               uaType = "desktop";
       boolean supportsTelProtocol = false;
+      boolean            isTablet = false;
       boolean     supportsScripts = true;
       boolean       supportsFlash = true;
       boolean           isBrowser = true;
@@ -64,6 +65,13 @@ public final class Sniffer {
          }
       }
 
+      // Tablets
+      for (int i=0; i < UA_TABLET_DEVICE_SNIPPETS.length; i++) {
+         if (agentString.contains(UA_TABLET_DEVICE_SNIPPETS[i])) {
+            isTablet = true;
+         }
+      }
+
       // iPod
       if (!matchFound && agentString.contains("ipod")) {
          matchFound          = true;
@@ -77,6 +85,14 @@ public final class Sniffer {
          matchFound          = true;
          uaType              = "desktop";
          supportsTelProtocol = true;
+         supportsScripts     = true;
+         supportsFlash       = false;
+
+      // iPad
+      } else if (!matchFound && agentString.contains("ipad")) {
+         matchFound          = true;
+         uaType              = "tablet";
+         supportsTelProtocol = false;
          supportsScripts     = true;
          supportsFlash       = false;
 
@@ -129,10 +145,17 @@ public final class Sniffer {
       } else {
          ua.addName("Device-Desktop");
       }
+
+      if (isTablet) {
+         ua.addName("Device-Tablet");
+      }
+
       if (appleTouch) {
          ua.addName("Device-AppleTouch");
          if (agentString.contains("ipod")) {
             ua.addName("Device-AppleTouch-iPod");
+         } else if (agentString.contains("ipad")) {
+            ua.addName("Device-AppleTouch-iPad");
          } else {
             ua.addName("Device-AppleTouch-iPhone");
          }
@@ -173,9 +196,9 @@ public final class Sniffer {
       } else if (agentString.contains("webos/")) {
          analyze(ua, agentString, "BrowserOS-WebOS", "webos/");
 
-      // iPhone OS (detect before Mac OS)
-      } else if (agentString.contains("iphone") || agentString.contains("ipod")) {
-         analyze(ua, agentString.replace('_', '.'), "BrowserOS-iPhoneOS", "iPhone OS ");
+      // iOS (detect before Mac OS)
+      } else if (agentString.contains("iphone") || agentString.contains("ipod") || agentString.contains("ipad")) {
+         analyze(ua, agentString.replace('_', '.'), "BrowserOS-iOS", "OS ");
 
       // Mac OS
       } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
@@ -573,6 +596,10 @@ public final class Sniffer {
 
    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] {
       "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry"
+   };
+
+   private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] {
+      "ipad", "xoom"
    };
 
    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] {
