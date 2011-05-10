@@ -295,7 +295,59 @@ BrowserLocale-en-US
 # OmniWeb - a browser for Mac OS X
 #-----------------------------------------------------------------------------
 
-# OmniWeb
+# Old OmniWeb on Mac OS X/PPC
+Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/522+ (KHTML, like Gecko) OmniWeb
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserEngine-WebKit
+BrowserEngine-WebKit-522
+BrowserEngine-WebKit-522-0
+BrowserEngine-WebKit-522-0-0
+BrowserEngine-WebKit-522-0-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserLocale-en
+
+# OmniWeb 4.1-v422
+Mozilla/4.5 (compatible; OmniWeb/4.1-v422; Mac_PowerPC)
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserOS-MacOS
+
+# OmniWeb v496
+Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US) AppleWebKit/85 (KHTML, like Gecko) OmniWeb/v496
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserEngine-WebKit
+BrowserEngine-WebKit-85
+BrowserEngine-WebKit-85-0
+BrowserEngine-WebKit-85-0-0
+BrowserEngine-WebKit-85-0-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+
+# OmniWeb v563.15 (Italian)
+Mozilla/5.0 (Macintosh; U; PPC Mac OS X; it-IT) AppleWebKit/125.4 (KHTML, like Gecko, Safari) OmniWeb/v563.15
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserEngine-WebKit
+BrowserEngine-WebKit-125
+BrowserEngine-WebKit-125-4
+BrowserEngine-WebKit-125-4-0
+BrowserEngine-WebKit-125-4-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserLocale-it
+BrowserLocale-it-IT
+
+# OmniWeb v622.3.0
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US) AppleWebKit/525.18 (KHTML, like Gecko, Safari/525.20) OmniWeb/v622.3.0.105198
 Device-Desktop
 Device-NoPhone
@@ -305,6 +357,22 @@ BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-18
 BrowserEngine-WebKit-525-18-0
 BrowserEngine-WebKit-525-18-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserLocale-en
+BrowserLocale-en-US
+
+# OmniWeb v622.8.0
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US) AppleWebKit/528.16 (KHTML, like Gecko, Safari/528.16) OmniWeb/v622.8.0.112941
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserEngine-WebKit
+BrowserEngine-WebKit-528
+BrowserEngine-WebKit-528-16
+BrowserEngine-WebKit-528-16-0
+BrowserEngine-WebKit-528-16-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
@@ -1504,7 +1572,24 @@ BrowserOS-Windows-XP
 # Safari (desktop)
 #-----------------------------------------------------------------------------
 
-# Old version of Safari (1.0?) on a Mac OS X (PPC) machine
+# Very old version of Safari (1.0?) on a Mac OS X (PPC) machine (German)
+Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5
+Device-Desktop
+Device-NoPhone
+Browser-Safari
+Browser-DesktopSafari
+BrowserEngine-WebKit
+BrowserEngine-WebKit-85
+BrowserEngine-WebKit-85-7
+BrowserEngine-WebKit-85-7-0
+BrowserEngine-WebKit-85-7-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserLocale-de
+BrowserLocale-de-DE
+
+# Old version of Safari (1.2?) on a Mac OS X (PPC) machine
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125
 Device-Desktop
 Device-NoPhone
@@ -1630,7 +1715,29 @@ BrowserOS-Windows-XP
 BrowserLocale-en
 BrowserLocale-en-US
 
-# Safari 4 Beta on Mac OS X 10.5.6.
+# Safari 4 Developer Preview 1 on Mac OS X 10.5.6 (British English)
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-gb) AppleWebKit/528.10+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2
+Device-Desktop
+Device-NoPhone
+Browser-Safari
+Browser-DesktopSafari
+Browser-DesktopSafari-4
+Browser-DesktopSafari-4-0
+Browser-DesktopSafari-4-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-528
+BrowserEngine-WebKit-528-10
+BrowserEngine-WebKit-528-10-0
+BrowserEngine-WebKit-528-10-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-5
+BrowserOS-MacOS-10-5-6
+BrowserLocale-en
+BrowserLocale-en-GB
+
+# Safari 4 Beta on Mac OS X 10.5.6
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; nl-nl) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16
 Device-Desktop
 Device-NoPhone
