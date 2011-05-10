@@ -1081,6 +1081,68 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
+# Internet Explorer 9 on Windows Vista, with Chrome Frame
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0; chromeframe/11.0.696.57)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-9
+Browser-DesktopMSIE-9-0
+Browser-DesktopMSIE-9-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-5
+BrowserEngine-Trident-5-0
+BrowserEngine-Trident-5-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-11
+BrowserEngine-ChromeFrame-11-0
+BrowserEngine-ChromeFrame-11-0-696
+BrowserEngine-ChromeFrame-11-0-696-57
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
+# Internet Explorer 9 on Windows 7
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; Tablet PC 2.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-9
+Browser-DesktopMSIE-9-0
+Browser-DesktopMSIE-9-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-5
+BrowserEngine-Trident-5-0
+BrowserEngine-Trident-5-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+
+# Internet Explorer 10 on Windows 7
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-10
+Browser-DesktopMSIE-10-0
+Browser-DesktopMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+
 # Internet Explorer 10 on Windows NT 7.2
 # Made up
 Mozilla/4.0 (compatible; MSIE 10.0.0; Windows NT 7.2; WOW64; Trident/6.0; SLCC2; .NET CLR 4.0.128; InfoPath.4)

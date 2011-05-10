@@ -439,7 +439,7 @@ public final class Sniffer {
 
       // Google Chrome - this one needs to be checked before Safari
       // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.
-      } else if (agentString.contains("chrome")) {
+      } else if (agentString.contains("chrome/")) {
          analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
 
       // Apple Safari
@@ -487,6 +487,11 @@ public final class Sniffer {
             ua.addName("Browser-MobileMSIE");
          } else {
             analyze(ua, agentString, "Browser-DesktopMSIE", "msie ", 3, true);
+
+            // Chrome Frame
+            if (agentString.contains("chromeframe/")) {
+               analyze(ua, agentString, "BrowserEngine-ChromeFrame", "chromeframe/", 4, false);
+            }
          }
 
       // Netscape 4
