@@ -519,6 +519,10 @@ public final class Sniffer {
             }
          }
 
+      // NCSA Mosaic
+      } else if (agentString.startsWith("ncsa_mosaic") || agentString.startsWith("ncsa mosaic")) {
+         analyze(ua, agentString.replace('_', ' '), "Browser-Mosaic", "ncsa mosaic/", 2, true);
+
       // Netscape 4
       } else if (! agentString.contains("(compatible") && (agentString.startsWith("mozilla/4.") || agentString.startsWith("mozilla/3."))) {
          analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);

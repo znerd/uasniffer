@@ -1,4 +1,57 @@
 #-----------------------------------------------------------------------------
+# NCSA Mosaic (first browser!)
+#-----------------------------------------------------------------------------
+
+# NCSA Mosaic 1.0 on Solaris
+NCSA Mosaic/1.0 (X11;SunOS 4.1.4 sun4m)
+Device-Desktop
+Device-NoPhone
+Browser-Mosaic
+Browser-Mosaic-1
+Browser-Mosaic-1-0
+BrowserOS-NIX
+BrowserOS-Solaris
+BrowserOS-Solaris-4
+BrowserOS-Solaris-4-1
+BrowserOS-Solaris-4-1-4
+
+# NCSA Mosaic 2.0 on Windows 3.1
+NCSA_Mosaic/2.0 (Windows 3.1)
+Device-Desktop
+Device-NoPhone
+Browser-Mosaic
+Browser-Mosaic-2
+Browser-Mosaic-2-0
+BrowserOS-Windows
+BrowserOS-Windows-3
+BrowserOS-Windows-3-1
+BrowserOS-Windows-3-1-0
+
+# NCSA Mosaic 2.6 on Solaris
+NCSA_Mosaic/2.6 (X11; SunOS 4.1.3 sun4m)
+Device-Desktop
+Device-NoPhone
+Browser-Mosaic
+Browser-Mosaic-2
+Browser-Mosaic-2-6
+BrowserOS-NIX
+BrowserOS-Solaris
+BrowserOS-Solaris-4
+BrowserOS-Solaris-4-1
+BrowserOS-Solaris-4-1-3
+
+# NCSA Mosaic 3.0 on Windows 95
+NCSA_Mosaic/3.0 (Windows 95)
+Device-Desktop
+Device-NoPhone
+Browser-Mosaic
+Browser-Mosaic-3
+Browser-Mosaic-3-0
+BrowserOS-Windows
+BrowserOS-Windows-95
+
+
+#-----------------------------------------------------------------------------
 # Blackberry phones
 #-----------------------------------------------------------------------------
 
