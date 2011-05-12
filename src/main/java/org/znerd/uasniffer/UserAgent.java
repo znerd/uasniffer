@@ -15,70 +15,82 @@ public final class UserAgent {
       if (agentString == null) {
          throw new IllegalArgumentException("agentString == null");
       }
+      _names    = new HashSet<String>();
       _string   = agentString;
       _stringLC = agentString.toLowerCase();
-      _names    = new HashSet<String>();
    }
 
-   private final String _string;
-   private final String _stringLC;
    private final HashSet<String> _names;
 
+   public String toString() { return _string; };
+   private final String _string;
+
+   String getLowerCaseAgentString() { return _stringLC; }
+   private final String _stringLC;
+
+   /**
+    * Returns the original agent string (that was used to create this object).
+    * That string is also returned from {@link #toString()}.
+    *
+    * @return
+    *    the original agent string, never <code>null</code>.
+    */
    public String getAgentString() {
       return _string;
    }
 
-   public String getLowerCaseAgentString() {
-      return _stringLC;
-   }
-
-   public void addName(String name) {
+   void addName(String name) {
       _names.add(name);
    }
 
+   /**
+    * Retrieves all names associated with this user agent.
+    *
+    * @return
+    *    a {@link Set} of all names associated with this user agent.
+    */
    public Set<String> getNames() {
       return _names;
    }
 
+   /**
+    * Determines if the specified name is associated with this user agent.
+    *
+    * @return
+    *    <code>true</code> if the name is associated with this object,
+    *    <code>false</code> otherwise.
+    */
    public boolean hasName(String name) {
-      return _names.contains(name);
+      return name == null ? false : _names.contains(name);
    }
 
-   void setBrowser(boolean b) {
-      _browser = b;
-   }
-
-   private boolean _browser;
-
-   void setType(String t) {
-      _type = t;
-   }
-
-   private String _type;
-
-   void setJavaScriptSupport(boolean b) {
-      _js = b;
-   }
-
-   private boolean _js;
-
-   public void setFlashSupport(boolean b) {
-      _flash = b;
-   }
-
-   private boolean _flash;
-
-   public void setTelProtocolSupport(boolean b) {
-      _telProtoSupport = b;
-   }
-
-   private boolean _telProtoSupport;
-
+   /**
+    * Returns all names associated with this user agent, separated by a single 
+    * space each, in random order.
+    *
+    * @return
+    *    all names, separated by a space character; never <code>null</code>.
+    */
    public String getCombinedString() {
       String s = "";
       for (String name : _names) {
          s += " " + name;
       }
-      return s;
+      return "".equals(s) ? "" : s.substring(1);
    }
+
+   void setBrowser(boolean b) { _browser = b; }
+   private boolean _browser;
+
+   void setType(String t) { _type = t; }
+   private String _type;
+
+   void setJavaScriptSupport(boolean b) { _js = b; }
+   private boolean _js;
+
+   void setFlashSupport(boolean b) { _flash = b; }
+   private boolean _flash;
+
+   void setTelProtocolSupport(boolean b) { _telProtoSupport = b; } 
+   private boolean _telProtoSupport;
 }

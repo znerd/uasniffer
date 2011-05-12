@@ -14,3 +14,4 @@
 * Supporting 4 levels in Flock versions.
 * Added several agent strings for unit testing.
 * Changed "iPhoneOS" string to "iOS"
+* Gave the interface of the UserAgent class an overhaul.
