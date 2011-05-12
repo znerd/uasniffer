@@ -5,7 +5,30 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Information about an analyzed user agent.
+ * Information about an analyzed user agent, as a set of names.
+ *
+ * <p>For example, Internet Explorer 7 has used agent strings like this:
+ *
+ * <blockquote><code>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</code></blockquote>
+ *
+ * <p>This could result in the following names in a <code>UserAgent</code> 
+ * object:
+ *
+ * <ul>
+ * <li>Device-Desktop
+ * <li>Device-NoPhone
+ * <li>Browser-MSIE
+ * <li>Browser-DesktopMSIE
+ * <li>Browser-DesktopMSIE-7
+ * <li>Browser-DesktopMSIE-7-0
+ * <li>Browser-DesktopMSIE-7-0-0
+ * <li>BrowserEngine-Trident
+ * <li>BrowserOS-Windows
+ * <li>BrowserOS-Windows-NT
+ * <li>BrowserOS-Windows-NT-6
+ * <li>BrowserOS-Windows-NT-6-0
+ * <li>BrowserOS-Windows-Vista
+ * </ul>
  * 
  * @author <a href="mailto:ernst@ernstdehaan.com">Ernst de Haan</a>
  */
@@ -22,6 +45,7 @@ public final class UserAgent {
 
    private final HashSet<String> _names;
 
+   @Override
    public String toString() { return _string; };
    private final String _string;
 
@@ -71,7 +95,7 @@ public final class UserAgent {
     * @return
     *    all names, separated by a space character; never <code>null</code>.
     */
-   public String getCombinedString() {
+   public String getNamesAsString() {
       String s = "";
       for (String name : _names) {
          s += " " + name;
