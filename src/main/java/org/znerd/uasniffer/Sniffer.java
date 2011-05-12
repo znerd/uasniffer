@@ -317,6 +317,10 @@ public final class Sniffer {
       // OS/2 (a.k.a. Ecomstation)
       } else if (agentString.contains("(os/2")) {
          analyze(ua, agentString, "BrowserOS-OS2", "warp ", 1, false);
+
+      // Symbian
+      } else if (agentString.contains("symbian")) {
+         analyze(ua, agentString, "BrowserOS-Symbian", "symbianos/", 3, false);
       }
    }
 
@@ -470,6 +474,14 @@ public final class Sniffer {
       // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.
       } else if (agentString.contains("chrome/")) {
          analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
+
+      // Nokia browser - needs to be checked before Safari
+      } else if (agentString.contains("symbianos")) {
+         if (agentString.contains("version/") || !agentString.contains("browserng/")) {
+            analyze(ua, agentString, "Browser-Nokia", "version/", 3, false);
+         } else {
+            analyze(ua, agentString, "Browser-Nokia", "browserng/", 3, false);
+         }
 
       // Apple Safari
       } else if (agentString.contains("safari")) {

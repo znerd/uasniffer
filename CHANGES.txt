@@ -4,10 +4,12 @@
 * Detecting Chrome Frame engine inside MSIE.
 * Detecting Chrome OS.
 * Detecting Windows 8.
+* Detecting Symbian OS.
 * Detecting iPad.
 * Detecting old NCSA Mosaic browsers
 * Detecting Android tablets.
 * Detecting Blackberry browser (instead of just device).
+* Detecting Nokia browser.
 * Properly detecting (newer) WebKit-based Flock releases.
 * Supporting 4 levels in Flock versions.
 * Added several agent strings for unit testing.

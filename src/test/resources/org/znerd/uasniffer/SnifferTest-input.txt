@@ -52,6 +52,69 @@ BrowserOS-Windows-95
 
 
 #-----------------------------------------------------------------------------
+# Symbian OS
+#-----------------------------------------------------------------------------
+
+# OSS Browser 3.0, Symbian OS 9.1
+Mozilla/5.0 (SymbianOS/9.1; U; [en-us]) AppleWebKit/413 (KHTML, like Gecko) Safari/413
+Device-Mobile
+Device-Phone
+Browser-Nokia
+BrowserEngine-WebKit
+BrowserEngine-WebKit-413
+BrowserEngine-WebKit-413-0
+BrowserEngine-WebKit-413-0-0
+BrowserEngine-WebKit-413-0-0-0
+BrowserOS-Symbian
+BrowserOS-Symbian-9
+BrowserOS-Symbian-9-1
+BrowserOS-Symbian-9-1-0
+
+# Samsung i8910 running OSS Browser 3.0, Symbian OS 9.1
+SamsungI8910/SymbianOS/9.1 Series60/3.0
+Device-Mobile
+Device-Phone
+Browser-Nokia
+BrowserOS-Symbian
+BrowserOS-Symbian-9
+BrowserOS-Symbian-9-1
+BrowserOS-Symbian-9-1-0
+
+# Nokia 5250, Symbian OS 9.4, WebKit 525
+Nokia5250/10.0.011 (SymbianOS/9.4; U; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/525 (KHTML, like Gecko) Safari/525 3gpp-gba
+Device-Mobile
+Device-Phone
+Browser-Nokia
+BrowserEngine-WebKit
+BrowserEngine-WebKit-525
+BrowserEngine-WebKit-525-0
+BrowserEngine-WebKit-525-0-0
+BrowserEngine-WebKit-525-0-0-0
+BrowserOS-Symbian
+BrowserOS-Symbian-9
+BrowserOS-Symbian-9-4
+BrowserOS-Symbian-9-4-0
+
+# Nokia C6, running BrowserNG 7.2.6, Symbian OS 9.4, WebKit 525
+NokiaC6-00/10.0.021 (SymbianOS/9.4; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebkit/525 (KHTML, like Gecko) BrowserNG/7.2.6 UNTRUSTED/1.0 3gpp-gba
+Device-Mobile
+Device-Phone
+Browser-Nokia
+Browser-Nokia-7
+Browser-Nokia-7-2
+Browser-Nokia-7-2-6
+BrowserEngine-WebKit
+BrowserEngine-WebKit-525
+BrowserEngine-WebKit-525-0
+BrowserEngine-WebKit-525-0-0
+BrowserEngine-WebKit-525-0-0-0
+BrowserOS-Symbian
+BrowserOS-Symbian-9
+BrowserOS-Symbian-9-4
+BrowserOS-Symbian-9-4-0
+
+
+#-----------------------------------------------------------------------------
 # Blackberry phones
 #-----------------------------------------------------------------------------
 
@@ -1631,6 +1694,19 @@ BrowserOS-Windows-Mobile
 BrowserOS-Windows-Mobile-6
 BrowserOS-Windows-Mobile-6-1
 BrowserOS-Windows-Mobile-6-1-0
+
+# Mobile Internet Explorer 7.11 on HTC Touch
+HTC_Touch_3G Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; IEMobile 7.11)
+Device-Mobile
+Device-Phone
+Browser-MSIE
+Browser-MobileMSIE
+Browser-MobileMSIE-7
+Browser-MobileMSIE-7-1
+Browser-MobileMSIE-7-1-1
+BrowserEngine-Trident
+BrowserOS-Windows
+BrowserOS-Windows-Mobile
 
 
 #-----------------------------------------------------------------------------
