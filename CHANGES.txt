@@ -15,3 +15,4 @@
 * Added several agent strings for unit testing.
 * Changed "iPhoneOS" string to "iOS"
 * Gave the interface of the UserAgent class an overhaul.
+* POM now assumes UTF-8 for Java source files.
