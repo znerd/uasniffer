@@ -19,7 +19,8 @@ If you want to file a bug report or a feature request, please do so here:
 
    http://github.com/znerd/uasniffer/issues
 
-Here's a small code snippet that will analyze your agent string:
+Here's a small code snippet that will analyze your agent string and put
+some relevant CSS class names in your <HTML> tag:
 
    public service(HttpServletRequest req, HttpServletResponse res)
    throws ServletException {
