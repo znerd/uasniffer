@@ -143,7 +143,7 @@ BrowserOS-WebOS-1-0-0
 # Android phones
 #-----------------------------------------------------------------------------
 
-# Google Android phone (pre-release version)
+# Android 0.5 phone (pre-release version)
 Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3
 Device-Mobile
 Device-Phone
@@ -163,7 +163,7 @@ BrowserOS-Linux-Android-0-5-0
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
-# Google Android phone (HTC Dream)
+# Android 1.0 phone: HTC Dream
 Mozilla/5.0 (Linux; U; Android 1.0; en-us; dream) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2
 Device-Mobile
 Device-Phone
@@ -186,7 +186,30 @@ BrowserOS-Linux-Android-1-0-0
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
-# HTC Legend
+# Android 1.6 phone: Sony Ericsson X10i 
+Mozilla/5.0 (Linux; U; Android 1.6; ar-us; SonyEricssonX10i Build/R2BA026) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1
+Device-Mobile
+Device-Phone
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-3
+Browser-MobileSafari-3-1
+Browser-MobileSafari-3-1-2
+BrowserEngine-WebKit
+BrowserEngine-WebKit-528
+BrowserEngine-WebKit-528-5
+BrowserEngine-WebKit-528-5-0
+BrowserEngine-WebKit-528-5-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+BrowserOS-Linux-Android-1
+BrowserOS-Linux-Android-1-6
+BrowserOS-Linux-Android-1-6-0
+# TODO BrowserLocale-ar
+# TODO BrowserLocale-ar-US
+
+# Android 2.2 phone: HTC Legend
 Mozilla/5.0 (Linux; U; Android 2.2; fr-lu; HTC Legend Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
 Device-Mobile
 Device-Phone
@@ -208,6 +231,29 @@ BrowserOS-Linux-Android-2-2
 BrowserOS-Linux-Android-2-2-0
 # TODO BrowserLocale-fr
 # TODO BrowserLocale-fr-LU
+
+# Android 2.3.3 phone: HTC Pyramid
+Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; HTC_Pyramid Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+Device-Mobile
+Device-Phone
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-4
+Browser-MobileSafari-4-0
+Browser-MobileSafari-4-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-1
+BrowserEngine-WebKit-533-1-0
+BrowserEngine-WebKit-533-1-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+BrowserOS-Linux-Android-2
+BrowserOS-Linux-Android-2-3
+BrowserOS-Linux-Android-2-3-3
+# TODO BrowserLocale-zh
+# TODO BrowserLocale-zh-TW
 
 
 #-----------------------------------------------------------------------------
@@ -3251,6 +3297,77 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
+
+# Fennec 1.1
+Mozilla/5.0 (X11; U; Linux armv7l; pl-PL; rv:1.9.2.5) Gecko/20100614 Firefox/3.6.5pre Fennec/1.1
+Device-Mobile
+Device-Phone
+Browser-Fennec
+Browser-Fennec-1
+Browser-Fennec-1-1
+Browser-Fennec-1-1-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-1
+BrowserEngine-Gecko-1-9
+BrowserEngine-Gecko-1-9-2
+BrowserEngine-Gecko-1-9-2-5
+BrowserOS-NIX
+BrowserOS-Linux
+# TODO BrowserLocale-pl
+# TODO BrowserLocale-pl-PL
+
+# Fennec 2.0b1pre on Windows XP
+Mozilla/5.0 (Windows NT 5.1; rv:2.0b6pre) Gecko/20100902 Firefox/4.0b6pre Fennec/2.0b1pre
+Device-Mobile
+Device-Phone
+Browser-Fennec
+Browser-Fennec-2
+Browser-Fennec-2-0
+Browser-Fennec-2-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-2
+BrowserEngine-Gecko-2-0
+BrowserEngine-Gecko-2-0-0
+BrowserEngine-Gecko-2-0-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Fennec 4.0
+Mozilla/5.0 (Android; Linux armv7l; rv:2.0) Gecko/20110103 Firefox/4.0 Fennec/4.0
+Device-Mobile
+Device-Phone
+Browser-Fennec
+Browser-Fennec-4
+Browser-Fennec-4-0
+Browser-Fennec-4-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-2
+BrowserEngine-Gecko-2-0
+BrowserEngine-Gecko-2-0-0
+BrowserEngine-Gecko-2-0-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+
+# Fennec 4.1a1pre
+Mozilla/5.0 (Android; Linux armv7l; rv:2.2a1pre) Gecko/20110402 Firefox/4.2a1pre Fennec/4.1a1pre
+Device-Mobile
+Device-Phone
+Browser-Fennec
+Browser-Fennec-4
+Browser-Fennec-4-1
+Browser-Fennec-4-1-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-2
+BrowserEngine-Gecko-2-2
+BrowserEngine-Gecko-2-2-0
+BrowserEngine-Gecko-2-2-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
 
 
 #-----------------------------------------------------------------------------
