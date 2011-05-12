@@ -364,6 +364,10 @@ public final class Sniffer {
       } else if (agentString.contains("maxthon")) {
          analyze(ua, agentString, "Browser-Maxthon", "maxthon ");
 
+      // Blackberry
+      } else if (agentString.contains("blackberry")) {
+         analyze(ua, agentString, "Browser-Blackberry", "version/");
+
       // Konqueror (needs to be detected before Gecko-based browsers)
       // E.g.: Mozilla/5.0 (compatible; Konqueror/4.1; Linux) KHTML/4.1.2 (like Gecko)
       } else if (agentString.contains("konqueror")) {

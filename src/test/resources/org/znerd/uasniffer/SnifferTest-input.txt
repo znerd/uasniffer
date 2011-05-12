@@ -61,6 +61,7 @@ Device-Mobile
 Device-Phone
 Device-Blackberry
 Device-Blackberry-7100
+Browser-Blackberry
 
 # Blackberry 8330
 BlackBerry8330/4.3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105
@@ -68,6 +69,7 @@ Device-Mobile
 Device-Phone
 Device-Blackberry
 Device-Blackberry-8330
+Browser-Blackberry
 
 # Blackberry 8703e
 BlackBerry8703e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105
@@ -75,6 +77,7 @@ Device-Mobile
 Device-Phone
 Device-Blackberry
 Device-Blackberry-8703
+Browser-Blackberry
 
 # Blackberry 8830
 BlackBerry8830/4.2.2 Profile/MIDP-2.0 Configuration/CLOC-1.1 VendorID/105
@@ -82,6 +85,7 @@ Device-Mobile
 Device-Phone
 Device-Blackberry
 Device-Blackberry-8830
+Browser-Blackberry
 
 # Blackberry 9000
 BlackBerry9000/4.6.0.266 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/120
@@ -89,6 +93,25 @@ Device-Mobile
 Device-Phone
 Device-Blackberry
 Device-Blackberry-9000
+Browser-Blackberry
+
+# Blackberry 9800
+Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; zh-TW) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.448 Mobile Safari/534.8+
+Device-Mobile
+Device-Phone
+Device-Blackberry
+Browser-Blackberry
+Browser-Blackberry-6
+Browser-Blackberry-6-0
+Browser-Blackberry-6-0-0
+Browser-Blackberry-6-0-0-448
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-8
+BrowserEngine-WebKit-534-8-0
+BrowserEngine-WebKit-534-8-0-0
+# TODO BrowserLocale-zh
+# TODO BrowserLocale-zh-TW
 
 
 #-----------------------------------------------------------------------------
