@@ -1,3 +1,8 @@
+--- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------
+
+* Added unit test for Firefox 5.
+
+
 --- CHANGES SINCE UASNIFFER 0.2 ----------------------------------------------
 
 * Detecting RockMelt browser.
