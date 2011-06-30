@@ -1001,6 +1001,26 @@ BrowserOS-MacOS-10-6-6
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
+# RockMelt 0.9.58 on Mac OS X Snow Leopard (10.6.7)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-9
+Browser-RockMelt-0-9-58
+Browser-RockMelt-0-9-58-494
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-24
+BrowserEngine-WebKit-534-24-0
+BrowserEngine-WebKit-534-24-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-6
+BrowserOS-MacOS-10-6-7
+
 
 #-----------------------------------------------------------------------------
 # Internet Explorer (desktop)

@@ -1,6 +1,7 @@
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------
 
 * Added unit test for Firefox 5.
+* Added unit test for RockMelt 0.9.58.494.
 
 
 --- CHANGES SINCE UASNIFFER 0.2 ----------------------------------------------
