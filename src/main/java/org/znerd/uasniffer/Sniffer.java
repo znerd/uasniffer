@@ -366,7 +366,8 @@ public final class Sniffer {
 
       // Maxthon
       } else if (agentString.contains("maxthon")) {
-         analyze(ua, agentString, "Browser-Maxthon", "maxthon ");
+         analyze(ua, agentString, "Browser-Maxthon", "maxthon ", 4, false);
+         analyze(ua, agentString, "Browser-Maxthon", "maxthon/", 4, false);
 
       // Blackberry
       } else if (agentString.contains("blackberry")) {

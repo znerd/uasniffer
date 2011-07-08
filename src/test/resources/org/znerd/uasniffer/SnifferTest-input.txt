@@ -1867,7 +1867,7 @@ BrowserOS-Windows-XP
 # Maxthon
 #-----------------------------------------------------------------------------
 
-# Maxthon 2.0
+# Maxthon 2.0 on Windows XP - using Trident engine
 Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; MAXTHON 2.0)
 Device-Desktop
 Device-NoPhone
@@ -1879,11 +1879,56 @@ Browser-Maxthon
 Browser-Maxthon-2
 Browser-Maxthon-2-0
 Browser-Maxthon-2-0-0
+Browser-Maxthon-2-0-0-0
 BrowserOS-Windows
 BrowserOS-Windows-NT
 BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
+
+# Maxthon 3.0 on Windows XP - using WebKit engine
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.9 (KHTML, like Gecko) Maxthon/3.0 Safari/533.9
+Device-Desktop
+Device-NoPhone
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-9
+BrowserEngine-WebKit-533-9-0
+BrowserEngine-WebKit-533-9-0-0
+Browser-Maxthon
+Browser-Maxthon-3
+Browser-Maxthon-3-0
+Browser-Maxthon-3-0-0
+Browser-Maxthon-3-0-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+# TODO: BrowserLocal-en
+# TODO: BrowserLocal-en-US
+
+# Maxthon 3.0 on Windows 7
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.4 (KHTML, like Gecko) Maxthon/3.0.6.27 Safari/532.4
+Device-Desktop
+Device-NoPhone
+BrowserEngine-WebKit
+BrowserEngine-WebKit-532
+BrowserEngine-WebKit-532-4
+BrowserEngine-WebKit-532-4-0
+BrowserEngine-WebKit-532-4-0-0
+Browser-Maxthon
+Browser-Maxthon-3
+Browser-Maxthon-3-0
+Browser-Maxthon-3-0-6
+Browser-Maxthon-3-0-6-27
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+# TODO: BrowserLocal-en
+# TODO: BrowserLocal-en-US
 
 
 #-----------------------------------------------------------------------------
