@@ -2,6 +2,7 @@
 
 * Added unit test for Firefox 5.
 * Added unit test for RockMelt 0.9.58.494.
+* Added unit test for Opera 11.50.
 
 
 --- CHANGES SINCE UASNIFFER 0.2 ----------------------------------------------
