@@ -6,6 +6,7 @@
 * Added unit test for Opera 11.50.
 * Added unit test for Maxthon 3.0 (changed sniffing code to make it work).
 * Added unit test for iPad running iOS 3.2.
+* Added unit test for Safari 5.0.5 on Mac OS X 10.6.8.
 
 
 --- CHANGES SINCE UASNIFFER 0.2 ----------------------------------------------
