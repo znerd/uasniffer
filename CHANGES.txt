@@ -1,6 +1,7 @@
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------
 
 * Added unit test for Firefox 5 beta.
+* Added unit test for Firefox 6 beta on Mac OS X 10.7.
 * Added unit test for Firefox 8 alpha 1.
 * Added unit test for RockMelt 0.9.58.494.
 * Added unit test for Opera 11.50.

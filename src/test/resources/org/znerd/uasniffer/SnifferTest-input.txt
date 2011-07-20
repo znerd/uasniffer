@@ -2,10 +2,50 @@
 # NCSA Mosaic (first browser!)
 #-----------------------------------------------------------------------------
 
+# Amazon Kindle 2
+#Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)
+#Device-NoDesktop
+#Device-NoPhone
+#Device-Mobile
+#Device-AmazonKindle
+#Device-AmazonKindle-2
+#Browser-NetFront
+#Browser-NetFront-3
+#Browser-NetFront-3-4
+#BrowserOS-NIX
+#BrowserOS-Linux
+#BrowserOS-Linux-2
+#BrowserOS-Linux-2-6
+#BrowserOS-Linux-2-6-22
+
+# Amazon Kindle 3
+#Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)
+#Device-NoDesktop
+#Device-NoPhone
+#Device-Mobile
+#Device-AmazonKindle
+#Device-AmazonKindle-3
+#Browser-Kindle
+#Browser-Kindle-4
+#Browser-Kindle-4-0
+#BrowserEngine-WebKit
+#BrowserEngine-WebKit-528
+#BrowserEngine-WebKit-528-5
+#BrowserEngine-WebKit-528-5-0
+#BrowserEngine-WebKit-528-5-0-0
+#BrowserOS-NIX
+#BrowserOS-Linux
+
+
+#-----------------------------------------------------------------------------
+# NCSA Mosaic (first browser!)
+#-----------------------------------------------------------------------------
+
 # NCSA Mosaic 1.0 on Solaris
 NCSA Mosaic/1.0 (X11;SunOS 4.1.4 sun4m)
 Device-Desktop
 Device-NoPhone
+# TODO: Device-NoMobile
 Browser-Mosaic
 Browser-Mosaic-1
 Browser-Mosaic-1-0
@@ -2838,6 +2878,24 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
+
+# Firefox 6.0 Beta on Mac OS X 10.7
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:6.0) Gecko/20100101 Firefox/6.0
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-6
+BrowserEngine-Gecko-6-0
+BrowserEngine-Gecko-6-0-0
+BrowserEngine-Gecko-6-0-0-0
+Browser-Firefox
+Browser-Firefox-6
+Browser-Firefox-6-0
+Browser-Firefox-6-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-7
 
 # Firefox 8.0 Alpha 1 on Mac OS X 10.6
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:8.0a1) Gecko/20110719 Firefox/8.0a1
