@@ -1,40 +1,57 @@
 #-----------------------------------------------------------------------------
-# NCSA Mosaic (first browser!)
+# Amazon Kindle
 #-----------------------------------------------------------------------------
 
+# TODO: Add: Device-NoDesktop
+
+# Amazon Kindle 1
+Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)
+Device-NoPhone
+Device-Mobile
+Device-AmazonKindle
+Device-AmazonKindle-2
+Browser-NetFront
+Browser-NetFront-3
+Browser-NetFront-3-3
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-2
+BrowserOS-Linux-2-6
+BrowserOS-Linux-2-6-10
+
 # Amazon Kindle 2
-#Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)
-#Device-NoDesktop
-#Device-NoPhone
-#Device-Mobile
-#Device-AmazonKindle
-#Device-AmazonKindle-2
-#Browser-NetFront
-#Browser-NetFront-3
-#Browser-NetFront-3-4
-#BrowserOS-NIX
-#BrowserOS-Linux
-#BrowserOS-Linux-2
-#BrowserOS-Linux-2-6
-#BrowserOS-Linux-2-6-22
+Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)
+Device-NoPhone
+Device-Mobile
+Device-AmazonKindle
+Device-AmazonKindle-2
+Browser-NetFront
+Browser-NetFront-3
+Browser-NetFront-3-4
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-2
+BrowserOS-Linux-2-6
+BrowserOS-Linux-2-6-22
 
 # Amazon Kindle 3
-#Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)
-#Device-NoDesktop
-#Device-NoPhone
-#Device-Mobile
-#Device-AmazonKindle
-#Device-AmazonKindle-3
-#Browser-Kindle
-#Browser-Kindle-4
-#Browser-Kindle-4-0
-#BrowserEngine-WebKit
-#BrowserEngine-WebKit-528
-#BrowserEngine-WebKit-528-5
-#BrowserEngine-WebKit-528-5-0
-#BrowserEngine-WebKit-528-5-0-0
-#BrowserOS-NIX
-#BrowserOS-Linux
+Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)
+Device-NoPhone
+Device-Mobile
+Device-AmazonKindle
+Device-AmazonKindle-3
+Browser-Kindle
+Browser-Kindle-4
+Browser-Kindle-4-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-528
+BrowserEngine-WebKit-528-5
+BrowserEngine-WebKit-528-5-0
+BrowserEngine-WebKit-528-5-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+# TODO: BrowserLocale-en
+# TODO: BrowserLocale-en-US
 
 
 #-----------------------------------------------------------------------------

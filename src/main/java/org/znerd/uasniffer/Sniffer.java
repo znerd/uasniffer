@@ -40,6 +40,7 @@ public final class Sniffer {
       // Detect specific devices
       boolean    android = agentString.contains("android");
       boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
+      boolean     kindle = agentString.contains("kindle/");
 
       // Mobile devices
       boolean          matchFound = false;
@@ -112,6 +113,14 @@ public final class Sniffer {
          supportsScripts     = true;
          supportsFlash       = false;
 
+      // Amazon Kindle
+      } else if (!matchFound && agentString.contains("kindle/")) {
+         matchFound          = true;
+         uaType              = "ereader";
+         supportsTelProtocol = false;
+         supportsScripts     = true;
+         supportsFlash       = false;
+
       // Bots
       } else if (!matchFound) {
          for (int i=0; i < UA_BOT_SNIPPETS.length; i++) {
@@ -140,6 +149,9 @@ public final class Sniffer {
       }
       if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
          ua.addName("Device-Mobile");
+      } else if ("ereader".equals(uaType)) {
+         ua.addName("Device-Mobile"); // TODO
+         ua.addName("Device-Ereader");
       } else if ("bot".equals(uaType)) {
          ua.addName("Device-Bot");
       } else {
@@ -161,6 +173,8 @@ public final class Sniffer {
          }
       } else if (agentString.contains("blackberry")) {
          analyze(ua, agentString, "Device-Blackberry", "blackberry", 1, false);
+      } else if (agentString.contains("kindle/")) {
+         analyze(ua, agentString, "Device-AmazonKindle", "kindle/", 2, false);
       }
 
       // Detect OS, browser engine and browser
