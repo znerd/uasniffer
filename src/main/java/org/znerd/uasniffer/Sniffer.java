@@ -498,6 +498,14 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Nokia", "browserng/", 3, false);
          }
 
+      // NetFront
+      } else if (agentString.contains("netfront")) {
+         analyze(ua, agentString, "Browser-NetFront", "netfront/", 3, true);
+
+      // Amazon Kindle browser (detect after NetFront but before Safari)
+      } else if (agentString.contains("kindle/")) {
+         analyze(ua, agentString, "Browser-Kindle", "version/", 2, true);
+
       // Apple Safari
       } else if (agentString.contains("safari")) {
          ua.addName("BrowserEngine-WebKit");
