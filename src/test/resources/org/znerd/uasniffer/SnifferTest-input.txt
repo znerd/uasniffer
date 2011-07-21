@@ -2208,6 +2208,25 @@ BrowserOS-MacOS-10-6-8
 # TODO BrowserLocale-nl
 # TODO BrowserLocale-nl-NL
 
+# Safari 5.1 on Mac OS X 10.7
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7) AppleWebKit/534.48.3 (KHTML, like Gecko) Version/5.1 Safari/534.48.3
+Device-Desktop
+Device-NoPhone
+Browser-Safari
+Browser-DesktopSafari
+Browser-DesktopSafari-5
+Browser-DesktopSafari-5-1
+Browser-DesktopSafari-5-1-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-48
+BrowserEngine-WebKit-534-48-3
+BrowserEngine-WebKit-534-48-3-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-7
+
 
 #-----------------------------------------------------------------------------
 # Opera (desktop)
