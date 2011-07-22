@@ -507,7 +507,7 @@ public final class Sniffer {
          analyze(ua, agentString, "Browser-Kindle", "version/", 2, true);
 
       // Apple Safari
-      } else if (agentString.contains("safari")) {
+      } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
          ua.addName("BrowserEngine-WebKit");
          ua.addName("Browser-Safari"      );
 

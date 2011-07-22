@@ -459,6 +459,26 @@ BrowserOS-iOS-2
 BrowserOS-iOS-2-0
 BrowserOS-iOS-2-0-0
 
+# iPhone running iOS 4.3.3
+Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; nl-nl) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8J2
+Device-Mobile
+Device-Phone
+Device-AppleTouch
+Device-AppleTouch-iPhone
+Browser-Safari
+Browser-MobileSafari
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-17
+BrowserEngine-WebKit-533-17-9
+BrowserEngine-WebKit-533-17-9-0
+# TODO BrowserLocale-nl
+# TODO BrowserLocale-nl-NL
+BrowserOS-iOS
+BrowserOS-iOS-4
+BrowserOS-iOS-4-3
+BrowserOS-iOS-4-3-3
+
 # Apple iPod Touch
 Mozila/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3
 Device-Mobile
@@ -599,11 +619,8 @@ Device-Mobile
 Device-Phone
 Device-AppleTouch
 Device-AppleTouch-iPhone
-# TODO Browser-Safari
-# TODO Browser-MobileSafari
-# TODO Browser-MobileSafari-4
-# TODO Browser-MobileSafari-4-3
-# TODO Browser-MobileSafari-4-3-0
+Browser-Safari
+Browser-MobileSafari
 BrowserEngine-WebKit
 BrowserEngine-WebKit-533
 BrowserEngine-WebKit-533-17
@@ -3860,6 +3877,8 @@ BrowserOS-Linux
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; de-de) AppleWebKit/525.28.3 (KHTML, like Gecko) NetNewsWire/3.1.7
 Device-Desktop
 Device-NoPhone
+Browser-Safari
+Browser-DesktopSafari
 BrowserEngine-WebKit
 BrowserEngine-WebKit-525
 BrowserEngine-WebKit-525-28
