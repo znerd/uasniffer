@@ -3754,6 +3754,27 @@ BrowserOS-Linux-Android
 # Flock
 #-----------------------------------------------------------------------------
 
+# Flock 0.4 on Mac OS X
+Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8b5) Gecko/20051021 Flock/0.4 Firefox/1.0+
+Device-Desktop
+Device-NoPhone
+Browser-Flock
+Browser-Flock-0
+Browser-Flock-0-4
+Browser-Flock-0-4-0
+Browser-Flock-0-4-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-1
+BrowserEngine-Gecko-1-8
+BrowserEngine-Gecko-1-8-0
+BrowserEngine-Gecko-1-8-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+# TODO BrowserOSArch-PPC
+# TODO BrowserLocale-en
+# TODO BrowserLocale-en-US
+
 # Flock 1.2.7 on Windows XP
 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.18) Gecko/20081107 Firefox/2.0.0.18 Flock/1.2.7
 Device-Desktop
