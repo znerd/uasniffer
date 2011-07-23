@@ -121,6 +121,14 @@ public final class Sniffer {
          supportsScripts     = true;
          supportsFlash       = false;
 
+      // B&N Nook
+      } else if (!matchFound && agentString.contains("nook browser")) {
+         matchFound          = true;
+         uaType              = "ereader";
+         supportsTelProtocol = false;
+         supportsScripts     = true;
+         supportsFlash       = false;
+
       // Bots
       } else if (!matchFound) {
          for (int i=0; i < UA_BOT_SNIPPETS.length; i++) {
@@ -150,7 +158,7 @@ public final class Sniffer {
       if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
          ua.addName("Device-Mobile");
       } else if ("ereader".equals(uaType)) {
-         ua.addName("Device-Mobile"); // TODO
+         ua.addName("Device-Mobile"); // TODO: Review
          ua.addName("Device-Ereader");
       } else if ("bot".equals(uaType)) {
          ua.addName("Device-Bot");
@@ -335,6 +343,11 @@ public final class Sniffer {
       // Symbian
       } else if (agentString.contains("symbian")) {
          analyze(ua, agentString, "BrowserOS-Symbian", "symbianos/", 3, false);
+
+      } else if (agentString.equals("nook browser/1.0")) {
+          ua.addName("BrowserOS-Android");
+          ua.addName("BrowserOS-Android-2");
+          ua.addName("BrowserOS-Android-2-0");
       }
    }
 
@@ -565,6 +578,10 @@ public final class Sniffer {
       // Netscape 4
       } else if (! agentString.contains("(compatible") && (agentString.startsWith("mozilla/4.") || agentString.startsWith("mozilla/3."))) {
          analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
+
+      // Nook 1
+      } else if (agentString.contains("nook browser/")) {
+         analyze(ua, agentString, "Browser-Nook", "browser/", 2, true);
       }
    }
 

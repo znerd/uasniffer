@@ -1,8 +1,25 @@
+# TODO: Add: Device-NoDesktop
+
 #-----------------------------------------------------------------------------
-# Amazon Kindle
+# Nook e-readers
 #-----------------------------------------------------------------------------
 
-# TODO: Add: Device-NoDesktop
+# Nook
+nook browser/1.0
+Device-NoPhone
+Device-Mobile
+Device-Ereader
+Browser-Nook
+Browser-Nook-1
+Browser-Nook-1-0
+BrowserOS-Android
+BrowserOS-Android-2
+BrowserOS-Android-2-0
+
+
+#-----------------------------------------------------------------------------
+# Amazon Kindle e-readers
+#-----------------------------------------------------------------------------
 
 # Amazon Kindle 1
 Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)
@@ -700,6 +717,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 # TODO BrowserLocale-en
+# TODO BrowserOSArch-PPC
 
 # OmniWeb 4.1-v422
 Mozilla/4.5 (compatible; OmniWeb/4.1-v422; Mac_PowerPC)

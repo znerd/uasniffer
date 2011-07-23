@@ -11,6 +11,7 @@
 * Added unit test for iPhone running iOS 4.3.3.
 * Added unit test for Safari 5.0.5 on Mac OS X 10.6.8.
 * Added unit test for Safari 5.1.0 on Mac OS X 10.7.
+* Added unit test for B&N Nook 1 e-reader device (updated sniffing code).
 * Slightly changed Safari detection code.
 
 
