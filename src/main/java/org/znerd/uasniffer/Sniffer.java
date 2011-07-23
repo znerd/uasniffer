@@ -180,7 +180,8 @@ public final class Sniffer {
             ua.addName("Device-AppleTouch-iPhone");
          }
       } else if (agentString.contains("blackberry")) {
-         analyze(ua, agentString, "Device-Blackberry", "blackberry", 1, false);
+         analyze(ua, agentString, "Device-Blackberry", "blackberry",  1, false);
+         analyze(ua, agentString, "Device-Blackberry", "blackberry ", 1, false);
       } else if (agentString.contains("kindle/")) {
          analyze(ua, agentString, "Device-AmazonKindle", "kindle/", 2, false);
       }
@@ -220,7 +221,7 @@ public final class Sniffer {
 
       // iOS (detect before Mac OS)
       } else if (agentString.contains("iphone") || agentString.contains("ipod") || agentString.contains("ipad")) {
-         analyze(ua, agentString.replace('_', '.'), "BrowserOS-iOS", "OS ");
+         analyze(ua, agentString.replace('_', '.').replace("mac os x", ""), "BrowserOS-iOS", "OS ");
 
       // Mac OS
       } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {

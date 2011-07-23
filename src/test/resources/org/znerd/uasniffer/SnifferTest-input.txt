@@ -245,6 +245,7 @@ Mozilla/5.0 (BlackBerry; U; BlackBerry 9800; zh-TW) AppleWebKit/534.8+ (KHTML, l
 Device-Mobile
 Device-Phone
 Device-Blackberry
+Device-Blackberry-9800
 Browser-Blackberry
 Browser-Blackberry-6
 Browser-Blackberry-6-0
@@ -1990,6 +1991,25 @@ BrowserOS-Windows-XP
 #-----------------------------------------------------------------------------
 # Maxthon
 #-----------------------------------------------------------------------------
+
+# Maxthon 2.0 on Windows Vista - using Trident engine (TODO: Should it recognize Trident 5.0 ?)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/4.0; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; InfoPath.3; MS-RTC LM 8; .NET4.0C; .NET4.0E; Maxthon 2.0)
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Trident
+BrowserEngine-Trident-4
+BrowserEngine-Trident-4-0
+BrowserEngine-Trident-4-0-0
+Browser-Maxthon
+Browser-Maxthon-2
+Browser-Maxthon-2-0
+Browser-Maxthon-2-0-0
+Browser-Maxthon-2-0-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
 
 # Maxthon 2.0 on Windows XP - using Trident engine
 Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; MAXTHON 2.0)
