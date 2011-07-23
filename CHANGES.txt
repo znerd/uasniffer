@@ -13,6 +13,7 @@
 * Added unit test for Safari 5.1.0 on Mac OS X 10.7.
 * Added unit test for B&N Nook 1 e-reader device (updated sniffing code).
 * Added unit test for Flock 0.4 on Mac OS X (PPC).
+* Added unit test for Flock 2.5.6 on Linux (x86-64).
 * Added unit test for Flock 3.5.3 on Mac OS X 10.6.6.
 * Slightly changed Safari detection code.
 
