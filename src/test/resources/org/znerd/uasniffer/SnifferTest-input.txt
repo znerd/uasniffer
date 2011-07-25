@@ -1020,7 +1020,7 @@ BrowserEngine-WebKit-532-5-0
 BrowserEngine-WebKit-532-5-0-0
 BrowserOS-CrOS
 
-# Chrome 11 on Mac OS X Snow Leopard
+# Chrome 11 on Mac OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_6) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.698.0 Safari/534.24
 Device-Desktop
 Device-NoPhone
@@ -1077,6 +1077,26 @@ BrowserEngine-WebKit-534-24-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 
+# Chrome 12 on Mac OS X 10.7 "Lion"
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-12
+Browser-Chrome-12-0
+Browser-Chrome-12-0-742
+Browser-Chrome-12-0-742-122
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-30
+BrowserEngine-WebKit-534-30-0
+BrowserEngine-WebKit-534-30-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-7
+BrowserOS-MacOS-10-7-0
+
 
 #-----------------------------------------------------------------------------
 # RockMelt
@@ -1104,7 +1124,7 @@ BrowserOS-Windows-7
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
-# RockMelt 0.9.48.51 on Mac OS X Snow Leopard (10.6.6)
+# RockMelt 0.9.48.51 on Mac OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
 Device-Desktop
 Device-NoPhone
@@ -1126,7 +1146,7 @@ BrowserOS-MacOS-10-6-6
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
-# RockMelt 0.9.58 on Mac OS X Snow Leopard (10.6.7)
+# RockMelt 0.9.58 on Mac OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24
 Device-Desktop
 Device-NoPhone
@@ -2769,7 +2789,7 @@ BrowserOS-BSD-FreeBSD
 # TODO BrowserLocale-en
 # TODO BrowserLocale-US
 
-# Firefox pre-release (Minefield) on Mac OS X 10.6 (Snow Leopard)
+# Firefox pre-release (Minefield) on Mac OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6.0; en-US; rv:1.9.0.7) Gecko/2009030517 Minefield/3.0.7
 Device-Desktop
 Device-NoPhone
@@ -2804,7 +2824,7 @@ BrowserOS-Solaris
 # TODO BrowserLocale-it
 # TODO BrowserLocale-it-IT
 
-# Firefox 3.0 on Mac OS X 10.6 (Snow Leopard)
+# Firefox 3.0 on Mac OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9) Gecko/2008061712 Firefox/3.0
 Device-Desktop
 Device-NoPhone
