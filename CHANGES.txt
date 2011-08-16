@@ -1,5 +1,8 @@
 --- CHANGES SINCE UASNIFFER 0.4 ----------------------------------------------
 
+* Added dependency: znerd-util.
+* Refactored code and improved code style.
+
 
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------
 
