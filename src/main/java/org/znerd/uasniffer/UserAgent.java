@@ -38,22 +38,20 @@ public final class UserAgent {
     }
 
     private final HashSet<String> _names;
+    private final String _string;
+    private final String _stringLC;
 
     @Override
     public String toString() {
         return _string;
     };
 
-    private final String _string;
-
     String getLowerCaseAgentString() {
         return _stringLC;
     }
 
-    private final String _stringLC;
-
     /**
-     * Returns the original agent string (that was used to create this object). That string is also returned from {@link #toString()}.
+     * Returns the agent string that was used to create this object. That string is also returned from {@link #toString()}.
      * 
      * @return the original agent string, never <code>null</code>.
      */
@@ -77,6 +75,7 @@ public final class UserAgent {
     /**
      * Determines if the specified name is associated with this user agent.
      * 
+     * @param name the name to check; if <code>name == null</code> then <code>false</code> is returned.
      * @return <code>true</code> if the name is associated with this object, <code>false</code> otherwise.
      */
     public boolean hasName(String name) {
@@ -93,6 +92,6 @@ public final class UserAgent {
         for (String name : _names) {
             s += " " + name;
         }
-        return "".equals(s) ? "" : s.substring(1);
+        return "".equals(s) ? s : s.substring(1);
     }
 }
