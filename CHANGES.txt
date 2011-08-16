@@ -1,3 +1,6 @@
+--- CHANGES SINCE UASNIFFER 0.4 ----------------------------------------------
+
+
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------
 
 * Added unit tests for Amazon Kindle devices (updated sniffing code).
