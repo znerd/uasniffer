@@ -22,10 +22,30 @@ BrowserOS-Android-2-0
 #-----------------------------------------------------------------------------
 
 # Dolphin 2.0
-# TODO Mozilla/5.0 (SCH-F859/F859DG12;U;NUCLEUS/2.1;Profile/MIDP-2.1 Configuration/CLDC-1.1;480*800;CTC/2.0) Dolfin/2.0
+Mozilla/5.0 (SCH-F859/F859DG12;U;NUCLEUS/2.1;Profile/MIDP-2.1 Configuration/CLDC-1.1;480*800;CTC/2.0) Dolfin/2.0
+Device-Desktop
+Device-NoPhone
+Browser-Dolphin
+Browser-Dolphin-2
+Browser-Dolphin-2-0
 
 # Dolphin 2.0 on Bada
-# TODO Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJF4; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 OPN-B
+Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJF4; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 OPN-B
+Device-Desktop
+Device-NoPhone
+Browser-Dolphin
+Browser-Dolphin-2
+Browser-Dolphin-2-0
+BrowserOS-Bada
+BrowserOS-Bada-1
+BrowserOS-Bada-1-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-1
+BrowserEngine-WebKit-533-1-0
+BrowserEngine-WebKit-533-1-0-0
+# BrowserLocale-fr
+# BrowserLocale-fr-FR
 
 
 #-----------------------------------------------------------------------------
@@ -3050,7 +3070,9 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 
-# Firefox 6.0 Beta on Mac OS X 10.7
+# Firefox 6.0 on Mac OS X 10.7
+# - also applies to Firefox 6.0 Beta
+# - also applies to Mac OS X 10.7.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:6.0) Gecko/20100101 Firefox/6.0
 Device-Desktop
 Device-NoPhone

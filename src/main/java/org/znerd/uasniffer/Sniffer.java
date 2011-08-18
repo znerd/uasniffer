@@ -309,10 +309,14 @@ public final class Sniffer {
         } else if (agentString.contains("symbian")) {
             analyze(ua, agentString, "BrowserOS-Symbian", "symbianos/", 3, false);
 
+            // Android on Nook Browser
         } else if (agentString.equals("nook browser/1.0")) {
             ua.addName("BrowserOS-Android");
             ua.addName("BrowserOS-Android-2");
             ua.addName("BrowserOS-Android-2-0");
+
+        } else if (agentString.contains("bada/")) {
+            analyze(ua, agentString, "BrowserOS-Bada", "bada/", 2, false);
         }
     }
 
@@ -484,6 +488,10 @@ public final class Sniffer {
         } else if (agentString.contains("kindle/")) {
             analyze(ua, agentString, "Browser-Kindle", "version/", 2, true);
 
+            // Dolphin, check before Safari
+        } else if (agentString.contains("dolfin")) {
+            analyze(ua, agentString, "Browser-Dolphin", "dolfin/", 2, true);
+
             // Apple Safari
         } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
             ua.addName("BrowserEngine-WebKit");
@@ -568,11 +576,11 @@ public final class Sniffer {
             // Get the version number in a string
             String version = cutVersionEnd(agentString.substring(index + versionPrefix.length()).trim());
 
-            if (version.length() > 0 && (! version.startsWith("00"))) {
+            if (version.length() > 0 && (!version.startsWith("00"))) {
 
                 // Split the version number in pieces
                 String[] versionParts = version.split("\\.");
-                
+
                 // First version part can always be done immediately
                 String specificName = basicName + '-' + versionParts[0];
                 ua.addName(specificName);
