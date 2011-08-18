@@ -2,6 +2,7 @@
 
 * Added dependency: znerd-util.
 * Refactored code and improved code style.
+* Added unit tests for older Netscape versions (updated sniffing code).
 
 
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------

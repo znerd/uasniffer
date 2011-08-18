@@ -3080,6 +3080,53 @@ BrowserOS-MacOS-10-6
 # Netscape
 #-----------------------------------------------------------------------------
 
+# Netscape 1.0 on Windows 3.1
+Mozilla/1.0 (Win3.1)
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-1
+Browser-Netscape-1-0
+Browser-Netscape-1-0-0
+BrowserOS-Windows
+BrowserOS-Windows-3
+BrowserOS-Windows-3-1
+BrowserOS-Windows-3-1-0
+
+# Netscape 2.02 on Windows NT
+Mozilla/2.02 [fr] (WinNT; I)
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-2
+Browser-Netscape-2-0
+Browser-Netscape-2-0-2
+BrowserOS-Windows
+BrowserOS-Windows-NT
+
+# Netscape 2.02 Gold on Windows 95
+Mozilla/2.02Gold (Win95; I)
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-2
+Browser-Netscape-2-0
+Browser-Netscape-2-0-2
+BrowserOS-Windows
+BrowserOS-Windows-95
+
+# Netscape 3.0 on AIX
+Mozilla/3.0 (X11; I; AIX 2)
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-3
+Browser-Netscape-3-0
+Browser-Netscape-3-0-0
+BrowserOS-NIX
+BrowserOS-AIX
+BrowserOS-AIX-2
+
 # Netscape 3.04 on Mac OS
 Mozilla/3.04Gold (Macintosh; I; PPC)
 Device-Desktop

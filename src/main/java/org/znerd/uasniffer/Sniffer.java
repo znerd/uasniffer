@@ -2,6 +2,8 @@
 // Copyright 2011, Ernst de Haan
 package org.znerd.uasniffer;
 
+import org.znerd.util.text.TextUtils;
+
 /**
  * Class responsible for determining the user agent details.
  */
@@ -277,7 +279,7 @@ public final class Sniffer {
             // AIX
         } else if (agentString.contains("aix")) {
             ua.addName("BrowserOS-NIX");
-            ua.addName("BrowserOS-AIX");
+            analyze(ua, agentString, "BrowserOS-AIX", "aix ", 1, false);
 
             // IRIX
         } else if (agentString.contains("irix")) {
@@ -537,8 +539,8 @@ public final class Sniffer {
         } else if (agentString.startsWith("ncsa_mosaic") || agentString.startsWith("ncsa mosaic")) {
             analyze(ua, agentString.replace('_', ' '), "Browser-Mosaic", "ncsa mosaic/", 2, true);
 
-            // Netscape 4
-        } else if (!agentString.contains("(compatible") && (agentString.startsWith("mozilla/4.") || agentString.startsWith("mozilla/3."))) {
+            // Netscape 1, 2, 3, 4
+        } else if (!agentString.contains("(compatible") && TextUtils.matches(agentString, "mozilla\\/[1234]")) {
             analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
 
             // Nook 1
@@ -565,7 +567,7 @@ public final class Sniffer {
             // Get the version number in a string
             String version = cutVersionEnd(agentString.substring(index + versionPrefix.length()).trim());
 
-            if (version.length() > 0) {
+            if (version.length() > 0 && (! version.startsWith("00"))) {
 
                 // Split the version number in pieces
                 String[] versionParts = version.split("\\.");
