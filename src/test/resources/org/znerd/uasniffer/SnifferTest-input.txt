@@ -18,6 +18,17 @@ BrowserOS-Android-2-0
 
 
 #-----------------------------------------------------------------------------
+# Dolphin
+#-----------------------------------------------------------------------------
+
+# Dolphin 2.0
+# TODO Mozilla/5.0 (SCH-F859/F859DG12;U;NUCLEUS/2.1;Profile/MIDP-2.1 Configuration/CLDC-1.1;480*800;CTC/2.0) Dolfin/2.0
+
+# Dolphin 2.0 on Bada
+# TODO Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJF4; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 OPN-B
+
+
+#-----------------------------------------------------------------------------
 # Amazon Kindle e-readers
 #-----------------------------------------------------------------------------
 
