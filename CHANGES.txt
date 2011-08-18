@@ -4,6 +4,7 @@
 * Refactored code and improved code style.
 * Added unit tests for older Netscape versions (updated sniffing code).
 * Added unit tests for IRIX OS version detection (updated sniffing code).
+* Added unit test for Netscape 9.1 (updated sniffing code).
 
 
 --- CHANGES SINCE UASNIFFER 0.3 ----------------------------------------------

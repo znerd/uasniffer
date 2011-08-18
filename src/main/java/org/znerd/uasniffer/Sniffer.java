@@ -572,7 +572,7 @@ public final class Sniffer {
 
                 // Split the version number in pieces
                 String[] versionParts = version.split("\\.");
-
+                
                 // First version part can always be done immediately
                 String specificName = basicName + '-' + versionParts[0];
                 ua.addName(specificName);
@@ -589,6 +589,12 @@ public final class Sniffer {
                     }
                 } else {
                     for (int i = 1; i < versionParts.length; i++) {
+                        if (TextUtils.matches(versionParts[i], "^0[0-9]")) {
+                            specificName += '-' + "0";
+                            ua.addName(specificName);
+                            versionParts[i] = versionParts[i].substring(1);
+                        }
+
                         specificName += '-' + versionParts[i];
                         ua.addName(specificName);
                     }

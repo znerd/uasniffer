@@ -3474,6 +3474,23 @@ BrowserOS-Linux
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
+# Netscape 9.1 on Windows ME
+Mozilla/5.0 (Windows; U; Win 9x 4.90; SG; rv:1.9.2.4) Gecko/20101104 Netscape/9.1.0285
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-9
+Browser-Netscape-9-1
+Browser-Netscape-9-1-0
+Browser-Netscape-9-1-0-285
+BrowserEngine-Gecko
+BrowserEngine-Gecko-1
+BrowserEngine-Gecko-1-9
+BrowserEngine-Gecko-1-9-2
+BrowserEngine-Gecko-1-9-2-4
+BrowserOS-Windows
+BrowserOS-Windows-ME
+
 
 #-----------------------------------------------------------------------------
 # Mozilla SeaMonkey
