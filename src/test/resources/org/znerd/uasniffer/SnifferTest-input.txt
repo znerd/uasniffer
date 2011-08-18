@@ -3149,6 +3149,16 @@ BrowserOS-Windows
 BrowserOS-Windows-NT
 # TODO BrowserLocale-de
 
+# Netscape 4.4.1 on BeOS
+Mozilla/4.41 (BEOS; U ;Nav)
+Device-Desktop
+Device-NoPhone
+Browser-Netscape
+Browser-Netscape-4
+Browser-Netscape-4-4
+Browser-Netscape-4-4-1
+BrowserOS-BeOS
+
 # Netscape 4.5 on Linux
 Mozilla/4.5 [en] (X11; I; Linux 2.2.16 i586)
 Device-Desktop
