@@ -17,10 +17,8 @@ public final class Sniffer {
      * @throws IllegalArgumentException if <code>agentString == null</code>.
      */
     public static final UserAgent analyze(String agentString) throws IllegalArgumentException {
-
         UserAgent ua = new UserAgent(agentString);
         analyze(ua);
-
         return ua;
     }
 
@@ -151,15 +149,22 @@ public final class Sniffer {
 
         // Detect OS, browser engine and browser
         if (!"bot".equals(uaType)) {
-            detectOS(ua);
+            detectBrowserOS(ua);
             detectBrowserEngine(ua);
             detectBrowser(ua);
         }
     }
 
-    private static final void detectOS(UserAgent ua) {
+    private static final void detectBrowserOS(UserAgent ua) {
 
         String agentString = ua.getLowerCaseAgentString();
+
+        // Maemo - check before Linux
+        if (agentString.contains("maemo")) {
+            ua.addName("BrowserOS-NIX");
+            ua.addName("BrowserOS-Linux");
+            ua.addName("BrowserOS-Linux-Maemo");
+        }
 
         // Linux
         if (agentString.contains("linux")) {
