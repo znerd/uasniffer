@@ -3243,6 +3243,24 @@ BrowserOS-Windows-3-1
 BrowserOS-Windows-3-1-1
 # TODO BrowserLocale-es
 
+# Netscape 6.1 on Windows ME
+Mozilla/5.0 (Windows; U; Win 9x 4.90; de-DE; rv:0.9.2) Gecko/20010726 Netscape6/6.1
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-0
+BrowserEngine-Gecko-0-9
+BrowserEngine-Gecko-0-9-2
+BrowserEngine-Gecko-0-9-2-0
+Browser-Netscape
+Browser-Netscape-6
+Browser-Netscape-6-1
+Browser-Netscape-6-1-0
+BrowserOS-Windows
+BrowserOS-Windows-ME
+# TODO BrowserLocale-de
+# TODO BrowserLocale-de-DE
+
 # Netscape 6.2.3 on Windows NT 4.0
 Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3
 Device-Desktop
