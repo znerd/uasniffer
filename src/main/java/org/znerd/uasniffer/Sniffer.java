@@ -284,7 +284,8 @@ public final class Sniffer {
             // IRIX
         } else if (agentString.contains("irix")) {
             ua.addName("BrowserOS-NIX");
-            ua.addName("BrowserOS-IRIX");
+            analyze(ua, agentString, "BrowserOS-IRIX", "irix ", 2, false);
+            analyze(ua, agentString, "BrowserOS-IRIX", "irix64 ", 2, false);
 
             // HP-UX
         } else if (agentString.contains("hp-ux")) {
