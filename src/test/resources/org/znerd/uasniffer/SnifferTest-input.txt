@@ -1543,6 +1543,22 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
+# Internet Explorer 6.0 on Windows XP - Tablet PC
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; Tablet PC 2.0)
+Device-Tablet
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-6
+Browser-DesktopMSIE-6-0
+Browser-DesktopMSIE-6-0-0
+BrowserEngine-Trident
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
 # Internet Explorer 7.0 on Windows XP 64-bit or Windows Server 2003
 Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2)
 Device-Desktop
