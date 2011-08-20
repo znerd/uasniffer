@@ -2,6 +2,7 @@
 
 * Added dependency: znerd-util.
 * Refactored code and improved code style.
+* Added unit test for NCSA Mosaic 2.7 on AIX.
 * Added unit tests for older Netscape versions (updated sniffing code).
 * Added unit tests for IRIX OS version detection (updated sniffing code).
 * Added unit test for Netscape 9.1 (updated sniffing code).

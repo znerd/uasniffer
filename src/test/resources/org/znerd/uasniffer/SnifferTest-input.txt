@@ -153,6 +153,18 @@ BrowserOS-Solaris-4
 BrowserOS-Solaris-4-1
 BrowserOS-Solaris-4-1-3
 
+# NCSA Mosaic 2.7 on AIX
+NCSA_Mosaic/2.7b4 (X11;AIX 1 000180663000)
+Device-Desktop
+Device-NoPhone
+Browser-Mosaic
+Browser-Mosaic-2
+Browser-Mosaic-2-7
+BrowserOS-NIX
+BrowserOS-AIX
+BrowserOS-AIX-1
+
+
 # NCSA Mosaic 3.0 on Windows 95
 NCSA_Mosaic/3.0 (Windows 95)
 Device-Desktop
