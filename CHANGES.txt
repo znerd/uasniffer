@@ -1,3 +1,6 @@
+--- CHANGES SINCE UASNIFFER 0.5 ----------------------------------------------
+
+
 --- CHANGES SINCE UASNIFFER 0.4 ----------------------------------------------
 
 * Added dependency: znerd-util.
