@@ -3,7 +3,7 @@
 	<groupId>org.znerd.uasniffer</groupId>
 	<artifactId>uasniffer</artifactId>
 	<packaging>jar</packaging>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.4</version>
 	<name>User Agent Sniffer</name>
 	<url>http://www.github.com/znerd/uasniffer</url>
 
