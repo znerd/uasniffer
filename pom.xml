@@ -9,7 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<znerd-util.version>0.5-SNAPSHOT</znerd-util.version>
+		<znerd-util.version>0.5</znerd-util.version>
 	</properties>
 
 	<dependencies>
