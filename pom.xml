@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.znerd.uasniffer</groupId>
   <artifactId>uasniffer</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.5</version>
 
   <name>User Agent Sniffer</name>
   <url>http://www.github.com/znerd/uasniffer</url>
@@ -71,4 +71,21 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>ArtifactoryRepository</id>
+      <name>Deli XL Artifact Repository</name>
+      <url>http://145.7.5.8/artifactory/libs-release-local</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>ArtifactoryRepository</id>
+      <name>Deli XL Artifact Repository</name>
+      <url>http://145.7.5.8/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
