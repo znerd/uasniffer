@@ -1,5 +1,8 @@
 --- CHANGES SINCE UASNIFFER 0.5 ----------------------------------------------
 
+* Upgraded dependency on znerd-util from 0.5 to 0.6.
+* Upgraded plugin versions.
+
 
 --- CHANGES SINCE UASNIFFER 0.4 ----------------------------------------------
 
