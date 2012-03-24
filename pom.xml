@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.znerd.uasniffer</groupId>
   <artifactId>uasniffer</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
 
   <name>User Agent Sniffer</name>
   <url>http://www.github.com/znerd/uasniffer</url>

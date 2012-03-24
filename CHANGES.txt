@@ -1,4 +1,8 @@
---- CHANGES SINCE UASNIFFER 0.6 ----------------------------------------------
+--- CHANGES SINCE UASNIFFER 0.7 ----------------------------------------------
+
+
+
+--- CHANGES SINCE UASNIFFER 0.6 (March 24, 2012) -----------------------------
 
 * Added unit test for iPhone with iOS 5.1.
 * Improved Android detection.
