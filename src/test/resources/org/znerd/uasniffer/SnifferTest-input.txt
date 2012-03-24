@@ -1679,6 +1679,50 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
+# Internet Explorer 8 on Windows XP, with Chrome Frame
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; chromeframe/13.0.782.218; chromeframe; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-8
+Browser-DesktopMSIE-8-0
+Browser-DesktopMSIE-8-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-4
+BrowserEngine-Trident-4-0
+BrowserEngine-Trident-4-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-13
+BrowserEngine-ChromeFrame-13-0
+BrowserEngine-ChromeFrame-13-0-782
+BrowserEngine-ChromeFrame-13-0-782-218
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Internet Explorer 8 on Windows Vista, with Chrome Frame
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; GTB6; chromeframe; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.5.30729; InfoPath.1; .NET CLR 3.0.30729
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-8
+Browser-DesktopMSIE-8-0
+Browser-DesktopMSIE-8-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-4
+BrowserEngine-Trident-4-0
+BrowserEngine-Trident-4-0-0
+BrowserEngine-ChromeFrame
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
 # Internet Explorer 8.0 on Windows XP 64-bit or Windows Server 2003
 Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
 Device-Desktop
@@ -3961,7 +4005,7 @@ BrowserOS-MacOS-10-5
 
 
 #-----------------------------------------------------------------------------
-# Mozilla Fennec - Firefox-alternative for mobile devices
+# Mozilla Fennec - Firefox for mobile devices
 #-----------------------------------------------------------------------------
 
 # Fennec 1.0b1 on Mac OS X
@@ -3972,6 +4016,10 @@ Browser-Fennec
 Browser-Fennec-1
 Browser-Fennec-1-0
 Browser-Fennec-1-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-1
+Browser-MobileFirefox-1-0
+Browser-MobileFirefox-1-0-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-1
 BrowserEngine-Gecko-1-9
@@ -3991,6 +4039,10 @@ Browser-Fennec
 Browser-Fennec-1
 Browser-Fennec-1-1
 Browser-Fennec-1-1-0
+Browser-MobileFirefox
+Browser-MobileFirefox-1
+Browser-MobileFirefox-1-1
+Browser-MobileFirefox-1-1-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-1
 BrowserEngine-Gecko-1-9
@@ -4009,6 +4061,10 @@ Browser-Fennec
 Browser-Fennec-2
 Browser-Fennec-2-0
 Browser-Fennec-2-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-2
+Browser-MobileFirefox-2-0
+Browser-MobileFirefox-2-0-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-0
@@ -4026,6 +4082,10 @@ Browser-Fennec
 Browser-Fennec-2
 Browser-Fennec-2-0
 Browser-Fennec-2-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-2
+Browser-MobileFirefox-2-0
+Browser-MobileFirefox-2-0-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-0
@@ -4045,6 +4105,10 @@ Browser-Fennec
 Browser-Fennec-2
 Browser-Fennec-2-0
 Browser-Fennec-2-0-1
+Browser-MobileFirefox
+Browser-MobileFirefox-2
+Browser-MobileFirefox-2-0
+Browser-MobileFirefox-2-0-1
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-0
@@ -4062,6 +4126,10 @@ Browser-Fennec
 Browser-Fennec-2
 Browser-Fennec-2-0
 Browser-Fennec-2-0-1
+Browser-MobileFirefox
+Browser-MobileFirefox-2
+Browser-MobileFirefox-2-0
+Browser-MobileFirefox-2-0-1
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-0
@@ -4078,6 +4146,10 @@ Browser-Fennec
 Browser-Fennec-4
 Browser-Fennec-4-0
 Browser-Fennec-4-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-4
+Browser-MobileFirefox-4-0
+Browser-MobileFirefox-4-0-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-0
@@ -4095,11 +4167,58 @@ Browser-Fennec
 Browser-Fennec-4
 Browser-Fennec-4-1
 Browser-Fennec-4-1-0
+Browser-MobileFirefox
+Browser-MobileFirefox-4
+Browser-MobileFirefox-4-1
+Browser-MobileFirefox-4-1-0
 BrowserEngine-Gecko
 BrowserEngine-Gecko-2
 BrowserEngine-Gecko-2-2
 BrowserEngine-Gecko-2-2-0
 BrowserEngine-Gecko-2-2-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+
+# Firefox 13 on Android Phone
+Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0
+Device-Mobile
+Device-Phone
+Browser-Firefox
+Browser-Firefox-13
+Browser-Firefox-13-0
+Browser-Firefox-13-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-13
+Browser-MobileFirefox-13-0
+Browser-MobileFirefox-13-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-13
+BrowserEngine-Gecko-13-0
+BrowserEngine-Gecko-13-0-0
+BrowserEngine-Gecko-13-0-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+
+# Firefox 13 on Android Tablet
+Mozilla/5.0 (Android; Tablet; rv:13.0) Gecko/13.0 Firefox/13.0
+Device-Mobile
+Device-NoPhone
+Device-Tablet
+Browser-Firefox
+Browser-Firefox-13
+Browser-Firefox-13-0
+Browser-Firefox-13-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-13
+Browser-MobileFirefox-13-0
+Browser-MobileFirefox-13-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-13
+BrowserEngine-Gecko-13-0
+BrowserEngine-Gecko-13-0-0
+BrowserEngine-Gecko-13-0-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 BrowserOS-Linux-Android
