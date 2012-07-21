@@ -1,6 +1,14 @@
---- CHANGES SINCE UASNIFFER 0.6 ----------------------------------------------
+--- CHANGES SINCE UASNIFFER 0.7 ----------------------------------------------
+
+
+
+--- CHANGES SINCE UASNIFFER 0.6 (March 24, 2012) -----------------------------
 
 * Added unit test for iPhone with iOS 5.1.
+* Improved Android detection.
+* Added support for MobileFirefox.
+* Fixed a bug in the detection of tablets.
+* Fixed a bug in the detection of the Chrome Frame plugin.
 
 
 --- CHANGES SINCE UASNIFFER 0.5 ----------------------------------------------

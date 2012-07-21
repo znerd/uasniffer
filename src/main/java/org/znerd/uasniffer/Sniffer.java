@@ -167,7 +167,7 @@ public final class Sniffer {
         }
 
         // Linux
-        if (agentString.contains("linux")) {
+        if (agentString.contains("linux") || agentString.contains("android")) {
             ua.addName("BrowserOS-NIX");
             ua.addName("BrowserOS-Linux");
             if (agentString.contains("linux 2.")) {
@@ -386,6 +386,7 @@ public final class Sniffer {
             // Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20090322 Fennec/1.0b2pre
         } else if (agentString.contains("fennec")) {
             analyze(ua, agentString, "Browser-Fennec", "fennec/");
+            analyze(ua, agentString, "Browser-MobileFirefox", "fennec/");
 
             // Epiphany
             // E.g.: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.3) Gecko/20041007 Epiphany/1.4.7
@@ -423,8 +424,14 @@ public final class Sniffer {
             // Firefox
         } else if (agentString.contains("firefox")) {
             analyze(ua, agentString, "Browser-Firefox", "firefox/");
+            if (agentString.contains("mobile") || agentString.contains("tablet")) {
+                analyze(ua, agentString, "Browser-MobileFirefox", "firefox/");
+            }
         } else if (agentString.contains("minefield/")) {
             analyze(ua, agentString, "Browser-Firefox", "minefield/");
+            if (agentString.contains("mobile")) {
+                analyze(ua, agentString, "Browser-MobileFirefox", "firefox/");
+            }
         } else if (agentString.contains("namoroka/")) {
             analyze(ua, agentString, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
         } else if (agentString.contains("shiretoko/")) {
@@ -544,7 +551,7 @@ public final class Sniffer {
                 analyze(ua, agentString, "Browser-DesktopMSIE", "msie ", 3, true);
 
                 // Chrome Frame
-                if (agentString.contains("chromeframe/")) {
+                if (agentString.contains("chromeframe")) {
                     analyze(ua, agentString, "BrowserEngine-ChromeFrame", "chromeframe/", 4, false);
                 }
             }
@@ -637,7 +644,7 @@ public final class Sniffer {
     }
 
     private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry" };
-    private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet " };
+    private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet" };
     private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod" };
     private static final String[] UA_BOT_SNIPPETS = new String[] { "spider", "bot", "crawl", "miner", "checker", "java", "pingdom" };
 
