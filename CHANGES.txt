@@ -1,6 +1,7 @@
 --- CHANGES SINCE UASNIFFER 0.7 ----------------------------------------------
 
 * Added parent POM: znerd-oss-parent v2.
+* Upgraded dependency on maven-compiler-plugin from 2.3.2 to 2.5.1.
 
 
 --- CHANGES SINCE UASNIFFER 0.6 (March 24, 2012) -----------------------------
