@@ -1,5 +1,6 @@
 --- CHANGES SINCE UASNIFFER 0.7 ----------------------------------------------
 
+* Added parent POM: znerd-oss-parent v2.
 
 
 --- CHANGES SINCE UASNIFFER 0.6 (March 24, 2012) -----------------------------
