@@ -119,7 +119,7 @@ public final class Sniffer {
         if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
             ua.addName("Device-Mobile");
         } else if ("ereader".equals(uaType)) {
-            ua.addName("Device-Mobile"); // TODO: Review
+            ua.addName("Device-Mobile");
             ua.addName("Device-Ereader");
         } else if ("bot".equals(uaType)) {
             ua.addName("Device-Bot");
