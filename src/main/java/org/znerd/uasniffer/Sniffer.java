@@ -12,9 +12,11 @@ public final class Sniffer {
     /**
      * Analyzes the specified user agent string.
      * 
-     * @param agentString the user agent string, cannot be <code>null</code>.
+     * @param agentString
+     *            the user agent string, cannot be <code>null</code>.
      * @return an {@link UserAgent} instance that describes the user agent, never <code>null</code>.
-     * @throws IllegalArgumentException if <code>agentString == null</code>.
+     * @throws IllegalArgumentException
+     *             if <code>agentString == null</code>.
      */
     public static final UserAgent analyze(String agentString) throws IllegalArgumentException {
         UserAgent ua = new UserAgent(agentString);
@@ -22,89 +24,95 @@ public final class Sniffer {
         return ua;
     }
 
-    private static final void analyze(final UserAgent ua) {
+    private static final void analyze(UserAgent ua) {
 
         String agentString = ua.getLowerCaseAgentString();
 
         // Detect specific devices
         boolean android = agentString.contains("android");
         boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
+        boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
 
         // Mobile devices
         boolean matchFound = false;
         String uaType = "desktop";
         boolean isPhone = false;
         boolean isTablet = false;
-        for (int i = 0; i < UA_MOBILE_DEVICE_SNIPPETS.length; i++) {
-            if (agentString.contains(UA_MOBILE_DEVICE_SNIPPETS[i])) {
-                matchFound = true;
-                uaType = "mobile";
-                isPhone = true;
 
-                for (int j = 0; j < UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT.length; j++) {
-                    if (agentString.contains(UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT[j])) {
-                        isPhone = false;
+        if (nook) {
+            matchFound = true;
+            uaType = "ereader";
+            isPhone = false;
+            isTablet = false;
+        } else {
+
+            for (int i = 0; i < UA_MOBILE_DEVICE_SNIPPETS.length; i++) {
+                if (agentString.contains(UA_MOBILE_DEVICE_SNIPPETS[i])) {
+                    matchFound = true;
+                    uaType = "mobile";
+                    isPhone = true;
+
+                    for (int j = 0; j < UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT.length; j++) {
+                        if (agentString.contains(UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT[j])) {
+                            isPhone = false;
+                        }
                     }
+                }
+            }
+
+            // Tablets
+            for (int i = 0; i < UA_TABLET_DEVICE_SNIPPETS.length; i++) {
+                if (agentString.contains(UA_TABLET_DEVICE_SNIPPETS[i])) {
+                    isTablet = true;
                 }
             }
         }
 
-        // Tablets
-        for (int i = 0; i < UA_TABLET_DEVICE_SNIPPETS.length; i++) {
-            if (agentString.contains(UA_TABLET_DEVICE_SNIPPETS[i])) {
-                isTablet = true;
-            }
-        }
+        if (!matchFound) {
+            // iPod
+            if (agentString.contains("ipod")) {
+                matchFound = true;
+                uaType = "desktop";
+                isPhone = false;
 
-        // iPod
-        if (!matchFound && agentString.contains("ipod")) {
-            matchFound = true;
-            uaType = "desktop";
-            isPhone = false;
+                // iPhone
+            } else if (agentString.contains("iphone")) {
+                matchFound = true;
+                uaType = "desktop";
+                isPhone = true;
 
-            // iPhone
-        } else if (!matchFound && agentString.contains("iphone")) {
-            matchFound = true;
-            uaType = "desktop";
-            isPhone = true;
+                // iPad
+            } else if (agentString.contains("ipad")) {
+                matchFound = true;
+                uaType = "tablet";
+                isPhone = false;
 
-            // iPad
-        } else if (!matchFound && agentString.contains("ipad")) {
-            matchFound = true;
-            uaType = "tablet";
-            isPhone = false;
+                // Android
+            } else if (!isTablet && agentString.contains("android")) {
+                matchFound = true;
+                uaType = "desktop";
+                isPhone = true;
 
-            // Android
-        } else if (!matchFound && !isTablet && agentString.contains("android")) {
-            matchFound = true;
-            uaType = "desktop";
-            isPhone = true;
+                // Palm Pre
+            } else if (agentString.contains("pre/")) {
+                matchFound = true;
+                uaType = "desktop";
+                isPhone = true;
 
-            // Palm Pre
-        } else if (!matchFound && agentString.contains("pre/")) {
-            matchFound = true;
-            uaType = "desktop";
-            isPhone = true;
+                // Amazon Kindle
+            } else if (agentString.contains("kindle/")) {
+                matchFound = true;
+                uaType = "ereader";
+                isPhone = false;
 
-            // Amazon Kindle
-        } else if (!matchFound && agentString.contains("kindle/")) {
-            matchFound = true;
-            uaType = "ereader";
-            isPhone = false;
-
-            // B&N Nook
-        } else if (!matchFound && agentString.contains("nook browser")) {
-            matchFound = true;
-            uaType = "ereader";
-            isPhone = false;
-
-            // Bots
-        } else if (!matchFound) {
-            for (int i = 0; i < UA_BOT_SNIPPETS.length; i++) {
-                if (agentString.contains(UA_BOT_SNIPPETS[i])) {
-                    matchFound = true;
-                    uaType = "bot";
-                    isPhone = false;
+                // Bots
+            } else {
+                for (int i = 0; i < UA_BOT_SNIPPETS.length; i++) {
+                    if (agentString.contains(UA_BOT_SNIPPETS[i])) {
+                        matchFound = true;
+                        uaType = "bot";
+                        isPhone = false;
+                    }
                 }
             }
         }
@@ -116,11 +124,11 @@ public final class Sniffer {
             ua.addName("Device-NoPhone");
         }
 
-        if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
-            ua.addName("Device-Mobile");
-        } else if ("ereader".equals(uaType)) {
+        if ("ereader".equals(uaType)) {
             ua.addName("Device-Mobile");
             ua.addName("Device-Ereader");
+        } else if ("mobile".equals(uaType) || appleTouch || android || agentString.contains("webos/")) {
+            ua.addName("Device-Mobile");
         } else if ("bot".equals(uaType)) {
             ua.addName("Device-Bot");
         } else if (!isTablet) {
@@ -159,6 +167,8 @@ public final class Sniffer {
 
         String agentString = ua.getLowerCaseAgentString();
 
+        boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
+
         // Maemo - check before Linux
         if (agentString.contains("maemo")) {
             ua.addName("BrowserOS-NIX");
@@ -167,7 +177,7 @@ public final class Sniffer {
         }
 
         // Linux
-        if (agentString.contains("linux") || agentString.contains("android") || agentString.contains("nook browser/1")) {
+        if (agentString.contains("linux") || agentString.contains("android") || nook) {
             ua.addName("BrowserOS-NIX");
             ua.addName("BrowserOS-Linux");
             if (agentString.contains("linux 2.")) {
@@ -175,7 +185,7 @@ public final class Sniffer {
             }
 
             // Android
-            if (agentString.contains("android") || agentString.contains("nook browser/1")) {
+            if (agentString.contains("android") || nook) {
                 analyze(ua, agentString, "BrowserOS-Linux-Android", "android ");
             }
 
@@ -313,24 +323,19 @@ public final class Sniffer {
         } else if (agentString.contains("symbian")) {
             analyze(ua, agentString, "BrowserOS-Symbian", "symbianos/", 3, false);
 
-            // Android on Nook Browser
-        } else if (agentString.equals("nook browser/1.0")) {
-            ua.addName("BrowserOS-Android");
-            ua.addName("BrowserOS-Android-2");
-            ua.addName("BrowserOS-Android-2-0");
-
         } else if (agentString.contains("bada/")) {
             analyze(ua, agentString, "BrowserOS-Bada", "bada/", 2, false);
         }
     }
 
     private static final void detectBrowserEngine(UserAgent ua) {
-
         String agentString = ua.getLowerCaseAgentString();
 
         // Apple WebKit
         if (agentString.contains("applewebkit/")) {
             analyze(ua, agentString, "BrowserEngine-WebKit", "applewebkit/", 4, false);
+        } else if (agentString.contains("apple webkit/")) {
+            analyze(ua, agentString, "BrowserEngine-WebKit", "apple webkit/", 4, false);
 
             // Mozilla Gecko
         } else if (agentString.contains("gecko/")) {
@@ -503,6 +508,14 @@ public final class Sniffer {
         } else if (agentString.contains("dolfin")) {
             analyze(ua, agentString, "Browser-Dolphin", "dolfin/", 2, true);
 
+            // Nook, check before Safari
+        } else if (agentString.contains("nook ") || agentString.contains("bntv250 ")) {
+            if (agentString.contains("nook browser/")) {
+                analyze(ua, agentString, "Browser-Nook", "browser/", 2, true);
+            } else {
+                analyze(ua, agentString, "Browser-Nook", "version/", 2, true);
+            }
+
             // Apple Safari
         } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
             ua.addName("BrowserEngine-WebKit");
@@ -562,10 +575,6 @@ public final class Sniffer {
             // Netscape 1, 2, 3, 4
         } else if (!agentString.contains("(compatible") && TextUtils.matches(agentString, "mozilla\\/[1234]")) {
             analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
-
-            // Nook 1
-        } else if (agentString.contains("nook browser/")) {
-            analyze(ua, agentString, "Browser-Nook", "browser/", 2, true);
         }
     }
 

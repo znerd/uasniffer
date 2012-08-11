@@ -20,9 +20,16 @@ import org.znerd.util.test.junit.PolySuite;
 public class SnifferTest extends Object {
 
     private final SnifferTestDataEntry entry;
+    String agentString;
+    private final UserAgent ua;
+    Collection<String> actualNames;
 
     public SnifferTest(SnifferTestDataEntry entry) {
         this.entry = entry;
+        agentString = entry.getAgentString();
+        ua = Sniffer.analyze(agentString);
+        actualNames = ua.getNames();
+
     }
 
     @PolySuite.Config
@@ -36,18 +43,14 @@ public class SnifferTest extends Object {
     }
 
     @Test
-    public void testUserAgentSniffer() throws Exception {
-        String agentString = entry.getAgentString();
-        UserAgent ua = Sniffer.analyze(agentString);
-
+    public void testAgentString() throws Exception {
         assertEquals(agentString, ua.getAgentString());
         assertEquals(agentString.toLowerCase(), ua.getLowerCaseAgentString());
+    }
 
-        // Find all recognized names
-        Collection<String> actualNames = ua.getNames();
-
-        // Compare expected and recognized
-        Collection<String> actualNames2 = new HashSet<String>(actualNames);
+    @Test
+    public void testExpectedNames() {
+        HashSet<String> actualNames2 = new HashSet<String>(actualNames);
         for (String expectedName : entry.getOutputStrings()) {
             if (actualNames.contains(expectedName)) {
                 actualNames.remove(expectedName);
