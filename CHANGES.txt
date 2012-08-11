@@ -1,5 +1,15 @@
---- CHANGES SINCE UASNIFFER 0.7 ----------------------------------------------
+--- CHANGES SINCE UASNIFFER 1.1 (under development) --------------------------
 
+* Added unit test for Maxthon 1.0 beta on Mac (OS X 10.8).
+
+
+--- CHANGES SINCE UASNIFFER 1.0 (July 21, 2012) ------------------------------
+
+* Added parent POM: znerd-oss-parent v2.
+* Upgraded dependency on maven-compiler-plugin from 2.3.2 to 2.5.1.
+* Upgraded dependency on znerd-util from 0.6 to 0.7.
+* Removed 'distributionManagement' section from POM.
+* POM Coordinates: org.znerd.uasniffer:uasniffer -> org.znerd:uasniffer.
 
 
 --- CHANGES SINCE UASNIFFER 0.6 (March 24, 2012) -----------------------------
