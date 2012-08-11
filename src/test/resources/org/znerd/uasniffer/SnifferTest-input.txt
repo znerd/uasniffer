@@ -3242,6 +3242,24 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 
+# Firefox 14.0 on Mac OS X 10.7
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-14
+BrowserEngine-Gecko-14-0
+BrowserEngine-Gecko-14-0-0
+BrowserEngine-Gecko-14-0-0-0
+Browser-Firefox
+Browser-Firefox-14
+Browser-Firefox-14-0
+Browser-Firefox-14-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-7
+
 
 #-----------------------------------------------------------------------------
 # Netscape
