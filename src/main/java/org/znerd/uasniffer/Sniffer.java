@@ -167,7 +167,7 @@ public final class Sniffer {
         }
 
         // Linux
-        if (agentString.contains("linux") || agentString.contains("android")) {
+        if (agentString.contains("linux") || agentString.contains("android") || agentString.contains("nook browser/1")) {
             ua.addName("BrowserOS-NIX");
             ua.addName("BrowserOS-Linux");
             if (agentString.contains("linux 2.")) {
@@ -175,7 +175,7 @@ public final class Sniffer {
             }
 
             // Android
-            if (agentString.contains("android")) {
+            if (agentString.contains("android") || agentString.contains("nook browser/1")) {
                 analyze(ua, agentString, "BrowserOS-Linux-Android", "android ");
             }
 
@@ -193,7 +193,6 @@ public final class Sniffer {
 
             // Mac OS
         } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
-
             ua.addName("BrowserOS-MacOS");
 
             // Mac OS X
