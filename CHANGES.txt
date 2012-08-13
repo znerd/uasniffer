@@ -1,6 +1,7 @@
 --- CHANGES SINCE UASNIFFER 1.1 (under development) --------------------------
 
 * Improved support for Nook E-readers.
+* Added support for Opera Tablet browser (with unit test).
 * Upgraded dependency on znerd-util from 0.7 to 0.8.
 * Refactored unit tests, now using PolySuite-approach.
 * Added knowledge: Nook 1.0 is an Android device.

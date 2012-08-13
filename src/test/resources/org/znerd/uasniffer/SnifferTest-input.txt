@@ -534,6 +534,29 @@ BrowserOS-Linux-Android-3-0-0
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
+# Motorola Xoom running Android 3.0.1
+Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HRI66) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+# TODO Device-Touch
+Device-Tablet
+Device-Mobile
+Device-NoPhone
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-4
+Browser-MobileSafari-4-0
+Browser-MobileSafari-4-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-13
+BrowserEngine-WebKit-534-13-0
+BrowserEngine-WebKit-534-13-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+BrowserOS-Linux-Android-3
+BrowserOS-Linux-Android-3-0
+BrowserOS-Linux-Android-3-0-1
+
 # Samsung Galaxy Tab
 Mozilla/5.0 (Linux; U; Android 2.2; en-gb; SAMSUNG GT-P1000 Tablet Build/MASTER) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
 Device-Tablet
@@ -2712,6 +2735,27 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 # TODO BrowserLocale-en
+
+# Opera 11 tablet
+Opera/9.80 (Android 2.3.3; Linux; Opera Tablet/ADR-1103211415; U; en) Presto/2.7.81 Version/11.00
+Device-Tablet
+Device-Mobile
+Device-NoPhone
+Browser-Opera
+Browser-OperaTablet
+Browser-OperaTablet-11
+Browser-OperaTablet-11-0
+Browser-OperaTablet-11-0-0
+BrowserEngine-Presto
+BrowserEngine-Presto-2
+BrowserEngine-Presto-2-7
+BrowserEngine-Presto-2-7-81
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+BrowserOS-Linux-Android-2
+BrowserOS-Linux-Android-2-3
+BrowserOS-Linux-Android-2-3-3
 
 # Opera 11.50 for Mac OS X, via Mac App Store
 Opera/9.80 (Macintosh; Intel Mac OS X 10.6.7; U; Edition MacAppStore; nl) Presto/2.9.168 Version/11.50

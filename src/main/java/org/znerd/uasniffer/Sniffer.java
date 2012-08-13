@@ -452,7 +452,9 @@ public final class Sniffer {
             ua.addName("Browser-Opera");
 
             // Opera Mobile
-            if (agentString.contains("mobi/")) {
+            if (agentString.contains("tablet")) {
+                analyze(ua, agentString, "Browser-OperaTablet", "version/", 3, true);
+            } else if (agentString.contains("mobi/")) {
                 analyze(ua, agentString, "Browser-OperaMobile", agentString.contains("version/") ? "version/" : "opera/", 3, true);
 
                 // Opera Mini
