@@ -1,6 +1,52 @@
 # TODO: Add: Device-NoDesktop
 
 #-----------------------------------------------------------------------------
+# Sony PSP
+#-----------------------------------------------------------------------------
+
+# Sony PlayStation Portable
+PSP (PlayStation Portable); 2.00
+Device-NoPhone
+Device-Gaming
+Device-PSP
+
+# Sony PSP Vita 1.50
+Mozilla/5.0 (Playstation Vita 1.50) AppleWebKit/531.22.8 (KHTML, like Gecko) Silk/3.2
+Device-NoPhone
+Device-Gaming
+Device-PSP
+Device-PSP-Vita
+Device-PSP-Vita-1
+Device-PSP-Vita-1-50
+BrowserEngine-WebKit
+BrowserEngine-WebKit-531
+BrowserEngine-WebKit-531-22
+BrowserEngine-WebKit-531-22-8
+BrowserEngine-WebKit-528-22-8-0
+Browser-Silk
+Browser-Silk-3
+Browser-Silk-3-2
+
+# Sony PSP Vita 1.69
+Mozilla/5.0 (PlayStation Vita 1.69) AppleWebKit/531.22.8 (KHTML, like Gecko) Silk/3.2
+Device-NoPhone
+Device-Gaming
+Device-PSP
+Device-PSP-Vita
+Device-PSP-Vita-1
+Device-PSP-Vita-1-69
+BrowserEngine-WebKit
+BrowserEngine-WebKit-531
+BrowserEngine-WebKit-531-22
+BrowserEngine-WebKit-531-22-8
+BrowserEngine-WebKit-528-22-8-0
+Browser-Silk
+Browser-Silk-3
+Browser-Silk-3-2
+
+
+
+#-----------------------------------------------------------------------------
 # Nook e-readers
 #-----------------------------------------------------------------------------
 
