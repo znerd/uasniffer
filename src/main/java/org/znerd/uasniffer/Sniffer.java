@@ -9,6 +9,14 @@ import org.znerd.util.text.TextUtils;
  */
 public final class Sniffer {
 
+    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry" };
+    private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet" };
+    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod" };
+    private static final String[] UA_BOT_SNIPPETS = new String[] { "spider", "bot", "crawl", "miner", "checker", "java", "pingdom" };
+
+    private Sniffer() {
+    }
+
     /**
      * Analyzes the specified user agent string.
      * 
@@ -106,8 +114,8 @@ public final class Sniffer {
 
                 // Bots
             } else {
-                for (int i = 0; i < UA_BOT_SNIPPETS.length; i++) {
-                    if (agentString.contains(UA_BOT_SNIPPETS[i])) {
+                for (String botSnippet : UA_BOT_SNIPPETS) {
+                    if (agentString.contains(botSnippet)) {
                         matchFound = true;
                         uaType = "bot";
                         isPhone = false;
@@ -650,13 +658,5 @@ public final class Sniffer {
         }
 
         return result;
-    }
-
-    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry" };
-    private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet" };
-    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod" };
-    private static final String[] UA_BOT_SNIPPETS = new String[] { "spider", "bot", "crawl", "miner", "checker", "java", "pingdom" };
-
-    private Sniffer() {
     }
 }
