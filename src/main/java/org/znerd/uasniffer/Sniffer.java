@@ -9,9 +9,9 @@ import org.znerd.util.text.TextUtils;
  */
 public final class Sniffer {
 
-    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry" };
+    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry", "portable", "vita" };
     private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet" };
-    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod" };
+    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod", "playstation" };
     private static final String[] UA_BOT_SNIPPETS = new String[] { "spider", "bot", "crawl", "miner", "checker", "java", "pingdom" };
 
     private Sniffer() {
@@ -20,7 +20,8 @@ public final class Sniffer {
     /**
      * Analyzes the specified user agent string.
      * 
-     * @param agentString            the user agent string, cannot be <code>null</code>.
+     * @param agentString
+     *            the user agent string, cannot be <code>null</code>.
      * @return an {@link UserAgent} instance that describes the user agent, never <code>null</code>.
      * @throws IllegalArgumentException
      *             if <code>agentString == null</code>.
@@ -39,6 +40,7 @@ public final class Sniffer {
         boolean android = agentString.contains("android");
         boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
         boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
+        boolean psp = agentString.contains("playstation portable") || agentString.contains("playstation vita");
 
         // Mobile devices
         boolean matchFound = false;
@@ -52,7 +54,6 @@ public final class Sniffer {
             isPhone = false;
             isTablet = false;
         } else {
-
             for (String mobileDeviceSnippet : UA_MOBILE_DEVICE_SNIPPETS) {
                 if (agentString.contains(mobileDeviceSnippet)) {
                     matchFound = true;
@@ -76,44 +77,37 @@ public final class Sniffer {
         }
 
         if (!matchFound) {
-            // iPod
-            if (agentString.contains("ipod")) {
+            if (agentString.contains("ipod")) { // iPod
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = false;
 
-                // iPhone
-            } else if (agentString.contains("iphone")) {
+            } else if (agentString.contains("iphone")) { // iPhone
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = true;
 
-                // iPad
-            } else if (agentString.contains("ipad")) {
+            } else if (agentString.contains("ipad")) { // iPad
                 matchFound = true;
                 uaType = "tablet";
                 isPhone = false;
 
-                // Android
-            } else if (!isTablet && agentString.contains("android")) {
+            } else if (!isTablet && agentString.contains("android")) { // Android
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = true;
 
-                // Palm Pre
-            } else if (agentString.contains("pre/")) {
+            } else if (agentString.contains("pre/")) { // Palm Pre
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = true;
 
-                // Amazon Kindle
-            } else if (agentString.contains("kindle/")) {
+            } else if (agentString.contains("kindle/")) { // Amazon Kindle
                 matchFound = true;
                 uaType = "ereader";
                 isPhone = false;
 
-                // Bots
-            } else {
+            } else { // Bots
                 for (String botSnippet : UA_BOT_SNIPPETS) {
                     if (agentString.contains(botSnippet)) {
                         matchFound = true;
@@ -144,6 +138,15 @@ public final class Sniffer {
 
         if (isTablet) {
             ua.addName("Device-Tablet");
+        }
+
+        if (psp) {
+            ua.addName("Device-Gaming");
+            ua.addName("Device-Mobile");
+            ua.addName("Device-PSP");
+            if (agentString.contains("vita")) {
+                analyze(ua, agentString, "Device-PSP-Vita", "vita ", 2, false);
+            }
         }
 
         if (appleTouch) {
@@ -221,6 +224,7 @@ public final class Sniffer {
                 analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x leopard ", 0, false);
                 analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x snow leopard ", 0, false);
                 analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x lion ", 0, false);
+                analyze(ua, agentString.replace('_', '.'), "BrowserOS-MacOS", "mac os x mountain lion ", 0, false);
             }
 
             // Windows
@@ -359,7 +363,7 @@ public final class Sniffer {
             analyze(ua, agentString, "BrowserEngine-Trident", "trident/", 3, false);
         } else if (agentString.contains("trident")) {
             analyze(ua, agentString, "BrowserEngine-Trident", "trident ", 3, false);
-
+            
             // KDE KHTML
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
@@ -524,6 +528,9 @@ public final class Sniffer {
             } else {
                 analyze(ua, agentString, "Browser-Nook", "version/", 2, true);
             }
+            
+        } else if (agentString.contains("silk/")) {
+            analyze(ua, agentString, "Browser-Silk", "silk/", 2, true);
 
             // Apple Safari
         } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
