@@ -18,6 +18,10 @@ Among other, the following are detected:
   OmniWeb, Dolphin, etc.
 - old browsers: NCSA Mosaic, Netscape 1+, MSIE 2+, etc.
 - mobile and mini variants, e.g. Opera Mini, Fennec, IE Mobile, etc.
+- bots, such as Pingdom and the Google Bot
+
+The quality of this library is maintained by an extensive set of unit
+tests, for 250+ user agent strings.
 
 This utility library has no runtime dependencies other than the Java
 runtime environment, version 1.5 or higher.
