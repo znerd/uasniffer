@@ -12,8 +12,7 @@ public final class Sniffer {
     /**
      * Analyzes the specified user agent string.
      * 
-     * @param agentString
-     *            the user agent string, cannot be <code>null</code>.
+     * @param agentString            the user agent string, cannot be <code>null</code>.
      * @return an {@link UserAgent} instance that describes the user agent, never <code>null</code>.
      * @throws IllegalArgumentException
      *             if <code>agentString == null</code>.
@@ -46,14 +45,14 @@ public final class Sniffer {
             isTablet = false;
         } else {
 
-            for (int i = 0; i < UA_MOBILE_DEVICE_SNIPPETS.length; i++) {
-                if (agentString.contains(UA_MOBILE_DEVICE_SNIPPETS[i])) {
+            for (String mobileDeviceSnippet : UA_MOBILE_DEVICE_SNIPPETS) {
+                if (agentString.contains(mobileDeviceSnippet)) {
                     matchFound = true;
                     uaType = "mobile";
                     isPhone = true;
 
-                    for (int j = 0; j < UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT.length; j++) {
-                        if (agentString.contains(UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT[j])) {
+                    for (String mobileWithoutTelSnippet : UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT) {
+                        if (agentString.contains(mobileWithoutTelSnippet)) {
                             isPhone = false;
                         }
                     }
@@ -61,8 +60,8 @@ public final class Sniffer {
             }
 
             // Tablets
-            for (int i = 0; i < UA_TABLET_DEVICE_SNIPPETS.length; i++) {
-                if (agentString.contains(UA_TABLET_DEVICE_SNIPPETS[i])) {
+            for (String tabletDeviceSnippet : UA_TABLET_DEVICE_SNIPPETS) {
+                if (agentString.contains(tabletDeviceSnippet)) {
                     isTablet = true;
                 }
             }
