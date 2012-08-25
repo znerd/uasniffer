@@ -7,7 +7,8 @@
 * Added knowledge: Nook 1.0 is an Android device.
 * Added unit test for Maxthon 1.0 beta on Mac (OS X 10.8).
 * Added unit test for Firefox 14.0 on Mac (OS X 10.7).
-* Added support for Sony PlayStation (Vita).
+* Added unit test for Safari 6.0 on Mac (OS X 10.8)
+* Added support for Sony PlayStation Portable (PSP) devices.
 
 
 --- CHANGES SINCE UASNIFFER 1.0 (July 21, 2012) ------------------------------

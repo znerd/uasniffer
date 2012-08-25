@@ -2680,6 +2680,25 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-7
 
+# Safari 6.0 on Mac OS X 10.8
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8) AppleWebKit/536.25 (KHTML, like Gecko) Version/6.0 Safari/536.25
+Device-Desktop
+Device-NoPhone
+Browser-Safari
+Browser-DesktopSafari
+Browser-DesktopSafari-6
+Browser-DesktopSafari-6-0
+Browser-DesktopSafari-6-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-536
+BrowserEngine-WebKit-536-25
+BrowserEngine-WebKit-536-25-0
+BrowserEngine-WebKit-536-25-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+
 
 #-----------------------------------------------------------------------------
 # Opera (desktop)
