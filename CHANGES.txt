@@ -1,14 +1,15 @@
---- CHANGES SINCE UASNIFFER 1.1 (under development) --------------------------
+--- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
 
-* Improved support for Nook E-readers.
+* Added support for Amazon Kindle Fire.
+* Added support for Sony PlayStation Portable (PSP) devices.
 * Added support for Opera Tablet browser (with unit test).
-* Upgraded dependency on znerd-util from 0.7 to 0.8.
-* Refactored unit tests, now using PolySuite-approach.
+* Improved support for Nook E-readers.
 * Added knowledge: Nook 1.0 is an Android device.
+* Refactored unit tests, now using PolySuite-approach.
 * Added unit test for Maxthon 1.0 beta on Mac (OS X 10.8).
 * Added unit test for Firefox 14.0 on Mac (OS X 10.7).
 * Added unit test for Safari 6.0 on Mac (OS X 10.8)
-* Added support for Sony PlayStation Portable (PSP) devices.
+* Upgraded dependency on znerd-util from 0.7 to 0.8.
 
 
 --- CHANGES SINCE UASNIFFER 1.0 (July 21, 2012) ------------------------------

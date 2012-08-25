@@ -41,6 +41,7 @@ public final class Sniffer {
         boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
         boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
         boolean psp = agentString.contains("playstation portable") || agentString.contains("playstation vita");
+        boolean kindleFire = agentString.contains("silk-accelerated") && agentString.contains("silk/1.1."); // TODO
 
         // Mobile devices
         boolean matchFound = false;
@@ -53,6 +54,11 @@ public final class Sniffer {
             uaType = "ereader";
             isPhone = false;
             isTablet = false;
+        } else if (kindleFire) {
+            matchFound = true;
+            uaType = "ereader";
+            isPhone = false;
+            isTablet = true;
         } else {
             for (String mobileDeviceSnippet : UA_MOBILE_DEVICE_SNIPPETS) {
                 if (agentString.contains(mobileDeviceSnippet)) {
@@ -146,6 +152,17 @@ public final class Sniffer {
             ua.addName("Device-PSP");
             if (agentString.contains("vita")) {
                 analyze(ua, agentString, "Device-PSP-Vita", "vita ", 2, false);
+            }
+        }
+        
+        if (kindleFire) {
+            ua.addName("Device-AmazonKindle");
+            ua.addName("Device-AmazonKindle-Fire");
+            
+            if (agentString.contains("silk-accelerated=true")) {
+                ua.addName("CloudAcceleration-Yes");
+            } else if (agentString.contains("silk-accelerated=false")) {
+                ua.addName("CloudAcceleration-No");
             }
         }
 
@@ -363,7 +380,7 @@ public final class Sniffer {
             analyze(ua, agentString, "BrowserEngine-Trident", "trident/", 3, false);
         } else if (agentString.contains("trident")) {
             analyze(ua, agentString, "BrowserEngine-Trident", "trident ", 3, false);
-            
+
             // KDE KHTML
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
@@ -528,7 +545,7 @@ public final class Sniffer {
             } else {
                 analyze(ua, agentString, "Browser-Nook", "version/", 2, true);
             }
-            
+
         } else if (agentString.contains("silk/")) {
             analyze(ua, agentString, "Browser-Silk", "silk/", 2, true);
 
