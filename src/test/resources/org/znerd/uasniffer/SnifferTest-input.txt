@@ -970,6 +970,45 @@ BrowserOS-iOS-5
 BrowserOS-iOS-5-1
 BrowserOS-iOS-5-1-0
 
+# Dolphin browser on iPhone running iOS 5.1.1
+Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206
+Device-Mobile
+Device-Phone
+Device-AppleTouch
+Device-AppleTouch-iPhone
+Browser-Safari
+Browser-MobileSafari
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-46
+BrowserEngine-WebKit-534-46-0
+BrowserEngine-WebKit-534-46-0-0
+BrowserOS-iOS
+BrowserOS-iOS-5
+BrowserOS-iOS-5-1
+BrowserOS-iOS-5-1-1
+
+# Safari on same iPhone running iOS 5.1.1
+Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+Device-Mobile
+Device-Phone
+Device-AppleTouch
+Device-AppleTouch-iPhone
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-5
+Browser-MobileSafari-5-1
+Browser-MobileSafari-5-1-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-46
+BrowserEngine-WebKit-534-46-0
+BrowserEngine-WebKit-534-46-0-0
+BrowserOS-iOS
+BrowserOS-iOS-5
+BrowserOS-iOS-5-1
+BrowserOS-iOS-5-1-1
+
 # iPad running on iOS 3.2
 Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10
 Device-Mobile

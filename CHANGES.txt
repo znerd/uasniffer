@@ -1,3 +1,9 @@
+--- CHANGES SINCE UASNIFFER 1.2 ----------------------------------------------
+
+* Added unit test for in-app browser on iOS 5.1.1.
+* Added unit test for Mobile Safari on iOS 5.1.1.
+
+
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
 
 * Added support for Amazon Kindle Fire.
