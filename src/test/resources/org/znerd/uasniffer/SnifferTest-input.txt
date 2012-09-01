@@ -1242,6 +1242,25 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 
+# iCab 4.8 on Mac OS X 10.6.8
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/533.21.1 (KHTML, like Gecko) iCab/4.8 Safari/533.16
+Device-Desktop
+Device-NoPhone
+Browser-iCab
+Browser-iCab-4
+Browser-iCab-4-8
+Browser-iCab-4-8-0
+BrowserEngine-WebKit
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-6
+BrowserOS-MacOS-10-6-8
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-21
+BrowserEngine-WebKit-533-21-1
+BrowserEngine-WebKit-533-21-1-0
+
 
 #-----------------------------------------------------------------------------
 # Google Chrome

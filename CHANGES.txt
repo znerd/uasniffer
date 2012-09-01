@@ -9,6 +9,7 @@
 * Added unit test for Chromium 18 on Linux.
 * Added unit test for Chrome 22 on Windows.
 * Added unit test for Maxthon 3.0 on Windows Vista.
+* Added unit test for iCab 4.8 on Mac OS X 10.6.8. Had to apply small fix.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------

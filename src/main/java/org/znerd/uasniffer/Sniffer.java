@@ -549,6 +549,18 @@ public final class Sniffer {
         } else if (agentString.contains("silk/")) {
             analyze(ua, agentString, "Browser-Silk", "silk/", 2, true);
 
+            // iCab, check before Safari
+            // E.g.: iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)
+        } else if (agentString.contains("icab")) {
+            analyze(ua, agentString, "Browser-iCab", "icab/");
+            analyze(ua, agentString, "Browser-iCab", "icab ");
+
+            // iCab 4 uses the WebKit rendering engine, although the user agent
+            // string does not advertise that
+            if (ua.hasName("Browser-iCab-4")) {
+                ua.addName("BrowserEngine-WebKit");
+            }
+
             // Apple Safari
         } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
             ua.addName("BrowserEngine-WebKit");
@@ -570,17 +582,6 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Netscape", "netscape/", 3, true);
             ua.addName("BrowserEngine-Gecko");
 
-            // iCab
-            // E.g.: iCab/4.5 (Macintosh; U; Mac OS X Leopard 10.5.7)
-        } else if (agentString.contains("icab")) {
-            analyze(ua, agentString, "Browser-iCab", "icab/");
-            analyze(ua, agentString, "Browser-iCab", "icab ");
-
-            // iCab 4 uses the WebKit rendering engine, although the user agent
-            // string does not advertise that
-            if (ua.hasName("Browser-iCab-4")) {
-                ua.addName("BrowserEngine-WebKit");
-            }
 
             // Internet Explorer
         } else if (agentString.contains("msie")) {
