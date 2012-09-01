@@ -3147,6 +3147,25 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-1
 
+# Opera 12.02 on Mac OS X 10.8.1
+Opera/9.80 (Macintosh; Intel Mac OS X 10.8.1; U; Edition MAS; nl) Presto/2.10.289 Version/12.02
+Device-Desktop
+Device-NoPhone
+Browser-Opera
+Browser-OperaDesktop
+Browser-OperaDesktop-12
+Browser-OperaDesktop-12-0
+Browser-OperaDesktop-12-0-2
+BrowserEngine-Presto
+BrowserEngine-Presto-2
+BrowserEngine-Presto-2-10
+BrowserEngine-Presto-2-10-289
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-1
+
 # Opera 12.50 on Mac OS X 10.8.0
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.0) Presto/2.12.363 Version/12.50
 Device-Desktop
