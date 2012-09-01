@@ -9,9 +9,9 @@ import org.znerd.util.text.TextUtils;
  */
 public final class Sniffer {
 
-    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry", "portable", "vita" };
+    private static final String[] UA_MOBILE_DEVICE_SNIPPETS = new String[] { "windows ce", "windowsce", "symbian", "nokia", "opera mini", "wget", "fennec", "opera mobi", "windows; ppc", "blackberry", "portable", "vita", "mobile" };
     private static final String[] UA_TABLET_DEVICE_SNIPPETS = new String[] { "ipad", "xoom", "tablet" };
-    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod", "playstation" };
+    private static final String[] UA_MOBILE_DEVICE_WITHOUT_TEL_SUPPORT = new String[] { "opera/8.", "opera/7.", "opera/6.", "opera/5.", "opera/4.", "opera/3.", "ipod", "ipad", "tablet", "playstation" };
     private static final String[] UA_BOT_SNIPPETS = new String[] { "spider", "bot", "crawl", "miner", "checker", "java", "pingdom" };
 
     private Sniffer() {

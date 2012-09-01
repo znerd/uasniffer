@@ -241,8 +241,8 @@ Browser-Dolphin-2-0
 
 # Dolphin 2.0 on Bada
 Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJF4; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 OPN-B
-Device-Desktop
-Device-NoPhone
+Device-Mobile
+Device-Phone
 Browser-Dolphin
 Browser-Dolphin-2
 Browser-Dolphin-2-0
@@ -3770,6 +3770,24 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-7
+
+# Firefox OS
+Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0
+Device-Phone
+Device-Mobile
+BrowserEngine-Gecko
+BrowserEngine-Gecko-14
+BrowserEngine-Gecko-14-0
+BrowserEngine-Gecko-14-0-0
+BrowserEngine-Gecko-14-0-0-0
+Browser-Firefox
+Browser-Firefox-14
+Browser-Firefox-14-0
+Browser-Firefox-14-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-14
+Browser-MobileFirefox-14-0
+Browser-MobileFirefox-14-0-0
 
 # Firefox 15.0 on Mac OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:15.0) Gecko/20100101 Firefox/15.0

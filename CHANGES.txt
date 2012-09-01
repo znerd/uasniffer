@@ -1,5 +1,6 @@
 --- CHANGES SINCE UASNIFFER 1.2 (under development) --------------------------
 
+* Fixed: Samsung S8500 was detected as desktop device, not phone.
 * Added unit test for in-app browser on iOS 5.1.1/iPhone.
 * Added unit test for Mobile Safari on iOS 5.1.1/iPhone.
 * Added unit test for Mobile Safari on iOS 6/iPad.
@@ -13,6 +14,7 @@
 * Added unit test for Firefox 3.1 alpha. Had to apply a small fix.
 * Added unit test for Internet Explorer 10 on Windows 8.
 * Added unit test for Internet Explorer 10 Compatibility Mode on Windows 8.
+* Added unit test for Firefox 14 on Firefox OS. Had to apply a small fix.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
