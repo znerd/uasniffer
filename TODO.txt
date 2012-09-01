@@ -1,4 +1,3 @@
-Update POM to introduce inceptionYear.
 Introduce Browser-DesktopFirefox
 Change Browser-Fennec to Browser-MobileFirefox (and add Browser-Firefox)
 Support locales.

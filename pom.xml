@@ -8,6 +8,8 @@
   <description>Java-based user agent sniffing tool that detects all major browsers, distinguishing versions, mobile/desktop, phone, etc.</description>
   <url>http://www.github.com/znerd/uasniffer</url>
 
+  <inceptionYear>2009</inceptionYear>
+
   <licenses>
     <license>
       <name>The BSD 2-Clause License</name>
