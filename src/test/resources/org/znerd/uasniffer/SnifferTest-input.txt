@@ -2275,6 +2275,44 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
+# Internet Explorer 10 on Windows 8 - official example, see http://msdn.microsoft.com/en-us/library/ie/hh869301%28v=vs.85%29.aspx
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-10
+Browser-DesktopMSIE-10-0
+Browser-DesktopMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+
+# Internet Explorer 10 on Windows 8 in Compatibility Mode
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; Trident/6.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-7
+Browser-DesktopMSIE-7-0
+Browser-DesktopMSIE-7-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+
 # Internet Explorer 10 on Windows 7
 Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
 Device-Desktop

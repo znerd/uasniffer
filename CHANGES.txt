@@ -11,6 +11,8 @@
 * Added unit test for Maxthon 3.0 on Windows Vista.
 * Added unit test for iCab 4.8 on Mac OS X 10.6.8. Had to apply small fix.
 * Added unit test for Firefox 3.1 alpha. Had to apply a small fix.
+* Added unit test for Internet Explorer 10 on Windows 8.
+* Added unit test for Internet Explorer 10 Compatibility Mode on Windows 8.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
