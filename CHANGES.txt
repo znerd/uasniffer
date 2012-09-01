@@ -1,5 +1,7 @@
 --- CHANGES SINCE UASNIFFER 1.2 (under development) --------------------------
 
+* Introduced 'BrowserEngine-Trident-MSIE' (with versions) to make it possible
+  to detect browsers that render with the same engine as MSIE version X. 
 * Now detecting Sleipnir browser. This changes the behaviour: Sleipnir on
   Windows is no longer detected as MSIE.
 * Added unit test for Sleipnir 2.8.1 on Windows XP.

@@ -188,6 +188,10 @@ public final class Sniffer {
             detectBrowserEngine(ua);
             detectBrowser(ua);
         }
+        
+        if (ua.hasName("BrowserEngine-Trident") && !ua.hasName("Browser-MobileMSIE")) {
+            analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "msie", 2, true);
+        }
     }
 
     private static final void detectBrowserOS(UserAgent ua) {
@@ -389,7 +393,7 @@ public final class Sniffer {
             if (agentString.contains("opera ")) {
                 ua.addName("BrowserEngine-Presto");
             } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
-                if (agentString.contains("mac") && agentString.contains("msie 5.0")) {
+                if (agentString.contains("mac") && agentString.contains("msie 5.")) {
                     ua.addName("BrowserEngine-Tasman");
                 } else {
                     ua.addName("BrowserEngine-Trident");
