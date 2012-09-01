@@ -468,6 +468,8 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
         } else if (agentString.contains("shiretoko/")) {
             analyze(ua, agentString, "Browser-Firefox", "shiretoko/"); // Firefox 3.5 pre-releases
+        } else if (agentString.contains("granparadiso/")) {
+            analyze(ua, agentString, "Browser-Firefox", "granparadiso/"); // Firefox 3.0/3.1 pre-releases
         } else if (agentString.contains("firebird/")) {
             analyze(ua, agentString, "Browser-Firefox", "firebird/"); // Before 1.0
         } else if (agentString.contains("phoenix/")) {

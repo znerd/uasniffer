@@ -3526,6 +3526,22 @@ BrowserOS-Windows-Vista
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
+# Firefox 3.1 alpha (codename Gran Paradiso)
+Mozilla/5.0(X11;U;Linux(x86_64);en;rv:1.9a8)Gecko/2007100619;GranParadiso/3.1
+Device-Desktop
+Device-NoPhone
+Browser-Firefox
+Browser-Firefox-3
+Browser-Firefox-3-1
+Browser-Firefox-3-1-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-1
+BrowserEngine-Gecko-1-9
+BrowserEngine-Gecko-1-9-0
+BrowserEngine-Gecko-1-9-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+
 # Firefox 3.1 (beta 1) on Mac OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b1) Gecko/20081007 Firefox/3.1b1
 Device-Desktop
