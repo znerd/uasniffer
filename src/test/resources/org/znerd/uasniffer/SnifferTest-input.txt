@@ -2472,6 +2472,21 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
+# Sleipnir 2.8.4 on Windows XP
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727) Sleipnir/2.8.4
+Device-Desktop
+Device-NoPhone
+Browser-Sleipnir
+Browser-Sleipnir-2
+Browser-Sleipnir-2-8
+Browser-Sleipnir-2-8-4
+BrowserEngine-Trident
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
 # Sleipnir 2.8.4 on Windows Vista
 Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506; OfficeLiveConnector.1.3; OfficeLivePatch.1.3) Sleipnir/2.8.4
 Device-Desktop

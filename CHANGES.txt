@@ -3,6 +3,7 @@
 * Now detecting Sleipnir browser. This changes the behaviour: Sleipnir on
   Windows is no longer detected as MSIE.
 * Added unit test for Sleipnir 2.8.1 on Windows XP.
+* Added unit test for Sleipnir 2.8.4 on Windows XP.
 * Added unit test for Sleipnir 2.9.9 on Windows Vista.
 * Added unit test for Sleipnir 3.7 on Mac OS X 10.8.1.
 * Fixed: Samsung S8500 was detected as desktop device, not phone.
