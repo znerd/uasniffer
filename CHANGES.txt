@@ -6,6 +6,9 @@
 * Added unit test for Sleipnir 2.8.4 on Windows XP.
 * Added unit test for Sleipnir 2.9.9 on Windows Vista.
 * Added unit test for Sleipnir 3.7 on Mac OS X 10.8.1.
+* Now detecting Tasman rendering engine (MSIE 5 on Mac).
+* Added unit test for Internet Explorer 5.0 on Mac PPC.
+* Added unit test for Internet Explorer 5.0 on Mac OS X.
 * Fixed: Samsung S8500 was detected as desktop device, not phone.
 * Added unit test for in-app browser on iOS 5.1.1/iPhone.
 * Added unit test for Mobile Safari on iOS 5.1.1/iPhone.

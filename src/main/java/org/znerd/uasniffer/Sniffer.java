@@ -389,7 +389,11 @@ public final class Sniffer {
             if (agentString.contains("opera ")) {
                 ua.addName("BrowserEngine-Presto");
             } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
-                ua.addName("BrowserEngine-Trident");
+                if (agentString.contains("mac") && agentString.contains("msie 5.0")) {
+                    ua.addName("BrowserEngine-Tasman");
+                } else {
+                    ua.addName("BrowserEngine-Trident");
+                }
             }
         }
     }
