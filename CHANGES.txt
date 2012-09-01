@@ -7,6 +7,7 @@
 * Added unit test for Firefox 15 on Mac OS X 10.8.
 * Added unit test for Konqueror 4.5 on FreeBSD.
 * Added unit test for Chromium 18 on Linux.
+* Added unit test for Chrome 22 on Windows.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------

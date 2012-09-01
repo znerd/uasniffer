@@ -1501,6 +1501,27 @@ BrowserEngine-WebKit-535-19-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 
+# Chrome 22 on Windows
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-22
+Browser-Chrome-22-0
+Browser-Chrome-22-0-1207
+Browser-Chrome-22-0-1207-1
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-1
+BrowserEngine-WebKit-537-1-0
+BrowserEngine-WebKit-537-1-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+
+
 #-----------------------------------------------------------------------------
 # RockMelt
 #-----------------------------------------------------------------------------
