@@ -1100,6 +1100,13 @@ BrowserOS-MacOS-10
 # TODO BrowserLocale-en
 # TODO BrowserOSArch-PPC
 
+# OmniWeb 4.2.1
+Mozilla/4.5 (compatible; OmniWeb/4.2.1-v435.9; Mac_PowerPC)
+Device-Desktop
+Device-NoPhone
+Browser-OmniWeb
+BrowserOS-MacOS
+
 # OmniWeb 4.1-v422
 Mozilla/4.5 (compatible; OmniWeb/4.1-v422; Mac_PowerPC)
 Device-Desktop
@@ -3634,6 +3641,24 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-7
 
+# Firefox 15.0 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:15.0) Gecko/20100101 Firefox/15.0
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-15
+BrowserEngine-Gecko-15-0
+BrowserEngine-Gecko-15-0-0
+BrowserEngine-Gecko-15-0-0-0
+Browser-Firefox
+Browser-Firefox-15
+Browser-Firefox-15-0
+Browser-Firefox-15-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+
 
 #-----------------------------------------------------------------------------
 # Netscape
@@ -4352,6 +4377,21 @@ BrowserEngine-KHTML-4-2
 BrowserEngine-KHTML-4-2-2
 BrowserOS-NIX
 BrowserOS-Linux
+
+# Konqueror 4.5 on FreeBSD
+Mozilla/5.0 (compatible; Konqueror/4.5; FreeBSD) KHTML/4.5.4 (like Gecko)
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-5
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-5
+BrowserEngine-KHTML-4-5-4
+BrowserOS-NIX
+BrowserOS-BSD
+BrowserOS-BSD-FreeBSD
 
 
 #-----------------------------------------------------------------------------

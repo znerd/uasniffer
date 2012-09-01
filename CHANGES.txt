@@ -3,6 +3,9 @@
 * Added unit test for in-app browser on iOS 5.1.1/iPhone.
 * Added unit test for Mobile Safari on iOS 5.1.1/iPhone.
 * Added unit test for Mobile Safari on iOS 6/iPad.
+* Added unit test for OmniWeb 4.2.1.
+* Added unit test for Firefox 15 on Mac OS X 10.8.
+* Added unit test for Konqueror 4.5 on FreeBSD.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
