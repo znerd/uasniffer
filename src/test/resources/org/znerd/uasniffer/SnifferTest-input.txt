@@ -1057,6 +1057,28 @@ BrowserOS-iOS-4-2-1
 # TODO BrowserLocale-en
 # TODO BrowserLocale-en-US
 
+# iPad running iOS 6
+Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25
+Device-Mobile
+Device-NoPhone
+Device-Tablet
+Device-AppleTouch
+Device-AppleTouch-iPad
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-6
+Browser-MobileSafari-6-0
+Browser-MobileSafari-6-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-536
+BrowserEngine-WebKit-536-26
+BrowserEngine-WebKit-536-26-0
+BrowserEngine-WebKit-536-26-0-0
+BrowserOS-iOS
+BrowserOS-iOS-6
+BrowserOS-iOS-6-0
+BrowserOS-iOS-6-0-0
+
 
 #-----------------------------------------------------------------------------
 # OmniWeb - a browser for Mac OS X

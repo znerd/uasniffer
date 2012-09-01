@@ -1,7 +1,8 @@
 --- CHANGES SINCE UASNIFFER 1.2 (under development) --------------------------
 
-* Added unit test for in-app browser on iOS 5.1.1.
-* Added unit test for Mobile Safari on iOS 5.1.1.
+* Added unit test for in-app browser on iOS 5.1.1/iPhone.
+* Added unit test for Mobile Safari on iOS 5.1.1/iPhone.
+* Added unit test for Mobile Safari on iOS 6/iPad.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
