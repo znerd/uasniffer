@@ -2454,18 +2454,32 @@ BrowserOS-Windows-Mobile
 
 
 #-----------------------------------------------------------------------------
-# Sleipnir - a Japanese browser based on MSIE
+# Sleipnir - a Japanese browser initially based on MSIE
 #-----------------------------------------------------------------------------
 
-# Sleipnir 2.8.4
+# Sleipnir 2.8.1 on Windows XP
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) Sleipnir/2.8.1
+Device-Desktop
+Device-NoPhone
+Browser-Sleipnir
+Browser-Sleipnir-2
+Browser-Sleipnir-2-8
+Browser-Sleipnir-2-8-1
+BrowserEngine-Trident
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Sleipnir 2.8.4 on Windows Vista
 Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506; OfficeLiveConnector.1.3; OfficeLivePatch.1.3) Sleipnir/2.8.4
 Device-Desktop
 Device-NoPhone
-Browser-MSIE
-Browser-DesktopMSIE
-Browser-DesktopMSIE-7
-Browser-DesktopMSIE-7-0
-Browser-DesktopMSIE-7-0-0
+Browser-Sleipnir
+Browser-Sleipnir-2
+Browser-Sleipnir-2-8
+Browser-Sleipnir-2-8-4
 BrowserEngine-Trident
 BrowserEngine-Trident-4
 BrowserEngine-Trident-4-0
@@ -2475,6 +2489,43 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
+
+# Sleipnir 2.9.9 on Windows Vista
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30618; .NET4.0C; .NET4.0E; Sleipnir/2.9.9)
+Device-Desktop
+Device-NoPhone
+Browser-Sleipnir
+Browser-Sleipnir-2
+Browser-Sleipnir-2-9
+Browser-Sleipnir-2-9-9
+BrowserEngine-Trident
+BrowserEngine-Trident-4
+BrowserEngine-Trident-4-0
+BrowserEngine-Trident-4-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
+# Sleipnir 3.7 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/536.25 (KHTML, like Gecko) Version/5.1 Safari/7534.51.22 Sleipnir/3.7
+Device-Desktop
+Device-NoPhone
+Browser-Sleipnir
+Browser-Sleipnir-3
+Browser-Sleipnir-3-7
+Browser-Sleipnir-3-7-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-536
+BrowserEngine-WebKit-536-25
+BrowserEngine-WebKit-536-25-0
+BrowserEngine-WebKit-536-25-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-1
 
 
 #-----------------------------------------------------------------------------

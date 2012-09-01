@@ -154,11 +154,11 @@ public final class Sniffer {
                 analyze(ua, agentString, "Device-PSP-Vita", "vita ", 2, false);
             }
         }
-        
+
         if (kindleFire) {
             ua.addName("Device-AmazonKindle");
             ua.addName("Device-AmazonKindle-Fire");
-            
+
             if (agentString.contains("silk-accelerated=true")) {
                 ua.addName("CloudAcceleration-Yes");
             } else if (agentString.contains("silk-accelerated=false")) {
@@ -384,7 +384,23 @@ public final class Sniffer {
             // KDE KHTML
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
+
+        } else if ((!hasEngine(ua))) {
+            if (agentString.contains("opera ")) {
+                ua.addName("BrowserEngine-Presto");
+            } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
+                ua.addName("BrowserEngine-Trident");
+            }
         }
+    }
+
+    private static boolean hasEngine(UserAgent ua) {
+        for (String s : ua.getNames()) {
+            if (s.startsWith("BrowserEngine-")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static final void detectBrowser(UserAgent ua) {
@@ -401,6 +417,10 @@ public final class Sniffer {
         } else if (agentString.contains("maxthon")) {
             analyze(ua, agentString, "Browser-Maxthon", "maxthon ", 4, false);
             analyze(ua, agentString, "Browser-Maxthon", "maxthon/", 4, false);
+
+            // Sleipnir
+        } else if (agentString.contains("sleipnir/")) {
+            analyze(ua, agentString, "Browser-Sleipnir", "sleipnir/", 3, false);
 
             // Blackberry
         } else if (agentString.contains("blackberry")) {
@@ -584,10 +604,8 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Netscape", "netscape/", 3, true);
             ua.addName("BrowserEngine-Gecko");
 
-
             // Internet Explorer
         } else if (agentString.contains("msie")) {
-            ua.addName("BrowserEngine-Trident");
             ua.addName("Browser-MSIE");
 
             // Mobile IE
