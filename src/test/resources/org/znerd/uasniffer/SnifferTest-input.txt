@@ -2616,6 +2616,26 @@ BrowserOS-Windows-7
 # TODO: BrowserLocal-en
 # TODO: BrowserLocal-en-US
 
+# Maxthon 3.0 on Windows Vista
+Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/533.1 (KHTML, like Gecko) Maxthon/3.0.8.2 Safari/533.1
+Device-Desktop
+Device-NoPhone
+BrowserEngine-WebKit
+BrowserEngine-WebKit-533
+BrowserEngine-WebKit-533-1
+BrowserEngine-WebKit-533-1-0
+BrowserEngine-WebKit-533-1-0-0
+Browser-Maxthon
+Browser-Maxthon-3
+Browser-Maxthon-3-0
+Browser-Maxthon-3-0-8
+Browser-Maxthon-3-0-8-2
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
 # Maxthon 1.0 beta on Mac OS X
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/535.19 (KHTML, like Gecko) Maxthon/1.0.2.0 Chrome/18.0.1025.142 Safari/535.19
 Device-Desktop

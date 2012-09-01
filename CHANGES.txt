@@ -8,6 +8,7 @@
 * Added unit test for Konqueror 4.5 on FreeBSD.
 * Added unit test for Chromium 18 on Linux.
 * Added unit test for Chrome 22 on Windows.
+* Added unit test for Maxthon 3.0 on Windows Vista.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
