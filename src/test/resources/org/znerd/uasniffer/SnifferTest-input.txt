@@ -4640,6 +4640,24 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 # TODO BrowserLocale-en
 
+# Camino 2.1.2 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.8; nl; rv:1.9.2.28) Gecko/20120308 Camino/2.1.2 (MultiLang) (like Firefox/3.6.28) 
+Device-Desktop
+Device-NoPhone
+Browser-Camino
+Browser-Camino-2
+Browser-Camino-2-1
+Browser-Camino-2-1-2
+BrowserEngine-Gecko
+BrowserEngine-Gecko-1
+BrowserEngine-Gecko-1-9
+BrowserEngine-Gecko-1-9-2
+BrowserEngine-Gecko-1-9-2-28
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+
 
 #-----------------------------------------------------------------------------
 # Mozilla Fennec - Firefox for mobile devices
