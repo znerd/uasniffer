@@ -16,6 +16,7 @@
 * Added unit test for Internet Explorer 10 Compatibility Mode on Windows 8.
 * Added unit test for Firefox 14 on Firefox OS. Had to apply a small fix.
 * Added unit test for Opera 12.50 on Mac OS X 10.8.0.
+* Added unit test for Opera 11.66 on Mac OS X 10.8.1.
 
 
 --- CHANGES SINCE UASNIFFER 1.1 (August 25, 2012) ----------------------------
