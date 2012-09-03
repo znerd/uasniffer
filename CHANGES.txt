@@ -1,4 +1,4 @@
---- CHANGES SINCE UASNIFFER 1.2 (under development) --------------------------
+--- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
 
 * Introduced 'BrowserEngine-Trident-MSIE' (with versions) to make it possible
   to detect browsers that render with the same engine as MSIE version X. 
