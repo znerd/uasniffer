@@ -1,3 +1,6 @@
+--- CHANGES SINCE UASNIFFER 1.3 (under development) --------------------------
+
+
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
 
 * Introduced 'BrowserEngine-Trident-MSIE' (with versions) to make it possible
