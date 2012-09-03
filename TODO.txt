@@ -1,3 +1,5 @@
 Introduce Browser-DesktopFirefox
 Change Browser-Fennec to Browser-MobileFirefox (and add Browser-Firefox)
 Improve Java API.
+Support Lynx/Links browsers.
+Distinguish text browser interfaces and graphical browser interfaces.
