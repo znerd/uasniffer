@@ -4906,6 +4906,27 @@ BrowserOS-NIX
 BrowserOS-Linux
 BrowserOS-Linux-Android
 
+# Fennec 9.0 on Android
+Mozilla/5.0 (Android; Linux armv7l; rv:9.0) Gecko/20111216 Firefox/9.0 Fennec/9.0
+Device-Mobile
+Device-Phone
+Browser-Fennec
+Browser-Fennec-9
+Browser-Fennec-9-0
+Browser-Fennec-9-0-0
+Browser-MobileFirefox
+Browser-MobileFirefox-9
+Browser-MobileFirefox-9-0
+Browser-MobileFirefox-9-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-9
+BrowserEngine-Gecko-9-0
+BrowserEngine-Gecko-9-0-0
+BrowserEngine-Gecko-9-0-0-0
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+
 # Firefox 13 on Android Phone
 Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0
 Device-Mobile
