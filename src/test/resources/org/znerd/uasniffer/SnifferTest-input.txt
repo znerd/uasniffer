@@ -3192,6 +3192,22 @@ BrowserEngine-Presto
 BrowserOS-Windows
 BrowserOS-Windows-98
 
+# Opera 8.0 on Windows XP
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 8.0
+Device-Desktop
+Device-NoPhone
+Browser-Opera
+Browser-OperaDesktop
+Browser-OperaDesktop-8
+Browser-OperaDesktop-8-0
+Browser-OperaDesktop-8-0-0
+BrowserEngine-Presto
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
 # Opera Desktop 9.26 on Windows XP
 Opera/9.26 (Windows NT 5.1; U; nl)
 Device-Desktop
