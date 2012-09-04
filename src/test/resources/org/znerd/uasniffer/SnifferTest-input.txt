@@ -3972,6 +3972,24 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
+# Firefox 16.0 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-16
+BrowserEngine-Gecko-16-0
+BrowserEngine-Gecko-16-0-0
+BrowserEngine-Gecko-16-0-0-0
+Browser-Firefox
+Browser-Firefox-16
+Browser-Firefox-16-0
+Browser-Firefox-16-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+
 
 #-----------------------------------------------------------------------------
 # Netscape
