@@ -3,6 +3,7 @@
 * Added unit test for Firefox 16 on Mac OS X 10.8.1.
 * Added unit test for Fennec 9.0 (Firefox Mobile) on Android.
 * Added unit test for Opera 8.0 masquerading as MSIE 6.0.
+* Added unit test for Opera 8.5 masquerading as MSIE 6.0.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
