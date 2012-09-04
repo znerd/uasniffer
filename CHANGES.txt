@@ -1,6 +1,7 @@
 --- CHANGES SINCE UASNIFFER 1.3 (under development) --------------------------
 
 * Added unit test for Firefox 16 on Mac OS X 10.8.1.
+* Added unit test for Fennec 9.0 (Firefox Mobile) on Android.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
