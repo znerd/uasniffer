@@ -4,6 +4,7 @@
 * Added unit test for Fennec 9.0 (Firefox Mobile) on Android.
 * Added unit test for Opera 8.0 masquerading as MSIE 6.0.
 * Added unit test for Opera 8.5 masquerading as MSIE 6.0.
+* Added unit test for Opera 9.2 on Windows Vista.
 * Added unit test for Opera Mini 10.54. Required change to sniffer.
 
 

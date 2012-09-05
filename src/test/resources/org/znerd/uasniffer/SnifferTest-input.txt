@@ -3224,6 +3224,22 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
+# Opera 9.2 on Windows Vista 
+Opera/9.20 (Windows NT 6.0; U; en)
+Device-Desktop
+Device-NoPhone
+Browser-Opera
+Browser-OperaDesktop
+Browser-OperaDesktop-9
+Browser-OperaDesktop-9-2
+Browser-OperaDesktop-9-2-0
+BrowserEngine-Presto
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
 # Opera Desktop 9.26 on Windows XP
 Opera/9.26 (Windows NT 5.1; U; nl)
 Device-Desktop
