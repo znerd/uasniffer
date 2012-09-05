@@ -7,6 +7,7 @@
 * Added unit test for Opera 9.2 on Windows Vista.
 * Added unit test for Opera Mini 10.54. Required change to sniffer.
 * Added unit test for Netscape 8.1 on Windows XP.
+* Added unit test for Opera 7.02 on Windows XP masquerading as MSIE 5.5/6.0.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
