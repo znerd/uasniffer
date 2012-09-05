@@ -504,31 +504,37 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before Firebird code-name)
 
             // Opera
-        } else if (agentString.startsWith("opera/")) {
-
-            ua.addName("BrowserEngine-Presto");
-            ua.addName("Browser-Opera");
-
-            // Opera Mobile
-            if (agentString.contains("tablet")) {
-                analyze(ua, agentString, "Browser-OperaTablet", "version/", 3, true);
-            } else if (agentString.contains("mobi/")) {
-                analyze(ua, agentString, "Browser-OperaMobile", agentString.contains("version/") ? "version/" : "opera/", 3, true);
-
-                // Opera Mini
-            } else if (agentString.contains("mini/")) {
-                analyze(ua, agentString, "Browser-OperaMini", "mini/", 3, true);
-
-                // Opera Desktop
-            } else {
-                analyze(ua, agentString, "Browser-OperaDesktop", agentString.contains("version/") ? "version/" : "opera/", 3, true);
-            }
-
-            // Opera (older releases)
         } else if (agentString.contains("opera")) {
             ua.addName("Browser-Opera");
-            analyze(ua, agentString, "Browser-OperaDesktop", "opera ");
             ua.addName("BrowserEngine-Presto");
+
+            String versionPrefix, browserName;
+            if (agentString.contains("tablet")) { // Opera Tablet
+                versionPrefix = "opera tablet/";
+                browserName = "Browser-OperaTablet";
+
+            } else if (agentString.contains("mini/")) { // Opera Mini
+                versionPrefix = "opera mini/";
+                browserName = "Browser-OperaMini";
+
+            } else if (agentString.contains("mobi/")) { // Opera Mobile
+                versionPrefix = null;
+                browserName = "Browser-OperaMobile";
+
+            } else { // Opera Desktop
+                versionPrefix = null;
+                browserName = "Browser-OperaDesktop";
+            }
+            
+            if (agentString.contains("version/")) {
+                analyze(ua, agentString, browserName, "version/", 3, true);
+            } else if (versionPrefix != null && agentString.contains(versionPrefix)) {
+                analyze(ua, agentString, browserName, versionPrefix, 3, true);
+            } else if (agentString.contains("opera/")) {
+                analyze(ua, agentString, browserName, "opera/", 3, true);
+            } else {
+                analyze(ua, agentString, browserName, "opera ", 3, true);
+            }
 
             // Palm Pre browser - this one needs to be checked before Safari
         } else if (agentString.contains("pre/")) {
