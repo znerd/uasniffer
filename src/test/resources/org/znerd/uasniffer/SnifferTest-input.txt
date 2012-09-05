@@ -3444,15 +3444,50 @@ BrowserEngine-Presto-2
 BrowserEngine-Presto-2-2
 BrowserEngine-Presto-2-2-0
 
-# Opera Mini 10.54
+# Opera Mini 7.0 on Android
+Opera/9.80 (Android; Opera Mini/7.0.29952/28.2075; U; es) Presto/2.8.119 Version/11.10
+Device-Mobile
+Device-Phone
+Browser-Opera
+Browser-OperaMini
+Browser-OperaMini-7
+Browser-OperaMini-7-0
+Browser-OperaMini-7-0-29952
+BrowserEngine-Presto
+BrowserEngine-Presto-2
+BrowserEngine-Presto-2-8
+BrowserEngine-Presto-2-8-119
+BrowserOS-NIX
+BrowserOS-Linux
+BrowserOS-Linux-Android
+
+# Opera Mini 7.1 on iPad
+Opera/9.80 (iPad; Opera Mini/7.1.32694/27.1407; U; en) Presto/2.8.119 Version/11.10
+Device-Mobile
+Device-Tablet
+Device-NoPhone
+Browser-Opera
+Browser-OperaMini
+Browser-OperaMini-7
+Browser-OperaMini-7-1
+Browser-OperaMini-7-1-32694
+BrowserEngine-Presto
+BrowserEngine-Presto-2
+BrowserEngine-Presto-2-8
+BrowserEngine-Presto-2-8-119
+BrowserOS-iOS
+Device-AppleTouch
+Device-AppleTouch-iPad
+
+# Opera Mini 9.80
 Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54
 Device-Mobile
 Device-Phone
 Browser-Opera
 Browser-OperaMini
-Browser-OperaMini-10
-Browser-OperaMini-10-5
-Browser-OperaMini-10-5-4
+Browser-OperaMini-9
+Browser-OperaMini-9-8
+Browser-OperaMini-9-8-0
 BrowserEngine-Presto
 BrowserEngine-Presto-2
 BrowserEngine-Presto-2-5

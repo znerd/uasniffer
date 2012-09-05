@@ -5,7 +5,9 @@
 * Added unit test for Opera 8.0 masquerading as MSIE 6.0.
 * Added unit test for Opera 8.5 masquerading as MSIE 6.0.
 * Added unit test for Opera 9.2 on Windows Vista.
-* Added unit test for Opera Mini 10.54. Required change to sniffer.
+* Added unit test for Opera Mini 7.0 on Android.
+* Added unit test for Opera Mini 7.1 on iPad.
+* Added unit test for Opera Mini 9.80. Required change to sniffer.
 * Added unit test for Netscape 8.1 on Windows XP.
 * Added unit test for Opera 7.02 on Windows XP masquerading as MSIE 5.5/6.0.
 

@@ -526,7 +526,9 @@ public final class Sniffer {
                 browserName = "Browser-OperaDesktop";
             }
             
-            if (agentString.contains("version/")) {
+            if (agentString.contains("opera mini/")) {
+                analyze(ua, agentString, browserName, "opera mini/", 3, true);
+            } else if (agentString.contains("version/")) {
                 analyze(ua, agentString, browserName, "version/", 3, true);
             } else if (versionPrefix != null && agentString.contains(versionPrefix)) {
                 analyze(ua, agentString, browserName, versionPrefix, 3, true);
