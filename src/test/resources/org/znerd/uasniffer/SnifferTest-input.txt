@@ -1543,6 +1543,26 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-7
 
+# RockMelt 0.16 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/535.7 (KHTML, like Gecko) RockMelt/0.16.91.483 Chrome/16.0.912.77 Safari/535.7
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-16
+Browser-RockMelt-0-16-91
+Browser-RockMelt-0-16-91-483
+BrowserEngine-WebKit
+BrowserEngine-WebKit-535
+BrowserEngine-WebKit-535-7
+BrowserEngine-WebKit-535-7-0
+BrowserEngine-WebKit-535-7-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-1
+
 
 #-----------------------------------------------------------------------------
 # Internet Explorer (desktop)
