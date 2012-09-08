@@ -4867,6 +4867,19 @@ BrowserOS-NIX
 BrowserOS-BSD
 BrowserOS-BSD-FreeBSD
 
+# Konqueror 4.8 on Windows
+Mozilla/5.0 (compatible; Konqueror/4.8; Windows) KHTML/4.8.3 (like Gecko)
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-8
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-8
+BrowserEngine-KHTML-4-8-3
+BrowserOS-Windows
+
 
 #-----------------------------------------------------------------------------
 # Mozilla Camino - a Firefox-alternative specific for Mac OS X

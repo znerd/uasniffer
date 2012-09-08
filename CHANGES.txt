@@ -13,6 +13,7 @@
 * Added unit test for RockMelt 0.16 on Mac OS X 10.8.1.
 * Added unit test for RockMelt 0.16 on Windows 7.
 * Added unit test for RockMelt 0.16 on Windows 8.
+* Added unit test for Konqueror 4.8 on Windows.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
