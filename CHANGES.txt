@@ -14,6 +14,7 @@
 * Added unit test for RockMelt 0.16 on Windows 7.
 * Added unit test for RockMelt 0.16 on Windows 8.
 * Added unit test for Konqueror 4.8 on Windows.
+* Added unit test for Konqueror 4.8 on Fedora 17.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------

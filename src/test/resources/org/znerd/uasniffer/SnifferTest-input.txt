@@ -4880,6 +4880,20 @@ BrowserEngine-KHTML-4-8
 BrowserEngine-KHTML-4-8-3
 BrowserOS-Windows
 
+# Konqueror 4.8 on Fedora 17
+Mozilla/5.0 (X11; Linux i686) KHTML/4.8.5 (like Gecko) Konqueror/4.8 Fedora/4.8.5-1.fc17
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-8
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-8
+BrowserEngine-KHTML-4-8-5
+BrowserOS-NIX
+BrowserOS-Linux
+
 
 #-----------------------------------------------------------------------------
 # Mozilla Camino - a Firefox-alternative specific for Mac OS X
