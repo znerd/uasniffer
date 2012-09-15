@@ -1,5 +1,7 @@
 --- CHANGES SINCE UASNIFFER 1.3 (under development) --------------------------
 
+* Unit testing Sniffer constructor now (must be private).
+* Removed dead code from Sniffer class.
 * Added unit test for Firefox 16 on Mac OS X 10.8.1.
 * Added unit test for Fennec 9.0 (Firefox Mobile) on Android.
 * Added unit test for Opera 8.0 masquerading as MSIE 6.0.

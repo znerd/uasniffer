@@ -83,22 +83,7 @@ public final class Sniffer {
         }
 
         if (!matchFound) {
-            if (agentString.contains("ipod")) { // iPod
-                matchFound = true;
-                uaType = "desktop";
-                isPhone = false;
-
-            } else if (agentString.contains("iphone")) { // iPhone
-                matchFound = true;
-                uaType = "desktop";
-                isPhone = true;
-
-            } else if (agentString.contains("ipad")) { // iPad
-                matchFound = true;
-                uaType = "tablet";
-                isPhone = false;
-
-            } else if (!isTablet && agentString.contains("android")) { // Android
+            if (!isTablet && agentString.contains("android")) { // Android
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = true;
@@ -389,7 +374,7 @@ public final class Sniffer {
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
 
-        } else if ((!hasEngine(ua))) {
+        } else {
             if (agentString.contains("opera ")) {
                 ua.addName("BrowserEngine-Presto");
             } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
@@ -400,15 +385,6 @@ public final class Sniffer {
                 }
             }
         }
-    }
-
-    private static boolean hasEngine(UserAgent ua) {
-        for (String s : ua.getNames()) {
-            if (s.startsWith("BrowserEngine-")) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private static final void detectBrowser(UserAgent ua) {
@@ -489,9 +465,7 @@ public final class Sniffer {
             }
         } else if (agentString.contains("minefield/")) {
             analyze(ua, agentString, "Browser-Firefox", "minefield/");
-            if (agentString.contains("mobile")) {
-                analyze(ua, agentString, "Browser-MobileFirefox", "firefox/");
-            }
+
         } else if (agentString.contains("namoroka/")) {
             analyze(ua, agentString, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
         } else if (agentString.contains("shiretoko/")) {
@@ -530,8 +504,6 @@ public final class Sniffer {
                 analyze(ua, agentString, browserName, "opera mini/", 3, true);
             } else if (agentString.contains("version/")) {
                 analyze(ua, agentString, browserName, "version/", 3, true);
-            } else if (versionPrefix != null && agentString.contains(versionPrefix)) {
-                analyze(ua, agentString, browserName, versionPrefix, 3, true);
             } else if (agentString.contains("opera/")) {
                 analyze(ua, agentString, browserName, "opera/", 3, true);
             } else {
