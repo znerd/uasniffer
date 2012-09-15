@@ -1543,6 +1543,66 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-7
 
+# RockMelt 0.16 on Mac OS X 10.8.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/535.7 (KHTML, like Gecko) RockMelt/0.16.91.483 Chrome/16.0.912.77 Safari/535.7
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-16
+Browser-RockMelt-0-16-91
+Browser-RockMelt-0-16-91-483
+BrowserEngine-WebKit
+BrowserEngine-WebKit-535
+BrowserEngine-WebKit-535-7
+BrowserEngine-WebKit-535-7-0
+BrowserEngine-WebKit-535-7-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-1
+
+# RockMelt 0.16 on Windows 7
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML like Gecko) RockMelt/0.16.91.483 Chrome/16.0.912.77 Safari/535.7
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-16
+Browser-RockMelt-0-16-91
+Browser-RockMelt-0-16-91-483
+BrowserEngine-WebKit
+BrowserEngine-WebKit-535
+BrowserEngine-WebKit-535-7
+BrowserEngine-WebKit-535-7-0
+BrowserEngine-WebKit-535-7-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+
+# RockMelt 0.16 on Windows 8
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.7 (KHTML like Gecko) RockMelt/0.16.91.478 Chrome/16.0.912.77 Safari/535.7
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-16
+Browser-RockMelt-0-16-91
+Browser-RockMelt-0-16-91-478
+BrowserEngine-WebKit
+BrowserEngine-WebKit-535
+BrowserEngine-WebKit-535-7
+BrowserEngine-WebKit-535-7-0
+BrowserEngine-WebKit-535-7-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+
 
 #-----------------------------------------------------------------------------
 # Internet Explorer (desktop)
@@ -4823,6 +4883,33 @@ BrowserEngine-KHTML-4-5-4
 BrowserOS-NIX
 BrowserOS-BSD
 BrowserOS-BSD-FreeBSD
+
+# Konqueror 4.8 on Windows
+Mozilla/5.0 (compatible; Konqueror/4.8; Windows) KHTML/4.8.3 (like Gecko)
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-8
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-8
+BrowserEngine-KHTML-4-8-3
+BrowserOS-Windows
+
+# Konqueror 4.8 on Fedora 17
+Mozilla/5.0 (X11; Linux i686) KHTML/4.8.5 (like Gecko) Konqueror/4.8 Fedora/4.8.5-1.fc17
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-8
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-8
+BrowserEngine-KHTML-4-8-5
+BrowserOS-NIX
+BrowserOS-Linux
 
 
 #-----------------------------------------------------------------------------
