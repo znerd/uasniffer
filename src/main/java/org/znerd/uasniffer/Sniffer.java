@@ -482,21 +482,14 @@ public final class Sniffer {
             ua.addName("Browser-Opera");
             ua.addName("BrowserEngine-Presto");
 
-            String versionPrefix, browserName;
+            String browserName;
             if (agentString.contains("tablet")) { // Opera Tablet
-                versionPrefix = "opera tablet/";
                 browserName = "Browser-OperaTablet";
-
             } else if (agentString.contains("mini/")) { // Opera Mini
-                versionPrefix = "opera mini/";
                 browserName = "Browser-OperaMini";
-
             } else if (agentString.contains("mobi/")) { // Opera Mobile
-                versionPrefix = null;
                 browserName = "Browser-OperaMobile";
-
             } else { // Opera Desktop
-                versionPrefix = null;
                 browserName = "Browser-OperaDesktop";
             }
             
