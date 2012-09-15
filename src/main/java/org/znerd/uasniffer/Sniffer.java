@@ -39,9 +39,9 @@ public final class Sniffer {
         // Detect specific devices
         boolean android = agentString.contains("android");
         boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
-        boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
+        boolean nook = agentString.contains("nook ") || agentString.contains("bntv250");
         boolean psp = agentString.contains("playstation portable") || agentString.contains("playstation vita");
-        boolean kindleFire = agentString.contains("silk-accelerated") && agentString.contains("silk/1.1."); // TODO
+        boolean kindleFire = agentString.contains("silk-accelerated"); // TODO
 
         // Mobile devices
         boolean matchFound = false;
