@@ -4,7 +4,8 @@
 * Removed dead code from Sniffer class.
 * Fixed issue detecting Opera Mini 9.80.
 * Added unit tests for:
-  - Firefox 16 on Mac OS X 10.8.1.
+  - Firefox 16 on Mac OS X 10.8.x.
+  - Firefox 19 on Mac OS X 10.8.x.
   - Fennec 9.0 (Firefox Mobile) on Android.
   - Opera 12.10 (prerelease) on Mac OS X 10.8.1.
   - Opera 8.0 masquerading as MSIE 6.0.

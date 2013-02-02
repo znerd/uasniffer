@@ -4278,6 +4278,24 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
+# Firefox 19.0 on Mac OS X 10.8.2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:19.0) Gecko/20100101 Firefox/19.0
+Device-Desktop
+Device-NoPhone
+BrowserEngine-Gecko
+BrowserEngine-Gecko-19
+BrowserEngine-Gecko-19-0
+BrowserEngine-Gecko-19-0-0
+BrowserEngine-Gecko-19-0-0-0
+Browser-Firefox
+Browser-Firefox-19
+Browser-Firefox-19-0
+Browser-Firefox-19-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+
 
 #-----------------------------------------------------------------------------
 # Netscape
