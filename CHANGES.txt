@@ -2,23 +2,29 @@
 
 * Unit testing Sniffer constructor now (must be private).
 * Removed dead code from Sniffer class.
-* Added unit test for Firefox 16 on Mac OS X 10.8.1.
-* Added unit test for Fennec 9.0 (Firefox Mobile) on Android.
-* Added unit test for Opera 12.10 (prerelease) on Mac OS X 10.8.1.
-* Added unit test for Opera 8.0 masquerading as MSIE 6.0.
-* Added unit test for Opera 8.5 masquerading as MSIE 6.0.
-* Added unit test for Opera 9.2 on Windows Vista.
-* Added unit test for Opera Mini 7.0 on Android.
-* Added unit test for Opera Mini 7.1 on iPad.
-* Added unit test for Opera Mini 9.80. Required change to sniffer.
-* Added unit test for Netscape 8.1 on Windows XP.
-* Added unit test for Opera 7.02 on Windows XP masquerading as MSIE 5.5/6.0.
-* Added unit test for RockMelt 0.16 on Mac OS X 10.8.1.
-* Added unit test for RockMelt 0.16 on Windows 7.
-* Added unit test for RockMelt 0.16 on Windows 8.
-* Added unit test for Konqueror 4.8 on Windows.
-* Added unit test for Konqueror 4.8 on Fedora 17.
-* Added unit test for Web browser inside Eclipse on Mac OS X 10.8.1.
+* Fixed issue detecting Opera Mini 9.80.
+* Added unit tests for:
+  - Firefox 16 on Mac OS X 10.8.1.
+  - Fennec 9.0 (Firefox Mobile) on Android.
+  - Opera 12.10 (prerelease) on Mac OS X 10.8.1.
+  - Opera 8.0 masquerading as MSIE 6.0.
+  - Opera 8.5 masquerading as MSIE 6.0.
+  - Opera 9.2 on Windows Vista.
+  - Opera Mini 7.0 on Android.
+  - Opera Mini 7.1 on iPad.
+  - Opera Mini 9.80.
+  - Netscape 8.1 on Windows XP.
+  - Opera 7.02 on Windows XP masquerading as MSIE 5.5/6.0.
+  - Rockmelt 0.9.72 on Mac OS X 10.8.2.
+  - RockMelt 2.1 browser on iPhone running iOS 6.0.1.
+  - RockMelt 0.16 on Mac OS X 10.8.1.
+  - RockMelt 0.16 on Windows 7.
+  - RockMelt 0.16 on Windows 8.
+  - Konqueror 4.8 on Windows.
+  - Konqueror 4.8 on Fedora 17.
+  - Web browser inside Eclipse on Mac OS X 10.8.1.
+  - Sleipnir 3.8.4.1 on Mac OS X 10.8.2.
+  - Opera 12.13 on Mac OS X 10.8.2.
 
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
