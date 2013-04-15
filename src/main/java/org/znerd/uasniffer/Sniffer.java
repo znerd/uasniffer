@@ -21,10 +21,10 @@ public final class Sniffer {
      * Analyzes the specified user agent string.
      * 
      * @param agentString
-     *            the user agent string, cannot be <code>null</code>.
+     *        the user agent string, cannot be <code>null</code>.
      * @return an {@link UserAgent} instance that describes the user agent, never <code>null</code>.
      * @throws IllegalArgumentException
-     *             if <code>agentString == null</code>.
+     *         if <code>agentString == null</code>.
      */
     public static final UserAgent analyze(String agentString) throws IllegalArgumentException {
         UserAgent ua = new UserAgent(agentString);
@@ -286,7 +286,7 @@ public final class Sniffer {
             } else if (agentString.contains("win3.")) {
                 int indexWin3 = agentString.indexOf("win3.");
                 int indexWindows = agentString.indexOf("windows");
-                String s = (indexWindows >= 0 && indexWindows < indexWin3) ? agentString.substring(indexWindows + 1) : agentString;
+                String s = indexWindows >= 0 && indexWindows < indexWin3 ? agentString.substring(indexWindows + 1) : agentString;
 
                 analyze(ua, s, "BrowserOS-Windows", "win", 3, true);
             }
@@ -389,7 +389,7 @@ public final class Sniffer {
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
 
-        } else if ((!hasEngine(ua))) {
+        } else if (!hasEngine(ua)) {
             if (agentString.contains("opera ")) {
                 ua.addName("BrowserEngine-Presto");
             } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
@@ -416,7 +416,8 @@ public final class Sniffer {
         String agentString = ua.getLowerCaseAgentString();
 
         // Lunascape, can use different rendering engines
-        // E.g.: Lunascape5 (Webkit) - Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/528+ (KHTML, like Gecko, Safari/528.0) Lunascape/5.0.3.0
+        // E.g.: Lunascape5 (Webkit) - Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US)
+        // AppleWebKit/528+ (KHTML, like Gecko, Safari/528.0) Lunascape/5.0.3.0
         if (agentString.contains("lunascape")) {
             analyze(ua, agentString, "Browser-Lunascape", "lunascape ", 4, false);
             analyze(ua, agentString, "Browser-Lunascape", "lunascape/", 4, false);
@@ -441,9 +442,11 @@ public final class Sniffer {
             ua.addName("BrowserEngine-KHTML");
 
             // Fennec
-            // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.9.2a1pre) Gecko/20090317 Fennec/1.0b1
+            // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.9.2a1pre) Gecko/20090317
+            // Fennec/1.0b1
             // Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1b2pre) Gecko/20081015 Fennec/1.0a1
-            // Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20090322 Fennec/1.0b2pre
+            // Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20090322
+            // Fennec/1.0b2pre
         } else if (agentString.contains("fennec")) {
             analyze(ua, agentString, "Browser-Fennec", "fennec/");
             analyze(ua, agentString, "Browser-MobileFirefox", "fennec/");
@@ -454,18 +457,22 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Epiphany", "epiphany/");
 
             // Flock (needs to be detected before Firefox and Chrome)
-            // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.18) Gecko/20081107 Firefox/2.0.0.18 Flock/1.2.7
-            // or: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.2.4599 Chrome/7.0.517.442 Safari/534.7
+            // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.18) Gecko/20081107
+            // Firefox/2.0.0.18 Flock/1.2.7
+            // or: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like
+            // Gecko) Flock/3.5.2.4599 Chrome/7.0.517.442 Safari/534.7
         } else if (agentString.contains("flock")) {
             analyze(ua, agentString, "Browser-Flock", "flock/", 4, false);
 
             // Camino (needs to be detected before Firefox)
-            // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; nl; rv:1.8.1.14) Gecko/20080512 Camino/1.6.1 (MultiLang) (like Firefox/2.0.0.14)
+            // E.g.: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; nl; rv:1.8.1.14) Gecko/20080512
+            // Camino/1.6.1 (MultiLang) (like Firefox/2.0.0.14)
         } else if (agentString.contains("camino")) {
             analyze(ua, agentString, "Browser-Camino", "camino/");
 
             // SeaMonkey
-            // E.g.: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1b3pre) Gecko/20090302 SeaMonkey/2.0b1pre
+            // E.g.: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1b3pre) Gecko/20090302
+            // SeaMonkey/2.0b1pre
         } else if (agentString.contains("seamonkey/")) {
             analyze(ua, agentString, "Browser-SeaMonkey", "seamonkey/");
 
@@ -476,7 +483,8 @@ public final class Sniffer {
             ua.addName("BrowserEngine-Gecko");
 
             // Netscape Navigator (needs to be detected before Firefox)
-            // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.5pre) Gecko/20070712 Firefox/2.0.0.4 Navigator/9.0b2
+            // E.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.5pre) Gecko/20070712
+            // Firefox/2.0.0.4 Navigator/9.0b2
         } else if (agentString.contains("navigator/")) {
             analyze(ua, agentString, "Browser-Netscape", "navigator/");
             ua.addName("BrowserEngine-Gecko");
@@ -497,46 +505,42 @@ public final class Sniffer {
         } else if (agentString.contains("shiretoko/")) {
             analyze(ua, agentString, "Browser-Firefox", "shiretoko/"); // Firefox 3.5 pre-releases
         } else if (agentString.contains("granparadiso/")) {
-            analyze(ua, agentString, "Browser-Firefox", "granparadiso/"); // Firefox 3.0/3.1 pre-releases
+            analyze(ua, agentString, "Browser-Firefox", "granparadiso/"); // Firefox 3.0/3.1
+                                                                          // pre-releases
         } else if (agentString.contains("firebird/")) {
             analyze(ua, agentString, "Browser-Firefox", "firebird/"); // Before 1.0
         } else if (agentString.contains("phoenix/")) {
-            analyze(ua, agentString, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before Firebird code-name)
+            analyze(ua, agentString, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before
+                                                                     // Firebird code-name)
 
             // Opera
+        } else if (agentString.startsWith("opera/")) {
+
+            ua.addName("BrowserEngine-Presto");
+            ua.addName("Browser-Opera");
+
+            // Opera Mobile
+            if (agentString.contains("tablet")) {
+                analyze(ua, agentString, "Browser-OperaTablet", "version/", 3, true);
+
+                // Opera Mini
+            } else if (agentString.contains("mini/")) {
+                analyze(ua, agentString, "Browser-OperaMini", "mini/", 3, true);
+
+                // Opera Mobile
+            } else if (agentString.contains("mobi/")) {
+                analyze(ua, agentString, "Browser-OperaMobile", agentString.contains("version/") ? "version/" : "opera/", 3, true);
+
+                // Opera Desktop
+            } else {
+                analyze(ua, agentString, "Browser-OperaDesktop", agentString.contains("version/") ? "version/" : "opera/", 3, true);
+            }
+
+            // Opera (older releases)
         } else if (agentString.contains("opera")) {
             ua.addName("Browser-Opera");
+            analyze(ua, agentString, "Browser-OperaDesktop", "opera ", 3, true);
             ua.addName("BrowserEngine-Presto");
-
-            String versionPrefix, browserName;
-            if (agentString.contains("tablet")) { // Opera Tablet
-                versionPrefix = "opera tablet/";
-                browserName = "Browser-OperaTablet";
-
-            } else if (agentString.contains("mini/")) { // Opera Mini
-                versionPrefix = "opera mini/";
-                browserName = "Browser-OperaMini";
-
-            } else if (agentString.contains("mobi/")) { // Opera Mobile
-                versionPrefix = null;
-                browserName = "Browser-OperaMobile";
-
-            } else { // Opera Desktop
-                versionPrefix = null;
-                browserName = "Browser-OperaDesktop";
-            }
-            
-            if (agentString.contains("opera mini/")) {
-                analyze(ua, agentString, browserName, "opera mini/", 3, true);
-            } else if (agentString.contains("version/")) {
-                analyze(ua, agentString, browserName, "version/", 3, true);
-            } else if (versionPrefix != null && agentString.contains(versionPrefix)) {
-                analyze(ua, agentString, browserName, versionPrefix, 3, true);
-            } else if (agentString.contains("opera/")) {
-                analyze(ua, agentString, browserName, "opera/", 3, true);
-            } else {
-                analyze(ua, agentString, browserName, "opera ", 3, true);
-            }
 
             // Palm Pre browser - this one needs to be checked before Safari
         } else if (agentString.contains("pre/")) {
@@ -547,12 +551,14 @@ public final class Sniffer {
             ua.addName("Browser-OmniWeb");
 
             // RockMelt - this one needs to be checked before Google Chrome
-            // e.g.: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
+            // e.g.: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like
+            // Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
         } else if (agentString.contains("rockmelt")) {
             analyze(ua, agentString, "Browser-RockMelt", "rockmelt/", 4, false);
 
             // Google Chrome - this one needs to be checked before Safari
-            // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.
+            // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like
+            // Gecko) Chrome/0.X.Y.Z Safari/525.13.
         } else if (agentString.contains("chrome/")) {
             analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
 
@@ -666,7 +672,7 @@ public final class Sniffer {
             // Get the version number in a string
             String version = cutVersionEnd(agentString.substring(index + versionPrefix.length()).trim());
 
-            if (version.length() > 0 && (!version.startsWith("00"))) {
+            if (version.length() > 0 && !version.startsWith("00")) {
 
                 // Split the version number in pieces
                 String[] versionParts = version.split("\\.");
