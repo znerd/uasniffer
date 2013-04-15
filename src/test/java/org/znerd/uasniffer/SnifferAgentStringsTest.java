@@ -17,14 +17,14 @@ import org.junit.runner.RunWith;
 import org.znerd.util.test.junit.PolySuite;
 
 @RunWith(PolySuite.class)
-public class SnifferTest extends Object {
+public class SnifferAgentStringsTest extends Object {
 
     private final SnifferTestDataEntry entry;
     String agentString;
     private final UserAgent ua;
     Collection<String> actualNames;
 
-    public SnifferTest(SnifferTestDataEntry entry) {
+    public SnifferAgentStringsTest(SnifferTestDataEntry entry) {
         this.entry = entry;
         agentString = entry.getAgentString();
         ua = Sniffer.analyze(agentString);
@@ -34,7 +34,7 @@ public class SnifferTest extends Object {
 
     @PolySuite.Config
     public static SnifferTestData loadTestData() throws Exception {
-        Class<?> clazz = SnifferTest.class;
+        Class<?> clazz = SnifferAgentStringsTest.class;
         InputStream byteStream = clazz.getResourceAsStream(clazz.getSimpleName() + "-input.txt");
         Reader charStream = new InputStreamReader(byteStream, "UTF-8");
         LineNumberReader lines = new LineNumberReader(charStream);

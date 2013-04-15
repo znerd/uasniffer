@@ -39,9 +39,9 @@ public final class Sniffer {
         // Detect specific devices
         boolean android = agentString.contains("android");
         boolean appleTouch = agentString.contains("ipod") || agentString.contains("iphone") || agentString.contains("ipad");
-        boolean nook = agentString.contains("nook ") || agentString.contains("nook/") || agentString.contains("bntv250");
+        boolean nook = agentString.contains("nook ") || agentString.contains("bntv250");
         boolean psp = agentString.contains("playstation portable") || agentString.contains("playstation vita");
-        boolean kindleFire = agentString.contains("silk-accelerated") && agentString.contains("silk/1.1."); // TODO
+        boolean kindleFire = agentString.contains("silk-accelerated"); // TODO
 
         // Mobile devices
         boolean matchFound = false;
@@ -83,22 +83,7 @@ public final class Sniffer {
         }
 
         if (!matchFound) {
-            if (agentString.contains("ipod")) { // iPod
-                matchFound = true;
-                uaType = "desktop";
-                isPhone = false;
-
-            } else if (agentString.contains("iphone")) { // iPhone
-                matchFound = true;
-                uaType = "desktop";
-                isPhone = true;
-
-            } else if (agentString.contains("ipad")) { // iPad
-                matchFound = true;
-                uaType = "tablet";
-                isPhone = false;
-
-            } else if (!isTablet && agentString.contains("android")) { // Android
+            if (!isTablet && agentString.contains("android")) { // Android
                 matchFound = true;
                 uaType = "desktop";
                 isPhone = true;
@@ -388,8 +373,7 @@ public final class Sniffer {
             // KDE KHTML
         } else if (agentString.contains("khtml/")) {
             analyze(ua, agentString, "BrowserEngine-KHTML", "khtml/", 3, false);
-
-        } else if (!hasEngine(ua)) {
+        } else {
             if (agentString.contains("opera ")) {
                 ua.addName("BrowserEngine-Presto");
             } else if (agentString.contains("msie ") || agentString.contains("msie/")) {
@@ -400,15 +384,6 @@ public final class Sniffer {
                 }
             }
         }
-    }
-
-    private static boolean hasEngine(UserAgent ua) {
-        for (String s : ua.getNames()) {
-            if (s.startsWith("BrowserEngine-")) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private static final void detectBrowser(UserAgent ua) {
@@ -497,9 +472,7 @@ public final class Sniffer {
             }
         } else if (agentString.contains("minefield/")) {
             analyze(ua, agentString, "Browser-Firefox", "minefield/");
-            if (agentString.contains("mobile")) {
-                analyze(ua, agentString, "Browser-MobileFirefox", "firefox/");
-            }
+
         } else if (agentString.contains("namoroka/")) {
             analyze(ua, agentString, "Browser-Firefox", "namoroka/"); // Firefox 3.6 pre-releases
         } else if (agentString.contains("shiretoko/")) {
@@ -519,19 +492,23 @@ public final class Sniffer {
             ua.addName("BrowserEngine-Presto");
             ua.addName("Browser-Opera");
 
-            // Opera Mobile
-            if (agentString.contains("tablet")) {
-                analyze(ua, agentString, "Browser-OperaTablet", "version/", 3, true);
+            String browserName;
+            if (agentString.contains("tablet")) { // Opera Tablet
+                browserName = "Browser-OperaTablet";
+            } else if (agentString.contains("mini/")) { // Opera Mini
+                browserName = "Browser-OperaMini";
+            } else if (agentString.contains("mobi/")) { // Opera Mobile
+                browserName = "Browser-OperaMobile";
+            } else { // Opera Desktop
+                browserName = "Browser-OperaDesktop";
+            }
 
-                // Opera Mini
-            } else if (agentString.contains("mini/")) {
-                analyze(ua, agentString, "Browser-OperaMini", "mini/", 3, true);
-
-                // Opera Mobile
-            } else if (agentString.contains("mobi/")) {
-                analyze(ua, agentString, "Browser-OperaMobile", agentString.contains("version/") ? "version/" : "opera/", 3, true);
-
-                // Opera Desktop
+            if (agentString.contains("opera mini/")) {
+                analyze(ua, agentString, browserName, "opera mini/", 3, true);
+            } else if (agentString.contains("version/")) {
+                analyze(ua, agentString, browserName, "version/", 3, true);
+            } else if (agentString.contains("opera/")) {
+                analyze(ua, agentString, browserName, "opera/", 3, true);
             } else {
                 analyze(ua, agentString, "Browser-OperaDesktop", agentString.contains("version/") ? "version/" : "opera/", 3, true);
             }
