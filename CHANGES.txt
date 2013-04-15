@@ -16,6 +16,8 @@
 * Added unit test for Konqueror 4.8 on Windows.
 * Added unit test for Konqueror 4.8 on Fedora 17.
 
+* Added unit test for Konqueror 4.9 on Linux.
+
 
 --- CHANGES SINCE UASNIFFER 1.2 (September 3, 2012) --------------------------
 
