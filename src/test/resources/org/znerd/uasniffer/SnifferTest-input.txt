@@ -4894,6 +4894,20 @@ BrowserEngine-KHTML-4-8-5
 BrowserOS-NIX
 BrowserOS-Linux
 
+# Konqueror 4.9 on Linux
+Mozilla/5.0 (X11; Linux x8664) KHTML/4.9.0 (like Gecko) Konqueror/4.9
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-9
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-9
+BrowserEngine-KHTML-4-9-0
+BrowserOS-NIX
+BrowserOS-Linux
+
 
 #-----------------------------------------------------------------------------
 # Mozilla Camino - a Firefox-alternative specific for Mac OS X
