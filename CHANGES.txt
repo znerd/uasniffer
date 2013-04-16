@@ -1,4 +1,4 @@
---- CHANGES SINCE UASNIFFER 1.3 (under development) --------------------------
+--- CHANGES SINCE UASNIFFER 1.3 (April 16, 2013) -----------------------------
 
 * Now recognizing IE 11 on Windows Blue (based on leaked preliminary agent string).
 * Fixed issue detecting Opera Mini 9.80.
