@@ -1,10 +1,12 @@
 --- CHANGES SINCE UASNIFFER 1.3 (under development) --------------------------
 
-* Unit testing Sniffer constructor now (must be private).
-* Removed dead code from Sniffer class.
-* Refactored Opera detection code.
+* Now recognizing IE 11 on Windows Blue (based on leaked preliminary agent string).
 * Fixed issue detecting Opera Mini 9.80.
-* Added unit tests for:
+* Refactored Opera detection code.
+* Removed dead code from Sniffer class.
+* Unit testing Sniffer constructor now (must be private).
+* Added unit tests for the following user agents:
+  - Internet Explorer 11 on Windows Blue (preliminary, leaked).
   - Internet Explorer 10 on Windows 8 64-bit.
   - WPF application on Windows 8.
   - Firefox 16 on OS X 10.8.x.

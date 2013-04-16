@@ -175,7 +175,7 @@ public final class Sniffer {
         }
 
         if (ua.hasName("BrowserEngine-Trident") && !ua.hasName("Browser-MobileMSIE")) {
-            analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "msie", 2, true);
+            analyze(ua, agentString, "BrowserEngine-Trident-MSIE", agentString.contains("msie ") ? "msie " : "(ie ", 2, true);
         }
     }
 
@@ -604,7 +604,7 @@ public final class Sniffer {
             ua.addName("BrowserEngine-Gecko");
 
             // Internet Explorer
-        } else if (agentString.contains("msie")) {
+        } else if (agentString.contains("msie") || agentString.contains("(ie ")) {
             ua.addName("Browser-MSIE");
 
             // Mobile IE
@@ -613,7 +613,7 @@ public final class Sniffer {
             } else if (ua.hasName("BrowserOS-Windows-Mobile")) {
                 ua.addName("Browser-MobileMSIE");
             } else {
-                analyze(ua, agentString, "Browser-DesktopMSIE", "msie ", 3, true);
+                analyze(ua, agentString, "Browser-DesktopMSIE", agentString.contains("msie ") ? "msie " : "(ie ", 3, true);
 
                 // Chrome Frame
                 if (agentString.contains("chromeframe")) {
