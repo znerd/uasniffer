@@ -221,7 +221,7 @@ public final class Sniffer {
         } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
             ua.addName("BrowserOS-MacOS");
 
-            // Mac OS X
+            // OS X
             if (agentString.contains("mac os x")) {
                 ua.addName("BrowserOS-NIX");
                 ua.addName("BrowserOS-MacOS-10");
