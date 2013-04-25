@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.znerd</groupId>
   <artifactId>uasniffer</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.4-SNAPSHOT</version>
 
   <name>User Agent Sniffer</name>
   <description>Java-based user agent sniffing tool that detects all major browsers, distinguishing versions, mobile/desktop, phone, etc.</description>

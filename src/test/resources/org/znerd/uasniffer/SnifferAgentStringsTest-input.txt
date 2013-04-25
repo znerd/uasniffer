@@ -2630,6 +2630,27 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-7
 BrowserOS-Windows-NT-7-2
 
+# IE 11 leaked agent string, pre announcement, on Windows Blue
+Mozilla/5.0 (IE 11.0; Windows NT 6.3; Trident/7.0; .NET4.0E; .NET4.0C; rv:11.0) like Gecko
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-11
+Browser-DesktopMSIE-11-0
+Browser-DesktopMSIE-11-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-7
+BrowserEngine-Trident-7-0
+BrowserEngine-Trident-7-0-0
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-11
+BrowserEngine-Trident-MSIE-11-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-3
+
 
 #-----------------------------------------------------------------------------
 # Mobile Internet Explorer
@@ -5128,6 +5149,20 @@ BrowserEngine-KHTML
 BrowserEngine-KHTML-4
 BrowserEngine-KHTML-4-8
 BrowserEngine-KHTML-4-8-5
+BrowserOS-NIX
+BrowserOS-Linux
+
+# Konqueror 4.9 on Linux
+Mozilla/5.0 (X11; Linux x8664) KHTML/4.9.0 (like Gecko) Konqueror/4.9
+Device-Desktop
+Device-NoPhone
+Browser-Konqueror
+Browser-Konqueror-4
+Browser-Konqueror-4-9
+BrowserEngine-KHTML
+BrowserEngine-KHTML-4
+BrowserEngine-KHTML-4-9
+BrowserEngine-KHTML-4-9-0
 BrowserOS-NIX
 BrowserOS-Linux
 
