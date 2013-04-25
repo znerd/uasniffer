@@ -3138,6 +3138,26 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-0
 
+# Maxthon 4.0.4 on OS X 10.8.2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Maxthon/4.0.4.2000 Chrome/25.0.1364.99 Safari/537.22
+Device-Desktop
+Device-NoPhone
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-22
+BrowserEngine-WebKit-537-22-0
+BrowserEngine-WebKit-537-22-0-0
+Browser-Maxthon
+Browser-Maxthon-4
+Browser-Maxthon-4-0
+Browser-Maxthon-4-0-4
+Browser-Maxthon-4-0-4-2000
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-2
+
 
 #-----------------------------------------------------------------------------
 # Safari (desktop)
