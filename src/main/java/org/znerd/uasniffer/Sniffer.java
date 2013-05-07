@@ -3,6 +3,7 @@
 package org.znerd.uasniffer;
 
 import org.znerd.util.text.TextUtils;
+import java.util.regex.Pattern;
 
 /**
  * Class responsible for determining the user agent details.
@@ -588,7 +589,11 @@ public final class Sniffer {
             ua.addName("Browser-Safari");
 
             if (agentString.contains("mobile/") || agentString.contains("android")) {
-                analyze(ua, agentString, "Browser-MobileSafari", "version/");
+                if (Pattern.compile("mobile\\/[0-9]+(\\.[0-9]+)+(\\s|\\))").matcher(agentString).find()) {
+                    analyze(ua, agentString, "Browser-MobileSafari", "mobile/");
+                } else {
+                    analyze(ua, agentString, "Browser-MobileSafari", "version/");
+                }
             } else {
                 analyze(ua, agentString, "Browser-DesktopSafari", "version/");
             }

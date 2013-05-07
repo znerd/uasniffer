@@ -1059,6 +1059,28 @@ BrowserOS-iOS-6
 BrowserOS-iOS-6-0
 BrowserOS-iOS-6-0-0
 
+# 1Password application on iPad running iOS 6.1.3
+Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) 1Password/4.1.2 (like Version/10B329 Mobile/6.1.3 Safari/8536.25)
+Device-Mobile
+Device-NoPhone
+Device-Tablet
+Device-AppleTouch
+Device-AppleTouch-iPad
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-6
+Browser-MobileSafari-6-1
+Browser-MobileSafari-6-1-3
+BrowserEngine-WebKit
+BrowserEngine-WebKit-536
+BrowserEngine-WebKit-536-26
+BrowserEngine-WebKit-536-26-0
+BrowserEngine-WebKit-536-26-0-0
+BrowserOS-iOS
+BrowserOS-iOS-6
+BrowserOS-iOS-6-1
+BrowserOS-iOS-6-1-3
+
 
 #-----------------------------------------------------------------------------
 # OmniWeb - a browser for OS X
@@ -2110,6 +2132,56 @@ Browser-DesktopMSIE
 Browser-DesktopMSIE-6
 Browser-DesktopMSIE-6-0
 Browser-DesktopMSIE-6-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-6
+BrowserEngine-Trident-MSIE-6-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Internet Explorer 6.0 on Windows XP with Chrome Frame extension (1/2)
+# Official example from http://www.chromium.org/developers/how-tos/chrome-frame-getting-started/understanding-chrome-frame-user-agent
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; chromeframe/11.0.660.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-6
+Browser-DesktopMSIE-6-0
+Browser-DesktopMSIE-6-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-11
+BrowserEngine-ChromeFrame-11-0
+BrowserEngine-ChromeFrame-11-0-660
+BrowserEngine-ChromeFrame-11-0-660-0
+BrowserEngine-Trident
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-6
+BrowserEngine-Trident-MSIE-6-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Internet Explorer 6.0 on Windows XP with Chrome Frame extension (2/2)
+# Official example from http://www.chromium.org/developers/how-tos/chrome-frame-getting-started/understanding-chrome-frame-user-agent
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) chromeframe/11.0.660.0
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-6
+Browser-DesktopMSIE-6-0
+Browser-DesktopMSIE-6-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-11
+BrowserEngine-ChromeFrame-11-0
+BrowserEngine-ChromeFrame-11-0-660
+BrowserEngine-ChromeFrame-11-0-660-0
 BrowserEngine-Trident
 BrowserEngine-Trident-MSIE
 BrowserEngine-Trident-MSIE-6

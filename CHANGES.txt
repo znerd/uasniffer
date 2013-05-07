@@ -1,6 +1,9 @@
 --- CHANGES SINCE UASNIFFER 1.4 (under development) --------------------------
 
+* Improved detection of mobile WebKit browser version.
 * Added unit tests for:
+  - Mobile WebKit browser inside 1Password app on iPad.
+  - MSIE 6.0 with Chrome Frame 11.0 extension.
   - Chrome 28 on OS X 10.8.2.
   - RockMelt 0.16 on OS X 10.8.2.
   - Maxthon 4.0.4 on OS X 10.8.2.
