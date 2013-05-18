@@ -537,7 +537,7 @@ public final class Sniffer {
             // Google Chrome - this one needs to be checked before Safari
             // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like
             // Gecko) Chrome/0.X.Y.Z Safari/525.13.
-        } else if (agentString.contains("chrome/")) {
+        } else if (agentString.contains("chrome/") && !agentString.contains("chromeframe")) {
             analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
 
             // Nokia browser - needs to be checked before Safari
@@ -584,7 +584,7 @@ public final class Sniffer {
             }
 
             // Apple Safari
-        } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
+        } else if (! agentString.contains("chromeframe") && (agentString.contains("safari") || agentString.contains("applewebkit"))) {
             ua.addName("BrowserEngine-WebKit");
             ua.addName("Browser-Safari");
 
@@ -609,7 +609,7 @@ public final class Sniffer {
             ua.addName("BrowserEngine-Gecko");
 
             // Internet Explorer
-        } else if (agentString.contains("msie") || agentString.contains("(ie ")) {
+        } else if (agentString.contains("msie") || agentString.contains("(ie ") || agentString.contains("chromeframe")) {
             ua.addName("Browser-MSIE");
 
             // Mobile IE
