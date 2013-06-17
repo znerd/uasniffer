@@ -1059,12 +1059,34 @@ BrowserOS-iOS-6
 BrowserOS-iOS-6-0
 BrowserOS-iOS-6-0-0
 
+# 1Password application on iPad running iOS 6.1.3
+Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) 1Password/4.1.2 (like Version/10B329 Mobile/6.1.3 Safari/8536.25)
+Device-Mobile
+Device-NoPhone
+Device-Tablet
+Device-AppleTouch
+Device-AppleTouch-iPad
+Browser-Safari
+Browser-MobileSafari
+Browser-MobileSafari-6
+Browser-MobileSafari-6-1
+Browser-MobileSafari-6-1-3
+BrowserEngine-WebKit
+BrowserEngine-WebKit-536
+BrowserEngine-WebKit-536-26
+BrowserEngine-WebKit-536-26-0
+BrowserEngine-WebKit-536-26-0-0
+BrowserOS-iOS
+BrowserOS-iOS-6
+BrowserOS-iOS-6-1
+BrowserOS-iOS-6-1-3
+
 
 #-----------------------------------------------------------------------------
-# OmniWeb - a browser for Mac OS X
+# OmniWeb - a browser for OS X
 #-----------------------------------------------------------------------------
 
-# Old OmniWeb on Mac OS X/PPC
+# Old OmniWeb on OS X/PPC
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/522+ (KHTML, like Gecko) OmniWeb
 Device-Desktop
 Device-NoPhone
@@ -1151,7 +1173,7 @@ BrowserOS-MacOS-10
 
 
 #-----------------------------------------------------------------------------
-# iCab - a browser for Mac OS X
+# iCab - a browser for OS X
 #-----------------------------------------------------------------------------
 
 # iCab 2.7.1
@@ -1215,7 +1237,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 
-# iCab 4.8 on Mac OS X 10.6.8
+# iCab 4.8 on OS X 10.6.8
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/533.21.1 (KHTML, like Gecko) iCab/4.8 Safari/533.16
 Device-Desktop
 Device-NoPhone
@@ -1239,7 +1261,7 @@ BrowserEngine-WebKit-533-21-1-0
 # Google Chrome
 #-----------------------------------------------------------------------------
 
-# Pre-release version of Google Chrome on Mac OS X 10.5.6
+# Pre-release version of Google Chrome on OS X 10.5.6
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-US) AppleWebKit/530.9 (KHTML, like Gecko) Chrome/ Safari/530.9
 Device-Desktop
 Device-NoPhone
@@ -1385,7 +1407,7 @@ BrowserEngine-WebKit-532-5-0
 BrowserEngine-WebKit-532-5-0-0
 BrowserOS-CrOS
 
-# Chrome 11 on Mac OS X 10.6 "Snow Leopard"
+# Chrome 11 on OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_6) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.698.0 Safari/534.24
 Device-Desktop
 Device-NoPhone
@@ -1442,7 +1464,7 @@ BrowserEngine-WebKit-534-24-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 
-# Chrome 12 on Mac OS X 10.7 "Lion"
+# Chrome 12 on OS X 10.7 "Lion"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30
 Device-Desktop
 Device-NoPhone
@@ -1499,6 +1521,26 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
+# Chrome 28 on OS X 10.8.2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1485.0 Safari/537.36
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-28
+Browser-Chrome-28-0
+Browser-Chrome-28-0-1485
+Browser-Chrome-28-0-1485-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-36
+BrowserEngine-WebKit-537-36-0
+BrowserEngine-WebKit-537-36-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-2
+
 
 #-----------------------------------------------------------------------------
 # RockMelt
@@ -1524,7 +1566,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
-# RockMelt 0.9.48.51 on Mac OS X 10.6 "Snow Leopard"
+# RockMelt 0.9.48.51 on OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.13 (KHTML, like Gecko) RockMelt/0.9.48.51 Chrome/9.0.597.107 Safari/534.13
 Device-Desktop
 Device-NoPhone
@@ -1544,7 +1586,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-6
 
-# RockMelt 0.9.58 on Mac OS X 10.6 "Snow Leopard"
+# RockMelt 0.9.58 on OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24
 Device-Desktop
 Device-NoPhone
@@ -1564,7 +1606,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-7
 
-# Rockmelt 0.9.72 on Mac OS X 10.8.2
+# Rockmelt 0.9.72 on OS X 10.8.2
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/535.1 (KHTML, like Gecko) RockMelt/0.9.72.664 Chrome/14.0.835.202 Safari/535.1
 Device-Desktop
 Device-NoPhone
@@ -1584,7 +1626,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-2
 
-# RockMelt 0.16 on Mac OS X 10.8.1
+# RockMelt 0.16 on OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/535.7 (KHTML, like Gecko) RockMelt/0.16.91.483 Chrome/16.0.912.77 Safari/535.7
 Device-Desktop
 Device-NoPhone
@@ -1643,6 +1685,26 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-2
 BrowserOS-Windows-8
+
+# RockMelt 0.16 on OS X 10.8.2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/535.7 (KHTML, like Gecko) RockMelt/0.16.91.483 Chrome/16.0.912.77 Safari/535.7
+Device-Desktop
+Device-NoPhone
+Browser-RockMelt
+Browser-RockMelt-0
+Browser-RockMelt-0-16
+Browser-RockMelt-0-16-91
+Browser-RockMelt-0-16-91-483
+BrowserEngine-WebKit
+BrowserEngine-WebKit-535
+BrowserEngine-WebKit-535-7
+BrowserEngine-WebKit-535-7-0
+BrowserEngine-WebKit-535-7-0-0
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-2
 
 
 #-----------------------------------------------------------------------------
@@ -1782,7 +1844,7 @@ Browser-DesktopMSIE-5-0-0
 BrowserEngine-Tasman
 BrowserOS-MacOS
 
-# Internet Explorer 5.0 on Mac OS X
+# Internet Explorer 5.0 on OS X
 Mozilla/4.0 (compatible; MSIE 5.0; Mac OS X)
 Device-Desktop
 Device-NoPhone
@@ -2070,6 +2132,56 @@ Browser-DesktopMSIE
 Browser-DesktopMSIE-6
 Browser-DesktopMSIE-6-0
 Browser-DesktopMSIE-6-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-6
+BrowserEngine-Trident-MSIE-6-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Internet Explorer 6.0 on Windows XP with Chrome Frame extension (1/2)
+# Official example from http://www.chromium.org/developers/how-tos/chrome-frame-getting-started/understanding-chrome-frame-user-agent
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; chromeframe/11.0.660.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-6
+Browser-DesktopMSIE-6-0
+Browser-DesktopMSIE-6-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-11
+BrowserEngine-ChromeFrame-11-0
+BrowserEngine-ChromeFrame-11-0-660
+BrowserEngine-ChromeFrame-11-0-660-0
+BrowserEngine-Trident
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-6
+BrowserEngine-Trident-MSIE-6-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-5
+BrowserOS-Windows-NT-5-1
+BrowserOS-Windows-XP
+
+# Internet Explorer 6.0 on Windows XP with Chrome Frame extension (2/2)
+# Official example from http://www.chromium.org/developers/how-tos/chrome-frame-getting-started/understanding-chrome-frame-user-agent
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) chromeframe/11.0.660.0
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-6
+Browser-DesktopMSIE-6-0
+Browser-DesktopMSIE-6-0-0
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-11
+BrowserEngine-ChromeFrame-11-0
+BrowserEngine-ChromeFrame-11-0-660
+BrowserEngine-ChromeFrame-11-0-660-0
 BrowserEngine-Trident
 BrowserEngine-Trident-MSIE
 BrowserEngine-Trident-MSIE-6
@@ -2611,6 +2723,28 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-3
 
+# Internet Explorer with Chrome Frame extension on Windows 7
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) Chrome/9.0.597.94 Safari/534.13 chromeframe/9.0.597.94
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+BrowserEngine-ChromeFrame
+BrowserEngine-ChromeFrame-9
+BrowserEngine-ChromeFrame-9-0
+BrowserEngine-ChromeFrame-9-0-597
+BrowserEngine-ChromeFrame-9-0-597-94
+BrowserEngine-WebKit
+BrowserEngine-WebKit-534
+BrowserEngine-WebKit-534-13
+BrowserEngine-WebKit-534-13-0
+BrowserEngine-WebKit-534-13-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-1
+BrowserOS-Windows-7
+
 
 #-----------------------------------------------------------------------------
 # Mobile Internet Explorer
@@ -2795,7 +2929,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
 
-# Sleipnir 3.7 on Mac OS X 10.8.1
+# Sleipnir 3.7 on OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/536.25 (KHTML, like Gecko) Version/5.1 Safari/7534.51.22 Sleipnir/3.7
 Device-Desktop
 Device-NoPhone
@@ -2814,7 +2948,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-1
 
-# Sleipnir 3.8.4.1 on Mac OS X 10.8.2
+# Sleipnir 3.8.4.1 on OS X 10.8.2
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.14 (KHTML, like Gecko) Version/5.1 Safari/7534.51.22 Sleipnir/3.8.4.1
 Device-Desktop
 Device-NoPhone
@@ -3078,7 +3212,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
 
-# Maxthon 1.0 beta on Mac OS X
+# Maxthon 1.0 beta on OS X
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/535.19 (KHTML, like Gecko) Maxthon/1.0.2.0 Chrome/18.0.1025.142 Safari/535.19
 Device-Desktop
 Device-NoPhone
@@ -3098,12 +3232,32 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-0
 
+# Maxthon 4.0.4 on OS X 10.8.2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Maxthon/4.0.4.2000 Chrome/25.0.1364.99 Safari/537.22
+Device-Desktop
+Device-NoPhone
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-22
+BrowserEngine-WebKit-537-22-0
+BrowserEngine-WebKit-537-22-0-0
+Browser-Maxthon
+Browser-Maxthon-4
+Browser-Maxthon-4-0
+Browser-Maxthon-4-0-4
+Browser-Maxthon-4-0-4-2000
+BrowserOS-NIX
+BrowserOS-MacOS
+BrowserOS-MacOS-10
+BrowserOS-MacOS-10-8
+BrowserOS-MacOS-10-8-2
+
 
 #-----------------------------------------------------------------------------
 # Safari (desktop)
 #-----------------------------------------------------------------------------
 
-# Very old version of Safari (1.0?) on a Mac OS X (PPC) machine (German)
+# Very old version of Safari (1.0?) on a OS X (PPC) machine (German)
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5
 Device-Desktop
 Device-NoPhone
@@ -3118,7 +3272,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 
-# Old version of Safari (1.2?) on a Mac OS X (PPC) machine
+# Old version of Safari (1.2?) on a OS X (PPC) machine
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125
 Device-Desktop
 Device-NoPhone
@@ -3153,7 +3307,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
 
-# Safari 3.1 on a Mac OS X (PPC) machine (10.4 Tiger)
+# Safari 3.1 on a OS X (PPC) machine (10.4 Tiger)
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; nl-nl) AppleWebKit/525.13 (KHTML, like Gecko) Version/3.1 Safari/525.13
 Device-Desktop
 Device-NoPhone
@@ -3173,7 +3327,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-4
 BrowserOS-MacOS-10-4-11
 
-# Safari 3.1.2 on a Mac OS X (Intel) machine (10.5 Leopard)
+# Safari 3.1.2 on a OS X (Intel) machine (10.5 Leopard)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_5; nl-nl) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1
 Device-Desktop
 Device-NoPhone
@@ -3193,7 +3347,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-5
 
-# Safari 3.2 on Mac OS X (Intel machine)
+# Safari 3.2 on OS X (Intel machine)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_5; nl-nl) AppleWebKit/525.26.2 (KHTML, like Gecko) Version/3.2 Safari/525.26.12
 Device-Desktop
 Device-NoPhone
@@ -3253,7 +3407,7 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
-# Safari 4 Developer Preview 1 on Mac OS X 10.5.6 (British English)
+# Safari 4 Developer Preview 1 on OS X 10.5.6 (British English)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-gb) AppleWebKit/528.10+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2
 Device-Desktop
 Device-NoPhone
@@ -3273,7 +3427,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-6
 
-# Safari 4 Beta on Mac OS X 10.5.6
+# Safari 4 Beta on OS X 10.5.6
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; nl-nl) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16
 Device-Desktop
 Device-NoPhone
@@ -3293,7 +3447,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 BrowserOS-MacOS-10-5-6
 
-# Safari 5.0 on Mac OS X 10.6.8
+# Safari 5.0 on OS X 10.6.8
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; nl-nl) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1
 Device-Desktop
 Device-NoPhone
@@ -3313,7 +3467,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-8
 
-# Safari 5.1 on Mac OS X 10.7
+# Safari 5.1 on OS X 10.7
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7) AppleWebKit/534.48.3 (KHTML, like Gecko) Version/5.1 Safari/534.48.3
 Device-Desktop
 Device-NoPhone
@@ -3332,7 +3486,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-7
 
-# Safari 6.0 on Mac OS X 10.8
+# Safari 6.0 on OS X 10.8
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8) AppleWebKit/536.25 (KHTML, like Gecko) Version/6.0 Safari/536.25
 Device-Desktop
 Device-NoPhone
@@ -3351,7 +3505,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
-# Web browser inside Eclipse on Mac OS X 10.8.1
+# Web browser inside Eclipse on OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/536.25 (KHTML, like Gecko) Safari/522.0
 Device-Desktop
 Device-NoPhone
@@ -3494,7 +3648,7 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
-# Opera 9.61 on Mac OS X 10.5 (Leopard)
+# Opera 9.61 on OS X 10.5 (Leopard)
 Opera/9.61 (Macintosh; Intel Mac OS X; U; nl) Presto/2.1.1
 Device-Desktop
 Device-NoPhone
@@ -3511,7 +3665,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 
-# Opera 10.00 (beta?) on Mac OS X
+# Opera 10.00 (beta?) on OS X
 Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
 Device-Desktop
 Device-NoPhone
@@ -3549,7 +3703,7 @@ BrowserOS-Linux-Android-2
 BrowserOS-Linux-Android-2-3
 BrowserOS-Linux-Android-2-3-3
 
-# Opera 11.50 for Mac OS X, via Mac App Store
+# Opera 11.50 for OS X, via Mac App Store
 Opera/9.80 (Macintosh; Intel Mac OS X 10.6.7; U; Edition MacAppStore; nl) Presto/2.9.168 Version/11.50
 Device-Desktop
 Device-NoPhone
@@ -3568,7 +3722,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 BrowserOS-MacOS-10-6-7
 
-# Opera 11.66 on Mac OS X 10.8.1
+# Opera 11.66 on OS X 10.8.1
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.1; U; Edition MAS; nl) Presto/2.10.229 Version/11.66
 Device-Desktop
 Device-NoPhone
@@ -3587,7 +3741,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-1
 
-# Opera 12.02 on Mac OS X 10.8.1
+# Opera 12.02 on OS X 10.8.1
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.1; U; Edition MAS; nl) Presto/2.10.289 Version/12.02
 Device-Desktop
 Device-NoPhone
@@ -3606,7 +3760,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-1
 
-# Opera 12.10 (prerelease) on Mac OS X 10.8.1
+# Opera 12.10 (prerelease) on OS X 10.8.1
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.1; Edition Next) Presto/2.12.388 Version/12.10
 Device-Desktop
 Device-NoPhone
@@ -3625,7 +3779,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-1
 
-# Opera 12.13 on Mac OS X 10.8.2
+# Opera 12.13 on OS X 10.8.2
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.2; Edition MAS) Presto/2.12.388 Version/12.13
 Device-Desktop
 Device-NoPhone
@@ -3644,7 +3798,7 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-2
 
-# Opera 12.50 on Mac OS X 10.8.0
+# Opera 12.50 on OS X 10.8.0
 Opera/9.80 (Macintosh; Intel Mac OS X 10.8.0) Presto/2.12.363 Version/12.50
 Device-Desktop
 Device-NoPhone
@@ -4045,7 +4199,7 @@ BrowserOS-NIX
 BrowserOS-BSD
 BrowserOS-BSD-FreeBSD
 
-# Firefox pre-release (Minefield) on Mac OS X 10.6 "Snow Leopard"
+# Firefox pre-release (Minefield) on OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6.0; en-US; rv:1.9.0.7) Gecko/2009030517 Minefield/3.0.7
 Device-Desktop
 Device-NoPhone
@@ -4076,7 +4230,7 @@ BrowserEngine-Gecko
 BrowserOS-NIX
 BrowserOS-Solaris
 
-# Firefox 3.0 on Mac OS X 10.6 "Snow Leopard"
+# Firefox 3.0 on OS X 10.6 "Snow Leopard"
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9) Gecko/2008061712 Firefox/3.0
 Device-Desktop
 Device-NoPhone
@@ -4148,7 +4302,7 @@ BrowserEngine-Gecko-1-9-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 
-# Firefox 3.1 (beta 1) on Mac OS X 10.5
+# Firefox 3.1 (beta 1) on OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b1) Gecko/20081007 Firefox/3.1b1
 Device-Desktop
 Device-NoPhone
@@ -4166,7 +4320,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 
-# Firefox 3.5 RC1 build 1 on Mac OS X 10.5
+# Firefox 3.5 RC1 build 1 on OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; nl; rv:1.9.1) Gecko/20090612 Firefox/3.5
 Device-Desktop
 Device-NoPhone
@@ -4203,7 +4357,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
 
-# Firefox pre-release (Namoroka) 3.6a1 on Mac OS X
+# Firefox pre-release (Namoroka) 3.6a1 on OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.2a1) Gecko/20090806 Namoroka/3.6a1
 Device-Desktop
 Device-NoPhone
@@ -4238,7 +4392,7 @@ Browser-Firefox-4-0-0
 BrowserOS-NIX
 BrowserOS-Linux
 
-# Firefox 4.0.1 on Mac OS X 10.6
+# Firefox 4.0.1 on OS X 10.6
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1
 Device-Desktop
 Device-NoPhone
@@ -4256,7 +4410,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 
-# Firefox 5.0 Beta on Mac OS X 10.6
+# Firefox 5.0 Beta on OS X 10.6
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:5.0) Gecko/20100101 Firefox/5.0
 Device-Desktop
 Device-NoPhone
@@ -4274,7 +4428,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 
-# Firefox 6.0 on Mac OS X 10.7
+# Firefox 6.0 on OS X 10.7
 # - also applies to Firefox 6.0 Beta
 # - also applies to Mac OS X 10.7.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:6.0) Gecko/20100101 Firefox/6.0
@@ -4294,7 +4448,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-7
 
-# Firefox 8.0 Alpha 1 on Mac OS X 10.6
+# Firefox 8.0 Alpha 1 on OS X 10.6
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:8.0a1) Gecko/20110719 Firefox/8.0a1
 Device-Desktop
 Device-NoPhone
@@ -4312,7 +4466,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-6
 
-# Firefox 14.0 on Mac OS X 10.7
+# Firefox 14.0 on OS X 10.7
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0
 Device-Desktop
 Device-NoPhone
@@ -4348,7 +4502,7 @@ Browser-MobileFirefox-14
 Browser-MobileFirefox-14-0
 Browser-MobileFirefox-14-0-0
 
-# Firefox 15.0 on Mac OS X 10.8.1
+# Firefox 15.0 on OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:15.0) Gecko/20100101 Firefox/15.0
 Device-Desktop
 Device-NoPhone
@@ -4366,7 +4520,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
-# Firefox 16.0 on Mac OS X 10.8.1
+# Firefox 16.0 on OS X 10.8.1
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0
 Device-Desktop
 Device-NoPhone
@@ -4384,7 +4538,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
-# Firefox 19.0 on Mac OS X 10.8.2
+# Firefox 19.0 on OS X 10.8.2
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:19.0) Gecko/20100101 Firefox/19.0
 Device-Desktop
 Device-NoPhone
@@ -4754,7 +4908,7 @@ BrowserOS-Windows-NT-5
 BrowserOS-Windows-NT-5-1
 BrowserOS-Windows-XP
 
-# Netscape 9.0.0.6 on Mac OS X (PPC)
+# Netscape 9.0.0.6 on OS X (PPC)
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.12) Gecko/20080219 Firefox/2.0.0.12 Navigator/9.0.0.6
 Device-Desktop
 Device-NoPhone
@@ -5149,10 +5303,10 @@ BrowserOS-Linux
 
 
 #-----------------------------------------------------------------------------
-# Mozilla Camino - a Firefox-alternative specific for Mac OS X
+# Mozilla Camino - a Firefox-alternative specific for OS X
 #-----------------------------------------------------------------------------
 
-# Camino 1.6.3 on Mac OS X
+# Camino 1.6.3 on OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.16) Gecko/20080803 Camino/1.6.3 (like Firefox/2.0.0.16)
 Device-Desktop
 Device-NoPhone
@@ -5169,7 +5323,7 @@ BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10
 
-# Camino 2.0 beta 3 on Mac OS X 10.5
+# Camino 2.0 beta 3 on OS X 10.5
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en; rv:1.9.0.11) Gecko/2009060219 Camino/2.0b3 (like Firefox/3.0.11)
 Device-Desktop
 Device-NoPhone
@@ -5187,7 +5341,7 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-5
 
-# Camino 2.1.2 on Mac OS X 10.8.1
+# Camino 2.1.2 on OS X 10.8.1
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.8; nl; rv:1.9.2.28) Gecko/20120308 Camino/2.1.2 (MultiLang) (like Firefox/3.6.28) 
 Device-Desktop
 Device-NoPhone
@@ -5210,7 +5364,7 @@ BrowserOS-MacOS-10-8
 # Mozilla Fennec - Firefox for mobile devices
 #-----------------------------------------------------------------------------
 
-# Fennec 1.0b1 on Mac OS X
+# Fennec 1.0b1 on OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.9.2a1pre) Gecko/20090317 Fennec/1.0b1
 Device-Mobile
 Device-Phone
@@ -5447,7 +5601,7 @@ BrowserOS-Linux-Android
 # Flock
 #-----------------------------------------------------------------------------
 
-# Flock 0.4 on Mac OS X
+# Flock 0.4 on OS X
 Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8b5) Gecko/20051021 Flock/0.4 Firefox/1.0+
 Device-Desktop
 Device-NoPhone
@@ -5506,7 +5660,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-0
 BrowserOS-Windows-Vista
 
-# Flock 2.0.3 on Mac OS X 10.4 (Tiger)
+# Flock 2.0.3 on OS X 10.4 (Tiger)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.0.5) Gecko/2008121716 Firefox/3.0.5 Flock/2.0.3
 Device-Desktop
 Device-NoPhone
@@ -5544,7 +5698,7 @@ BrowserOS-Linux
 # TODO BrowserOSArch-x86
 # TODO BrowserOSArch-x86-64
 
-# Flock 3.5 on Mac OS X
+# Flock 3.5 on OS X
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.3.4628 Chrome/7.0.517.450 Safari/534.7
 Device-Desktop
 Device-NoPhone
@@ -5584,7 +5738,7 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
-# Flock 3.5.3 on Mac OS X 10.6.6
+# Flock 3.5.3 on OS X 10.6.6
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Flock/3.5.3.4628 Chrome/7.0.517.450 Safari/534.7
 Device-Desktop
 Device-NoPhone
@@ -5630,7 +5784,7 @@ BrowserOS-Linux
 # RSS readers
 #-----------------------------------------------------------------------------
 
-# NetNewsWire 3.1.7 (RSS client for Mac OS X)
+# NetNewsWire 3.1.7 (RSS client for OS X)
 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; de-de) AppleWebKit/525.28.3 (KHTML, like Gecko) NetNewsWire/3.1.7
 Device-Desktop
 Device-NoPhone

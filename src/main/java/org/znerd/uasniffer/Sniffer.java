@@ -3,6 +3,7 @@
 package org.znerd.uasniffer;
 
 import org.znerd.util.text.TextUtils;
+import java.util.regex.Pattern;
 
 /**
  * Class responsible for determining the user agent details.
@@ -221,7 +222,7 @@ public final class Sniffer {
         } else if (agentString.contains("mac os") || agentString.contains("mac_") || agentString.contains("macintosh")) {
             ua.addName("BrowserOS-MacOS");
 
-            // Mac OS X
+            // OS X
             if (agentString.contains("mac os x")) {
                 ua.addName("BrowserOS-NIX");
                 ua.addName("BrowserOS-MacOS-10");
@@ -536,7 +537,7 @@ public final class Sniffer {
             // Google Chrome - this one needs to be checked before Safari
             // e.g.: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like
             // Gecko) Chrome/0.X.Y.Z Safari/525.13.
-        } else if (agentString.contains("chrome/")) {
+        } else if (agentString.contains("chrome/") && !agentString.contains("chromeframe")) {
             analyze(ua, agentString, "Browser-Chrome", "chrome/", 4, false);
 
             // Nokia browser - needs to be checked before Safari
@@ -583,12 +584,16 @@ public final class Sniffer {
             }
 
             // Apple Safari
-        } else if (agentString.contains("safari") || agentString.contains("applewebkit")) {
+        } else if (! agentString.contains("chromeframe") && (agentString.contains("safari") || agentString.contains("applewebkit"))) {
             ua.addName("BrowserEngine-WebKit");
             ua.addName("Browser-Safari");
 
             if (agentString.contains("mobile/") || agentString.contains("android")) {
-                analyze(ua, agentString, "Browser-MobileSafari", "version/");
+                if (Pattern.compile("mobile\\/[0-9]+(\\.[0-9]+)+(\\s|\\))").matcher(agentString).find()) {
+                    analyze(ua, agentString, "Browser-MobileSafari", "mobile/");
+                } else {
+                    analyze(ua, agentString, "Browser-MobileSafari", "version/");
+                }
             } else {
                 analyze(ua, agentString, "Browser-DesktopSafari", "version/");
             }
@@ -604,7 +609,7 @@ public final class Sniffer {
             ua.addName("BrowserEngine-Gecko");
 
             // Internet Explorer
-        } else if (agentString.contains("msie") || agentString.contains("(ie ")) {
+        } else if (agentString.contains("msie") || agentString.contains("(ie ") || agentString.contains("chromeframe")) {
             ua.addName("Browser-MSIE");
 
             // Mobile IE
