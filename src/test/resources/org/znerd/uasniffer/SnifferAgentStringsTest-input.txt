@@ -3838,6 +3838,27 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-3
 
+# Opera 15 pre-release on Windows Vista
+Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.20 Safari/537.36 OPR/15.0.1147.18 (Edition Next)
+Device-Desktop
+Device-NoPhone
+Browser-Opera
+Browser-OperaDesktop
+Browser-OperaDesktop-15
+Browser-OperaDesktop-15-0
+Browser-OperaDesktop-15-0-1147
+Browser-OperaDesktop-15-0-1147-18
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-36
+BrowserEngine-WebKit-537-36-0
+BrowserEngine-WebKit-537-36-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-0
+BrowserOS-Windows-Vista
+
 
 #-----------------------------------------------------------------------------
 # Opera Mini

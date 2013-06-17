@@ -5,7 +5,8 @@
   - Internet Explorer with Chrome Frame extension on Windows 7.
 * Detecting WebKit/Blink-based Opera, added unit test for:
   - Opera 15 pre-release on OS X 10.8.3 (using Blink).
-* Added unit tests for:
+  - Opera 15 pre-release on Windows Vista (using Blink).
+* Additionally, added unit tests for:
   - Mobile WebKit browser inside 1Password app on iPad.
   - MSIE 6.0 with Chrome Frame 11.0 extension.
   - Chrome 28 on OS X 10.8.2.
