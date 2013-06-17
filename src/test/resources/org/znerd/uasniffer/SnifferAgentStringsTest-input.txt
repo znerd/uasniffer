@@ -3827,11 +3827,11 @@ Browser-OperaDesktop-15
 Browser-OperaDesktop-15-0
 Browser-OperaDesktop-15-0-1147
 Browser-OperaDesktop-15-0-1147-62
-BrowserEngine-Webkit
-BrowserEngine-Webkit-537
-BrowserEngine-Webkit-537-36
-BrowserEngine-Webkit-537-36-0
-BrowserEngine-Webkit-537-36-0-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-36
+BrowserEngine-WebKit-537-36-0
+BrowserEngine-WebKit-537-36-0-0
 BrowserOS-NIX
 BrowserOS-MacOS
 BrowserOS-MacOS-10

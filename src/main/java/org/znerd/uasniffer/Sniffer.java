@@ -487,10 +487,9 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Firefox", "phoenix/"); // Before 1.0 (and before
                                                                      // Firebird code-name)
 
-            // Opera
-        } else if (agentString.startsWith("opera/")) {
+            // Opera (detect before Chrome)
+        } else if (agentString.startsWith("opera/") || agentString.contains("opr/")) {
 
-            ua.addName("BrowserEngine-Presto");
             ua.addName("Browser-Opera");
 
             String browserName;
@@ -506,9 +505,12 @@ public final class Sniffer {
 
             if (agentString.contains("opera mini/")) {
                 analyze(ua, agentString, browserName, "opera mini/", 3, true);
+            } else if (agentString.contains("opr/")) {
+                analyze(ua, agentString, browserName, "opr/", 4, true);
             } else if (agentString.contains("version/")) {
                 analyze(ua, agentString, browserName, "version/", 3, true);
             } else if (agentString.contains("opera/")) {
+                ua.addName("BrowserEngine-Presto");
                 analyze(ua, agentString, browserName, "opera/", 3, true);
             } else {
                 analyze(ua, agentString, "Browser-OperaDesktop", agentString.contains("version/") ? "version/" : "opera/", 3, true);
