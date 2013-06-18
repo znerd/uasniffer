@@ -2846,6 +2846,24 @@ BrowserEngine-Trident
 BrowserOS-Windows
 BrowserOS-Windows-Mobile
 
+# Samsung Focus running Windows Phone 7.5
+Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; SAMSUNG; SGH-i917)
+Device-Mobile
+Device-Phone
+Browser-MSIE
+Browser-MobileMSIE
+Browser-MobileMSIE-9
+Browser-MobileMSIE-9-0
+Browser-MobileMSIE-9-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-5
+BrowserEngine-Trident-5-0
+BrowserEngine-Trident-5-0-0
+BrowserOS-Windows
+BrowserOS-Windows-Phone
+BrowserOS-Windows-Phone-7
+BrowserOS-Windows-Phone-7-5
+
 # Nokia Lumia 520, Windows Phone 8, MSIE 10.0 (Mobile)
 Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 520)
 Device-Mobile

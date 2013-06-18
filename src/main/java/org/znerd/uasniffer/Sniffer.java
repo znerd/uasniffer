@@ -263,6 +263,8 @@ public final class Sniffer {
                 ua.addName("BrowserOS-Windows-95");
                 
                 // Windows Phone
+            } else if (agentString.contains("windows phone os")) {
+                analyze(ua, agentString, "BrowserOS-Windows-Phone", "windows phone os", 2, false);
             } else if (agentString.contains("windows phone")) {
                 analyze(ua, agentString, "BrowserOS-Windows-Phone", "windows phone", 2, false);
 

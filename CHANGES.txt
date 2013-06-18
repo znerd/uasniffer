@@ -8,7 +8,8 @@
   - Opera 15 pre-release on OS X 10.8.3 (using Blink).
   - Opera 15 pre-release on Windows Vista (using Blink).
 * Detecting Windows Phone, added unit test for:
-  - Nokia Lumia 520, running Windows Phone 8.0, IE Mobile 10.0.
+  - IE Mobile 9.0 on Windows Phone 7.5 (Samsung Focus).
+  - IE Mobile 10.0 on Windows Phone 8.0 (Nokia Lumia 520).
 * Additionally, added unit tests for:
   - Mobile WebKit browser inside 1Password app on iPad.
   - MSIE 6.0 with Chrome Frame 11.0 extension.
