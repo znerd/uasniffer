@@ -3,7 +3,6 @@
 * Improved detection of mobile WebKit browser version.
 * Detecting Chrome Frame agent string on subrequests now, added unit test for:
   - Internet Explorer with Chrome Frame extension on Windows 7.
-* Added unit tests for:
 * Detecting WebKit/Blink-based Opera, added unit test for:
   - Opera 15 pre-release on OS X 10.8.3 (using Blink).
   - Opera 15 pre-release on Windows Vista (using Blink).
