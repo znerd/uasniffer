@@ -13,6 +13,7 @@
 * Detecting Windows RT, added unit tests for:
   - Microsoft Surface RT with touch enabled.
   - Microsoft Surface RT without touch enabled.
+  - Nokia Lumia 820 with desktop version turned on in settings.
 * Additionally, added unit tests for:
   - Mobile WebKit browser inside 1Password app on iPad.
   - MSIE 6.0 with Chrome Frame 11.0 extension.
