@@ -21,6 +21,7 @@
   - Chrome 28 on OS X 10.8.2.
   - RockMelt 0.16 on OS X 10.8.2.
   - Maxthon 4.0.4 on OS X 10.8.2.
+  - Microsoft Surface Pro tablet, running IE 10 on Windows 8.
 
 
 --- CHANGES SINCE UASNIFFER 1.3 (April 16, 2013) -----------------------------

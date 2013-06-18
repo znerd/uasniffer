@@ -2679,6 +2679,28 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-2
 BrowserOS-Windows-8
 
+# Microsoft Surface Pro
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; Touch)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-10
+Browser-DesktopMSIE-10-0
+Browser-DesktopMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-10
+BrowserEngine-Trident-MSIE-10-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+
 # Internet Explorer 10 on Windows NT 7.2
 # Made up
 Mozilla/4.0 (compatible; MSIE 10.0.0; Windows NT 7.2; WOW64; Trident/6.0; SLCC2; .NET CLR 4.0.128; InfoPath.4)
