@@ -261,6 +261,10 @@ public final class Sniffer {
                 // Windows 95
             } else if (agentString.contains("windows 95") || agentString.contains("win95")) {
                 ua.addName("BrowserOS-Windows-95");
+                
+                // Windows Phone
+            } else if (agentString.contains("windows phone")) {
+                analyze(ua, agentString, "BrowserOS-Windows-Phone", "windows phone", 2, false);
 
                 // Windows Mobile
             } else if (agentString.contains("windows mobile") || agentString.contains("windows; ppc") || agentString.contains("windows ce") || agentString.contains("wince")) {
@@ -613,7 +617,9 @@ public final class Sniffer {
             ua.addName("Browser-MSIE");
 
             // Mobile IE
-            if (agentString.contains("iemobile")) {
+            if (agentString.contains("iemobile/")) {
+                analyze(ua, agentString, "Browser-MobileMSIE", "iemobile/", 3, true);
+            } else if (agentString.contains("iemobile")) {
                 analyze(ua, agentString, "Browser-MobileMSIE", "iemobile ", 3, true);
             } else if (ua.hasName("BrowserOS-Windows-Mobile")) {
                 ua.addName("Browser-MobileMSIE");
