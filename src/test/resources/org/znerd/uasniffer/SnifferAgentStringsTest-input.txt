@@ -2900,6 +2900,24 @@ BrowserOS-Windows-Phone
 BrowserOS-Windows-Phone-8
 BrowserOS-Windows-Phone-8-0
 
+# Nokia Lumia 920, Windows Phone 8, MSIE 10.0 (Mobile)
+Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)
+Device-Mobile
+Device-Phone
+Browser-MSIE
+Browser-MobileMSIE
+Browser-MobileMSIE-10
+Browser-MobileMSIE-10-0
+Browser-MobileMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserOS-Windows
+BrowserOS-Windows-Phone
+BrowserOS-Windows-Phone-8
+BrowserOS-Windows-Phone-8-0
+
 
 #-----------------------------------------------------------------------------
 # Sleipnir - a Japanese browser initially based on MSIE
