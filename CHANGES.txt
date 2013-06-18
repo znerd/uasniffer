@@ -9,8 +9,7 @@
 * Detecting Windows Phone, added unit tests for:
   - IE Mobile 7.0 on Windows Phone 7.0 (LG phone, Samsung Focus, Nokia N70).
   - IE Mobile 9.0 on Windows Phone 7.5 (Samsung Focus).
-  - IE Mobile 10.0 on Windows Phone 8.0 (Nokia Lumia 520).
-  - IE Mobile 10.0 on Windows Phone 8.0 (Nokia Lumia 920).
+  - IE Mobile 10.0 on Windows Phone 8.0 (Nokia Lumia 520/820/920).
 * Detecting Windows RT, added unit tests for:
   - Microsoft Surface RT with touch enabled.
   - Microsoft Surface RT without touch enabled.
