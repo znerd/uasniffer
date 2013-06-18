@@ -2702,6 +2702,50 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-7
 BrowserOS-Windows-NT-7-2
 
+# Microsoft Surface / Windows RT (with Touch disabled?)
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-10
+Browser-DesktopMSIE-10-0
+Browser-DesktopMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-10
+BrowserEngine-Trident-MSIE-10-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-RT
+
+# Microsoft Surface / Windows RT with Touch enabled
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0; Touch) 
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-10
+Browser-DesktopMSIE-10-0
+Browser-DesktopMSIE-10-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-6
+BrowserEngine-Trident-6-0
+BrowserEngine-Trident-6-0-0
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-10
+BrowserEngine-Trident-MSIE-10-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-RT
+
 # IE 11 leaked agent string, pre announcement, on Windows Blue
 Mozilla/5.0 (IE 11.0; Windows NT 6.3; Trident/7.0; .NET4.0E; .NET4.0C; rv:11.0) like Gecko
 Device-Desktop
