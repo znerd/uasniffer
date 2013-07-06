@@ -1,3 +1,9 @@
+--- CHANGES INTRODUCED IN UASNIFFER 1.6 (UNDER DEVELOPMENT) ------------------
+
+* Added unit tests for:
+  - Opera 15 on Windows 8.1 Preview.
+
+
 --- CHANGES INTRODUCED IN UASNIFFER 1.5 (July 6, 2013) -----------------------
 
 * Fixed detection of IE 11, using actual agent string.
