@@ -61,12 +61,12 @@
     <dependency>
       <groupId>org.znerd</groupId>
       <artifactId>znerd-util</artifactId>
-      <version>0.8</version>
+      <version>0.10</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.10</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
