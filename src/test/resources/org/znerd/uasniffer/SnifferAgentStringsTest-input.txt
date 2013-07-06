@@ -4932,6 +4932,26 @@ BrowserOS-MacOS
 BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 
+# Firefox 22 on Windows 8.1 Preview
+Mozilla/5.0 (Windows NT 6.2; rv:22.0) Gecko/20100101 Firefox/22.0
+Device-Desktop
+Device-NoPhone
+Browser-Firefox
+Browser-Firefox-22
+Browser-Firefox-22-0
+Browser-Firefox-22-0-0
+BrowserEngine-Gecko
+BrowserEngine-Gecko-22
+BrowserEngine-Gecko-22-0
+BrowserEngine-Gecko-22-0-0
+BrowserEngine-Gecko-22-0-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+BrowserOS-Windows-8-0
+
 
 #-----------------------------------------------------------------------------
 # Netscape
