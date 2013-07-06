@@ -1,4 +1,4 @@
---- CHANGES SINCE UASNIFFER 1.4 (under development) --------------------------
+--- CHANGES SINCE UASNIFFER 1.4 (July 6, 2013) -------------------------------
 
 * Improved detection of mobile WebKit browser version.
 * Detecting Chrome Frame agent string on subrequests now, added unit test for:
@@ -10,6 +10,7 @@
   - IE Mobile 7.0 on Windows Phone 7.0 (LG, Samsung Focus, Nokia N70/800/900).
   - IE Mobile 9.0 on Windows Phone 7.5 (Samsung Focus).
   - IE Mobile 10.0 on Windows Phone 8.0 (Nokia Lumia 520/820/920).
+* Detecting IE 11 on Windows 8.1, based on agent string in IE 11 Preview.
 * Detecting Windows RT, added unit tests for:
   - Microsoft Surface RT with touch enabled.
   - Microsoft Surface RT without touch enabled.

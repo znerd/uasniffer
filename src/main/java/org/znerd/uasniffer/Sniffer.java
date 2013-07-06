@@ -647,6 +647,13 @@ public final class Sniffer {
             // Netscape 1, 2, 3, 4
         } else if (!agentString.contains("(compatible") && TextUtils.matches(agentString, "mozilla\\/[1234]")) {
             analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
+            
+            // Internet Explorer, as of version 11
+        } else if (agentString.contains("trident/") && agentString.contains("rv ")) {
+        	ua.addName("Browser-MSIE");
+        	analyze(ua, agentString, "Browser-DesktopMSIE", "rv ", 3, true);
+        	analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "rv ", 2, true); // TODO: Move elsewhere
+
         }
     }
 

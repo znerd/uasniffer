@@ -2835,6 +2835,28 @@ BrowserOS-Windows-NT
 BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-3
 
+# IE 11 Preview on Windows 8.1 (p.k.a. 'Blue'), official example
+# See http://msdn.microsoft.com/en-us/library/ie/bg182625(v=vs.85).aspx#uaString
+Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+Device-Desktop
+Device-NoPhone
+Browser-MSIE
+Browser-DesktopMSIE
+Browser-DesktopMSIE-11
+Browser-DesktopMSIE-11-0
+Browser-DesktopMSIE-11-0-0
+BrowserEngine-Trident
+BrowserEngine-Trident-7
+BrowserEngine-Trident-7-0
+BrowserEngine-Trident-7-0-0
+BrowserEngine-Trident-MSIE
+BrowserEngine-Trident-MSIE-11
+BrowserEngine-Trident-MSIE-11-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-3
+
 # Internet Explorer with Chrome Frame extension on Windows 7
 Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) Chrome/9.0.597.94 Safari/534.13 chromeframe/9.0.597.94
 Device-Desktop
