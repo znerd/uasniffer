@@ -1,4 +1,8 @@
---- CHANGES INTRODUCED IN UASNIFFER 1.5 (UNDER DEVELOPMENT) ------------------
+--- CHANGES INTRODUCED IN UASNIFFER 1.5 (July 6, 2013) -----------------------
+
+* Fixed detection of IE 11, using actual agent string.
+* Adding BrowserOS-Windows-8-0 for Windows 8.
+* Adding BrowserOS-Windows-8 and BrowserOS-Windows-8-1 for Windows 8.1.
 
 
 --- CHANGES INTRODUCED IN UASNIFFER 1.4 (July 6, 2013) -----------------------

@@ -297,6 +297,14 @@ public final class Sniffer {
             		ua.addName("BrowserOS-Windows-RT");
             	} else {
                     ua.addName("BrowserOS-Windows-8");
+                    ua.addName("BrowserOS-Windows-8-0");
+            	}
+            } else if (ua.hasName("BrowserOS-Windows-NT-6-3")) {
+            	if (agentString.contains(" arm;")) {
+            		ua.addName("BrowserOS-Windows-RT");
+            	} else {
+                    ua.addName("BrowserOS-Windows-8");
+                    ua.addName("BrowserOS-Windows-8-1");
             	}
             }
 
@@ -649,10 +657,15 @@ public final class Sniffer {
             analyze(ua, agentString, "Browser-Netscape", "mozilla/", 3, true);
             
             // Internet Explorer, as of version 11
-        } else if (agentString.contains("trident/") && agentString.contains("rv ")) {
+        } else if (agentString.contains("trident/") && agentString.contains("rv")) {
         	ua.addName("Browser-MSIE");
-        	analyze(ua, agentString, "Browser-DesktopMSIE", "rv ", 3, true);
-        	analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "rv ", 2, true); // TODO: Move elsewhere
+                if (agentString.contains("rv ")) {
+        	    analyze(ua, agentString, "Browser-DesktopMSIE", "rv ", 3, true);
+        	    analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "rv ", 2, true); // TODO: Move elsewhere
+                } else if (agentString.contains("rv:")) {
+        	    analyze(ua, agentString, "Browser-DesktopMSIE", "rv:", 3, true);
+        	    analyze(ua, agentString, "BrowserEngine-Trident-MSIE", "rv:", 2, true); // TODO: Move elsewhere
+                }
 
         }
     }
