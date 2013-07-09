@@ -5,6 +5,7 @@
   - Firefox 22 on Windows 8.1 Preview.
   - Firefox 23 beta 3 on Windows 8.1 Preview.
   - Chrome Canary 30 (July 6, 2013) on OS X 10.8.4.
+  - Chrome 27 on Windows 8.1 Preview.
 
 
 --- CHANGES INTRODUCED IN UASNIFFER 1.5 (July 6, 2013) -----------------------

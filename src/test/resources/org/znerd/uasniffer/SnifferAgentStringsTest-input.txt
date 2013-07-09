@@ -1521,6 +1521,27 @@ BrowserOS-Windows-NT-6
 BrowserOS-Windows-NT-6-1
 BrowserOS-Windows-7
 
+# Chrome 27 on Windows 8.1 Preview
+Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-27
+Browser-Chrome-27-0
+Browser-Chrome-27-0-1453
+Browser-Chrome-27-0-1453-116
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-36
+BrowserEngine-WebKit-537-36-0
+BrowserEngine-WebKit-537-36-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+BrowserOS-Windows-8-0
+
 # Chrome 28 on OS X 10.8.2
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1485.0 Safari/537.36
 Device-Desktop
