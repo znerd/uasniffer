@@ -1582,6 +1582,27 @@ BrowserOS-MacOS-10
 BrowserOS-MacOS-10-8
 BrowserOS-MacOS-10-8-4
 
+# Chrome Canary 30 (July 9, 2013) on Windows 8.1 Preview
+Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1559.0 Safari/537.36
+Device-Desktop
+Device-NoPhone
+Browser-Chrome
+Browser-Chrome-30
+Browser-Chrome-30-0
+Browser-Chrome-30-0-1559
+Browser-Chrome-30-0-1559-0
+BrowserEngine-WebKit
+BrowserEngine-WebKit-537
+BrowserEngine-WebKit-537-36
+BrowserEngine-WebKit-537-36-0
+BrowserEngine-WebKit-537-36-0-0
+BrowserOS-Windows
+BrowserOS-Windows-NT
+BrowserOS-Windows-NT-6
+BrowserOS-Windows-NT-6-2
+BrowserOS-Windows-8
+BrowserOS-Windows-8-0
+
 
 #-----------------------------------------------------------------------------
 # RockMelt
